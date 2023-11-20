@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SpaceDebrisTracker.sln
+/SpaceDebrisTracker.vcxproj
+/SpaceDebrisTracker.vcxproj.filters
+/SpaceDebrisTracker.vcxproj.user
+/.vs
+/Debug
+/x64/Debug
