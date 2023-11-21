@@ -1,7 +1,7 @@
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o: \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui_demo.cpp \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imgui.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imconfig.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_demo.cpp \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imgui.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imconfig.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/float.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config_site \

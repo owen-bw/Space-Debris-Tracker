@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/CMakeLists.txt"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/CMakeLists.txt"
   "CMakeFiles/3.27.8/CMakeCCompiler.cmake"
   "CMakeFiles/3.27.8/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.8/CMakeSystem.cmake"

@@ -1,7 +1,7 @@
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui.cpp \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imgui.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imconfig.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui.cpp \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imgui.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imconfig.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/float.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config_site \
@@ -83,7 +83,7 @@ CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/malloc/_malloc.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_dev_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imgui_internal.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imgui_internal.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/_stdio.h \
@@ -223,5 +223,5 @@ CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/arm/limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/arm/_limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/syslimits.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imstb_textedit.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imstb_textedit.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/TargetConditionals.h

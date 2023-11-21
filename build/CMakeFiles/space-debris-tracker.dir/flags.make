@@ -5,7 +5,7 @@
 # compile CXX with /usr/bin/clang++
 C_DEFINES = 
 
-C_INCLUDES = -I"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include" -isystem /usr/local/include
+C_INCLUDES = -I"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include" -isystem /usr/local/include
 
 C_FLAGSarm64 = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
 
@@ -13,7 +13,7 @@ C_FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Pl
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include" -isystem /usr/local/include
+CXX_INCLUDES = -I"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include" -isystem /usr/local/include
 
 CXX_FLAGSarm64 = -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
 

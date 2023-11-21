@@ -1,4 +1,4 @@
-# Install script for directory: /Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test
+# Install script for directory: /Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

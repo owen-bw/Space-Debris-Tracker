@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test"
+CMAKE_SOURCE_DIR = "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build"
+CMAKE_BINARY_DIR = "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/space-debris-tracker.dir/depend.make
@@ -69,149 +69,224 @@ include CMakeFiles/space-debris-tracker.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/space-debris-tracker.dir/flags.make
 
+CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/BitmapFontData.cpp
+CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/BitmapFontData.cpp"
+
+CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/BitmapFontData.cpp" > CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.i
+
+CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/BitmapFontData.cpp" -o CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.s
+
+CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Bmp.cpp
+CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Bmp.cpp"
+
+CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Bmp.cpp" > CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.i
+
+CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Bmp.cpp" -o CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.s
+
+CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Matrices.cpp
+CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Matrices.cpp"
+
+CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Matrices.cpp" > CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.i
+
+CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Matrices.cpp" -o CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.s
+
 CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/Sphere.cpp
+CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Sphere.cpp
 CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/Sphere.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Sphere.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/Sphere.cpp" > CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Sphere.cpp" > CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/Sphere.cpp" -o CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Sphere.cpp" -o CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.s
+
+CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Timer.cpp
+CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Timer.cpp"
+
+CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Timer.cpp" > CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.i
+
+CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Timer.cpp" -o CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.s
+
+CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Tokenizer.cpp
+CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Tokenizer.cpp"
+
+CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Tokenizer.cpp" > CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.i
+
+CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Tokenizer.cpp" -o CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.s
 
 CMakeFiles/space-debris-tracker.dir/src/gl.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/gl.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/gl.c
+CMakeFiles/space-debris-tracker.dir/src/gl.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/gl.c
 CMakeFiles/space-debris-tracker.dir/src/gl.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/space-debris-tracker.dir/src/gl.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/gl.c.o -MF CMakeFiles/space-debris-tracker.dir/src/gl.c.o.d -o CMakeFiles/space-debris-tracker.dir/src/gl.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/gl.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/space-debris-tracker.dir/src/gl.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/gl.c.o -MF CMakeFiles/space-debris-tracker.dir/src/gl.c.o.d -o CMakeFiles/space-debris-tracker.dir/src/gl.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/gl.c"
 
 CMakeFiles/space-debris-tracker.dir/src/gl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/src/gl.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/gl.c" > CMakeFiles/space-debris-tracker.dir/src/gl.c.i
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/gl.c" > CMakeFiles/space-debris-tracker.dir/src/gl.c.i
 
 CMakeFiles/space-debris-tracker.dir/src/gl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/src/gl.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/gl.c" -o CMakeFiles/space-debris-tracker.dir/src/gl.c.s
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/gl.c" -o CMakeFiles/space-debris-tracker.dir/src/gl.c.s
 
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui.cpp
+CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.s
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui_demo.cpp
+CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_demo.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_demo.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_demo.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_demo.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_demo.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_demo.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_demo.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.s
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui_draw.cpp
+CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_draw.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_draw.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_draw.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_draw.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_draw.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_draw.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_draw.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.s
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui_impl_glfw.cpp
+CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_impl_glfw.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_glfw.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_impl_glfw.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_glfw.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_impl_glfw.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_glfw.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_impl_glfw.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.s
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui_impl_opengl3.cpp
+CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_impl_opengl3.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_opengl3.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_impl_opengl3.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_opengl3.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_impl_opengl3.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_opengl3.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_impl_opengl3.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.s
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui_tables.cpp
+CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_tables.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_tables.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_tables.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_tables.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_tables.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_tables.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_tables.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.s
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui_widgets.cpp
+CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_widgets.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_widgets.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_widgets.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_widgets.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_widgets.cpp" > CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_widgets.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_widgets.cpp" -o CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.s
 
 CMakeFiles/space-debris-tracker.dir/src/main.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
-CMakeFiles/space-debris-tracker.dir/src/main.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/main.cpp
+CMakeFiles/space-debris-tracker.dir/src/main.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/main.cpp
 CMakeFiles/space-debris-tracker.dir/src/main.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/main.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/main.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/main.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/main.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/main.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/main.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/main.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-debris-tracker.dir/src/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/main.cpp" > CMakeFiles/space-debris-tracker.dir/src/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/main.cpp" > CMakeFiles/space-debris-tracker.dir/src/main.cpp.i
 
 CMakeFiles/space-debris-tracker.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-debris-tracker.dir/src/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/main.cpp" -o CMakeFiles/space-debris-tracker.dir/src/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/main.cpp" -o CMakeFiles/space-debris-tracker.dir/src/main.cpp.s
 
 # Object files for target space-debris-tracker
 space__debris__tracker_OBJECTS = \
+"CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o" \
+"CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o" \
+"CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o" \
 "CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o" \
+"CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o" \
+"CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o" \
 "CMakeFiles/space-debris-tracker.dir/src/gl.c.o" \
 "CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o" \
 "CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o" \
@@ -225,7 +300,12 @@ space__debris__tracker_OBJECTS = \
 # External object files for target space-debris-tracker
 space__debris__tracker_EXTERNAL_OBJECTS =
 
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/gl.c.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o
@@ -238,7 +318,7 @@ space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/main.cpp.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/build.make
 space-debris-tracker: /usr/local/lib/libglfw3.a
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable space-debris-tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable space-debris-tracker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/space-debris-tracker.dir/link.txt --verbose=$(VERBOSE)
 	./space-debris-tracker
 
@@ -251,6 +331,6 @@ CMakeFiles/space-debris-tracker.dir/clean:
 .PHONY : CMakeFiles/space-debris-tracker.dir/clean
 
 CMakeFiles/space-debris-tracker.dir/depend:
-	cd "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test" "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test" "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build" "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build" "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles/space-debris-tracker.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker" "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker" "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build" "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build" "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/space-debris-tracker.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/space-debris-tracker.dir/depend
 

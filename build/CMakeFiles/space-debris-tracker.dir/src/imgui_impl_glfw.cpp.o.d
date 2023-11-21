@@ -1,7 +1,7 @@
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/imgui_impl_glfw.cpp \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imgui.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imconfig.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_impl_glfw.cpp \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imgui.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imconfig.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/float.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config_site \
@@ -83,13 +83,13 @@ CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/malloc/_malloc.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_dev_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/imgui_impl_glfw.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/glfw3.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/imgui_impl_glfw.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/glfw3.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gltypes.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/os/availability.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/glfw3native.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/glfw3native.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h \

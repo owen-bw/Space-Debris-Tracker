@@ -1,5 +1,5 @@
 CMakeFiles/space-debris-tracker.dir/src/gl.c.o: \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/src/gl.c \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/gl.c \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/cdefs.h \
@@ -80,5 +80,5 @@ CMakeFiles/space-debris-tracker.dir/src/gl.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/secure/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/secure/_string.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/gl.h \
-  /Users/blake/projects/cpp/COP3530/Project\ 3/OpenGL\ Test/include/khrplatform.h
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/gl.h \
+  /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/khrplatform.h

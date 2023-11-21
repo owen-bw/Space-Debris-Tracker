@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test"
+CMAKE_SOURCE_DIR = "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build"
+CMAKE_BINARY_DIR = "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,78 @@ space-debris-tracker/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/build
 .PHONY : space-debris-tracker/fast
 
+src/BitmapFontData.o: src/BitmapFontData.cpp.o
+.PHONY : src/BitmapFontData.o
+
+# target to build an object file
+src/BitmapFontData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o
+.PHONY : src/BitmapFontData.cpp.o
+
+src/BitmapFontData.i: src/BitmapFontData.cpp.i
+.PHONY : src/BitmapFontData.i
+
+# target to preprocess a source file
+src/BitmapFontData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.i
+.PHONY : src/BitmapFontData.cpp.i
+
+src/BitmapFontData.s: src/BitmapFontData.cpp.s
+.PHONY : src/BitmapFontData.s
+
+# target to generate assembly for a file
+src/BitmapFontData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.s
+.PHONY : src/BitmapFontData.cpp.s
+
+src/Bmp.o: src/Bmp.cpp.o
+.PHONY : src/Bmp.o
+
+# target to build an object file
+src/Bmp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o
+.PHONY : src/Bmp.cpp.o
+
+src/Bmp.i: src/Bmp.cpp.i
+.PHONY : src/Bmp.i
+
+# target to preprocess a source file
+src/Bmp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.i
+.PHONY : src/Bmp.cpp.i
+
+src/Bmp.s: src/Bmp.cpp.s
+.PHONY : src/Bmp.s
+
+# target to generate assembly for a file
+src/Bmp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.s
+.PHONY : src/Bmp.cpp.s
+
+src/Matrices.o: src/Matrices.cpp.o
+.PHONY : src/Matrices.o
+
+# target to build an object file
+src/Matrices.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o
+.PHONY : src/Matrices.cpp.o
+
+src/Matrices.i: src/Matrices.cpp.i
+.PHONY : src/Matrices.i
+
+# target to preprocess a source file
+src/Matrices.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.i
+.PHONY : src/Matrices.cpp.i
+
+src/Matrices.s: src/Matrices.cpp.s
+.PHONY : src/Matrices.s
+
+# target to generate assembly for a file
+src/Matrices.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.s
+.PHONY : src/Matrices.cpp.s
+
 src/Sphere.o: src/Sphere.cpp.o
 .PHONY : src/Sphere.o
 
@@ -152,6 +224,54 @@ src/Sphere.s: src/Sphere.cpp.s
 src/Sphere.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.s
 .PHONY : src/Sphere.cpp.s
+
+src/Timer.o: src/Timer.cpp.o
+.PHONY : src/Timer.o
+
+# target to build an object file
+src/Timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o
+.PHONY : src/Timer.cpp.o
+
+src/Timer.i: src/Timer.cpp.i
+.PHONY : src/Timer.i
+
+# target to preprocess a source file
+src/Timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.i
+.PHONY : src/Timer.cpp.i
+
+src/Timer.s: src/Timer.cpp.s
+.PHONY : src/Timer.s
+
+# target to generate assembly for a file
+src/Timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.s
+.PHONY : src/Timer.cpp.s
+
+src/Tokenizer.o: src/Tokenizer.cpp.o
+.PHONY : src/Tokenizer.o
+
+# target to build an object file
+src/Tokenizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o
+.PHONY : src/Tokenizer.cpp.o
+
+src/Tokenizer.i: src/Tokenizer.cpp.i
+.PHONY : src/Tokenizer.i
+
+# target to preprocess a source file
+src/Tokenizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.i
+.PHONY : src/Tokenizer.cpp.i
+
+src/Tokenizer.s: src/Tokenizer.cpp.s
+.PHONY : src/Tokenizer.s
+
+# target to generate assembly for a file
+src/Tokenizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.s
+.PHONY : src/Tokenizer.cpp.s
 
 src/gl.o: src/gl.c.o
 .PHONY : src/gl.o
@@ -378,9 +498,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... space-debris-tracker"
+	@echo "... src/BitmapFontData.o"
+	@echo "... src/BitmapFontData.i"
+	@echo "... src/BitmapFontData.s"
+	@echo "... src/Bmp.o"
+	@echo "... src/Bmp.i"
+	@echo "... src/Bmp.s"
+	@echo "... src/Matrices.o"
+	@echo "... src/Matrices.i"
+	@echo "... src/Matrices.s"
 	@echo "... src/Sphere.o"
 	@echo "... src/Sphere.i"
 	@echo "... src/Sphere.s"
+	@echo "... src/Timer.o"
+	@echo "... src/Timer.i"
+	@echo "... src/Timer.s"
+	@echo "... src/Tokenizer.o"
+	@echo "... src/Tokenizer.i"
+	@echo "... src/Tokenizer.s"
 	@echo "... src/gl.o"
 	@echo "... src/gl.i"
 	@echo "... src/gl.s"
