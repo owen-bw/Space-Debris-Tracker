@@ -197,12 +197,12 @@ int main(void)
     // glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
  
-    // IMGUI_CHECKVERSION();
-    // ImGui::CreateContext();
-    // ImGuiIO& io = ImGui::GetIO(); (void)io;
-    // ImGui::StyleColorsDark();
-    // ImGui_ImplGlfw_InitForOpenGL(window, true);
-    // ImGui_ImplOpenGL3_Init("#version 410");
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
 
     initGL();
     initGLSL();
@@ -248,24 +248,24 @@ int main(void)
         frame(frameTime);
         postFrame(frameTime);
 
-        // ImGui_ImplOpenGL3_NewFrame();
-        // ImGui_ImplGlfw_NewFrame();
-        // ImGui::NewFrame();
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
 
-        // ImGui::Begin("Test Window");
-        // ImGui::Text("Test");
-        // ImGui::End();
+        ImGui::Begin("Test Window");
+        ImGui::Text("Test");
+        ImGui::End();
 
-        // ImGui::Render();
-        // ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
  
-        glfwSwapBuffers(window);
+        // glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
-    // ImGui_ImplOpenGL3_Shutdown();
-    // ImGui_ImplGlfw_Shutdown();
-    // ImGui::DestroyContext();
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
  
     glfwDestroyWindow(window);
  
@@ -384,14 +384,15 @@ bool initGLSL()
     attribVertexTexCoord = glGetAttribLocation(progId, "vertexTexCoord");
 
     // set uniform values
-    float lightPosition[] = {0, 0, 1, 0};
-    float lightAmbient[]  = {0.3f, 0.3f, 0.3f, 1};
+    float lightPosition[] = {-1, 0, 0, 0};
+    float lightAmbient[]  = {0.0f, 0.1f, 0.3f, 1};
     float lightDiffuse[]  = {0.7f, 0.7f, 0.7f, 1};
     float lightSpecular[] = {1.0f, 1.0f, 1.0f, 1};
-    float materialAmbient[]  = {0.5f, 0.5f, 0.5f, 1};
-    float materialDiffuse[]  = {0.7f, 0.7f, 0.7f, 1};
+    float materialAmbient[]  = {0.0f, 0.2f, 0.3f, 1};
+    float materialDiffuse[]  = {1.7f, 1.7f, 1.7f, 1};
     float materialSpecular[] = {0.4f, 0.4f, 0.4f, 1};
     float materialShininess  = 16;
+
     glUniform4fv(uniformLightPosition, 1, lightPosition);
     glUniform4fv(uniformLightAmbient, 1, lightAmbient);
     glUniform4fv(uniformLightDiffuse, 1, lightDiffuse);
