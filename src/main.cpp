@@ -48,8 +48,8 @@ void showInfo();
 void showFPS();
 
 // Constants
-const int   WINDOW_WIDTH    = 1500;
-const int   WINDOW_HEIGHT   = 500;
+const int   WINDOW_WIDTH    = 1280;
+const int   WINDOW_HEIGHT   = 720;
 const float CAMERA_DISTANCE = 4.0f;
 
 // Global Variables
@@ -183,7 +183,7 @@ int main(void)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
  
-    window = glfwCreateWindow(640, 480, "Space Debris Tracker", NULL, NULL);
+    window = glfwCreateWindow(1280, 720, "Space Debris Tracker", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -248,18 +248,6 @@ int main(void)
         frame(frameTime);
         postFrame(frameTime);
 
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-        ImGui::Begin("Test Window");
-        ImGui::Text("Test");
-        ImGui::End();
-
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
- 
-        // glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
@@ -306,7 +294,7 @@ void initGL()
     // enable /disable features
     //glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
     //glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
-    //glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
+    glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
 
@@ -384,13 +372,13 @@ bool initGLSL()
     attribVertexTexCoord = glGetAttribLocation(progId, "vertexTexCoord");
 
     // set uniform values
-    float lightPosition[] = {-1, 0, 0, 0};
+    float lightPosition[] = {-2, 0, 1, 0};
     float lightAmbient[]  = {0.0f, 0.1f, 0.3f, 1};
     float lightDiffuse[]  = {0.7f, 0.7f, 0.7f, 1};
     float lightSpecular[] = {1.0f, 1.0f, 1.0f, 1};
     float materialAmbient[]  = {0.0f, 0.2f, 0.3f, 1};
     float materialDiffuse[]  = {1.7f, 1.7f, 1.7f, 1};
-    float materialSpecular[] = {0.4f, 0.4f, 0.4f, 1};
+    float materialSpecular[] = {0.4f, 0.4f, 0.4f, 0};
     float materialShininess  = 16;
 
     glUniform4fv(uniformLightPosition, 1, lightPosition);
@@ -749,6 +737,18 @@ void frame(double frameTime)
     glUseProgram(0);
 
     showInfo();
+
+    // GUI
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+
+    ImGui::Begin("Test Window");
+    ImGui::Text("Test");
+    ImGui::End();
+
+    ImGui::Render();
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
     glfwSwapBuffers(window);
 }
