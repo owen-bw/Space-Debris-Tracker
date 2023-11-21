@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/Sphere.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/Sphere.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/gl.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/gl.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/gl.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/gl.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_demo.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_demo.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_draw.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_draw.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_glfw.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_opengl3.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_tables.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_tables.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_widgets.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/imgui_widgets.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/main.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/main.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/OpenGL Test/src/main.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/main.cpp.o"
+}
+]
