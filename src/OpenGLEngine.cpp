@@ -18,6 +18,10 @@
  
 // https://github.com/datenwolf/linmath.h/blob/master/linmath.h
 #include "linmath.h"
+
+// https://github.com/g-truc/glm
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
  
 #include <stdlib.h>
 #include <stdio.h>
@@ -29,7 +33,7 @@
 
 // Constructor
 OpenGLEngine::OpenGLEngine() {
-    Sphere newSphere(1.0f, 36, 18, true, 2);
+    Sphere newSphere(1.0f, 128, 64, true, 2);
 
     earth = newSphere;
 }
@@ -168,6 +172,8 @@ void OpenGLEngine::initGL()
     glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+    glEnable(GL_LIGHTING);
+
 
     glClearColor(0, 0, 0, 0);                   // background color
     glClearStencil(0);                          // clear stencil buffer
@@ -223,6 +229,7 @@ bool OpenGLEngine::initGLSL()
 
     // get uniform/attrib locations
     glUseProgram(progId);
+
     uniformMatrixModelView           = glGetUniformLocation(progId, "matrixModelView");
     uniformMatrixModelViewProjection = glGetUniformLocation(progId, "matrixModelViewProjection");
     uniformMatrixNormal              = glGetUniformLocation(progId, "matrixNormal");
@@ -241,7 +248,7 @@ bool OpenGLEngine::initGLSL()
     attribVertexTexCoord = glGetAttribLocation(progId, "vertexTexCoord");
 
     // set uniform values
-    float lightPosition[] = {-2, 0, 1, 0};
+    //float lightPosition[] = {-2, 0, 1, 0};
     float lightAmbient[]  = {0.0f, 0.1f, 0.3f, 1};
     float lightDiffuse[]  = {0.7f, 0.7f, 0.7f, 1};
     float lightSpecular[] = {1.0f, 1.0f, 1.0f, 1};
@@ -250,7 +257,7 @@ bool OpenGLEngine::initGLSL()
     float materialSpecular[] = {0.4f, 0.4f, 0.4f, 0};
     float materialShininess  = 16;
 
-    glUniform4fv(uniformLightPosition, 1, lightPosition);
+    // glUniform4fv(uniformLightPosition, 1, lightPosition);
     glUniform4fv(uniformLightAmbient, 1, lightAmbient);
     glUniform4fv(uniformLightDiffuse, 1, lightDiffuse);
     glUniform4fv(uniformLightSpecular, 1, lightSpecular);
@@ -258,8 +265,13 @@ bool OpenGLEngine::initGLSL()
     glUniform4fv(uniformMaterialDiffuse, 1, materialDiffuse);
     glUniform4fv(uniformMaterialSpecular, 1, materialSpecular);
     glUniform1f(uniformMaterialShininess, materialShininess);
+    
     glUniform1i(uniformMap0, 0);
     glUniform1i(uniformTextureUsed, 1);
+
+    // Directional light setup
+    float lightDir[] = {-1.0f, 0.0f, .5f, 0.0f};
+    glUniform4fv(glGetUniformLocation(progId, "lightPosition"), 1, lightDir);
 
     // unbind GLSL
     glUseProgram(0);
@@ -691,8 +703,6 @@ void OpenGLEngine::mouseButtonCallback(GLFWwindow* window, int button, int actio
 {
     // remember mouse position
     glfwGetCursorPos(window, &mouseX, &mouseY);
-
-    std::cout << "True Callback" << std::endl;
 
     if(button == GLFW_MOUSE_BUTTON_LEFT)
     {
