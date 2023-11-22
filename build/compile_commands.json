@@ -19,6 +19,12 @@
 },
 {
   "directory": "D:/C++/COP3530/Project 3/SpaceDebrisTracker/build",
+  "command": "C:\\mingw\\bin\\g++.exe  @CMakeFiles/space-debris-tracker.dir/includes_CXX.rsp -g -std=c++1z -o CMakeFiles\\space-debris-tracker.dir\\src\\OpenGLEngine.cpp.obj -c \"D:\\C++\\COP3530\\Project 3\\SpaceDebrisTracker\\src\\OpenGLEngine.cpp\"",
+  "file": "D:/C++/COP3530/Project 3/SpaceDebrisTracker/src/OpenGLEngine.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.obj"
+},
+{
+  "directory": "D:/C++/COP3530/Project 3/SpaceDebrisTracker/build",
   "command": "C:\\mingw\\bin\\g++.exe  @CMakeFiles/space-debris-tracker.dir/includes_CXX.rsp -g -std=c++1z -o CMakeFiles\\space-debris-tracker.dir\\src\\Sphere.cpp.obj -c \"D:\\C++\\COP3530\\Project 3\\SpaceDebrisTracker\\src\\Sphere.cpp\"",
   "file": "D:/C++/COP3530/Project 3/SpaceDebrisTracker/src/Sphere.cpp",
   "output": "CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.obj"

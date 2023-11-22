@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.obj.d"
   "CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.obj"
   "CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.obj.d"
+  "CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.obj"
+  "CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.obj.d"
   "CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.obj"
   "CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.obj.d"
   "CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.obj"
