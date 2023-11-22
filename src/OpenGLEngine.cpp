@@ -66,13 +66,6 @@ void OpenGLEngine::init() {
     // glGenBuffers(1, &vertex_buffer);
     // glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
- 
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-    ImGui::StyleColorsDark();
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 330");
 
     initGL();
     initGLSL();
@@ -88,7 +81,7 @@ void OpenGLEngine::init() {
     glfwSetErrorCallback(errorCallback);
 
     // load BMP image
-    texId = loadTexture("earth_8k.bmp", true);
+    texId = loadTexture("earth2048.bmp", true);
     if(texId)
     {
         std::cout << "Loaded a texture: ID=" << texId << std::endl;
@@ -104,6 +97,13 @@ void OpenGLEngine::init() {
     const GLubyte* version = glGetString(GL_VERSION); // version as a string
     std::cout << "Renderer: " << renderer << std::endl;
     std::cout << "OpenGL version supported: " << version << std::endl;
+
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
 
     glfwSwapInterval(1);
 }
@@ -704,7 +704,9 @@ void OpenGLEngine::mouseButtonCallback(GLFWwindow* window, int button, int actio
     // remember mouse position
     glfwGetCursorPos(window, &mouseX, &mouseY);
 
-    if(button == GLFW_MOUSE_BUTTON_LEFT)
+    ImGuiIO& io = ImGui::GetIO();
+
+    if(button == GLFW_MOUSE_BUTTON_LEFT && !io.WantCaptureMouse)
     {
         if(action == GLFW_PRESS)
             mouseLeftDown = true;

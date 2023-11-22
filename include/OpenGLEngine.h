@@ -1,3 +1,6 @@
+// https://github.com/ocornut/imgui
+#include "imgui.h"
+
 // http://www.songho.ca/opengl/gl_sphere.html
 #include "Sphere.h"
 #include "Bmp.h"
@@ -143,8 +146,9 @@ class OpenGLEngine {
     layout(location=0) in vec3 vertexPosition;
     layout(location=1) in vec3 vertexNormal;
     layout(location=2) in vec2 vertexTexCoord;
+
     // varyings (output)
-    out vec3 lightDirection;
+    // out vec3 lightDirection;
     out vec3 esVertex;
     out vec3 esNormal;
     out vec2 texCoord0;
