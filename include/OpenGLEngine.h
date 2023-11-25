@@ -21,6 +21,13 @@ class OpenGLEngine {
     // Constructor
     OpenGLEngine();
 
+    // ImGUI
+    char day[3];
+    char month[3];
+    char year[5];
+
+    float* sunAngle;
+
     // function prototypes
     void init();
 
@@ -116,7 +123,8 @@ class OpenGLEngine {
     GLint uniformMatrixModelView;
     GLint uniformMatrixModelViewProjection;
     GLint uniformMatrixNormal;
-    GLint uniformLightPosition;
+    // GLint uniformLightPosition;
+    GLint uniformLightDirection;
     GLint uniformLightAmbient;
     GLint uniformLightDiffuse;
     GLint uniformLightSpecular;
@@ -166,7 +174,7 @@ class OpenGLEngine {
     // GLSL version (OpenGL 3.3)
     #version 330
     // uniforms
-    uniform vec4 lightPosition;             // should be in the eye space
+    //uniform vec4 lightPosition;             // should be in the eye space
     uniform vec4 lightAmbient;              // light ambient color
     uniform vec4 lightDiffuse;              // light diffuse color
     uniform vec4 lightSpecular;             // light specular color
@@ -176,10 +184,14 @@ class OpenGLEngine {
     uniform float materialShininess;        // material specular shininess
     uniform sampler2D map0;                 // texture map #1
     uniform bool textureUsed;               // flag for texture
+    
     // varyings (input)
     in vec3 esVertex;
     in vec3 esNormal;
     in vec2 texCoord0;
+
+    uniform vec4 lightDirection;
+
     // output
     out vec4 fragColor;
     void main()
@@ -187,14 +199,25 @@ class OpenGLEngine {
         vec3 normal = normalize(esNormal);
         vec3 light;
 
-        if(lightPosition.w == 0.0)
+        vec4 lightDir = normalize(-lightDirection);
+
+        if(lightDirection.w == 0.0)
         {
-            light = normalize(lightPosition.xyz);
+            light = normalize(lightDirection.xyz);
         }
         else
         {
-            light = normalize(lightPosition.xyz - esVertex);
+            light = normalize(lightDirection.xyz - esVertex);
         }
+
+        // if(lightPosition.w == 0.0)
+        // {
+        //     light = normalize(lightPosition.xyz);
+        // }
+        // else
+        // {
+        //     light = normalize(lightPosition.xyz - esVertex);
+        // }
 
         vec3 view = normalize(-esVertex);
         vec3 reflectVec = reflect(-light, normal);  // 2 * N * (N dot L) - L

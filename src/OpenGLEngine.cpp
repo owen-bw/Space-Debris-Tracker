@@ -28,14 +28,17 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <string>
 
 #include "OpenGLEngine.h"
+#include "Vectors.h"
 
 // Constructor
 OpenGLEngine::OpenGLEngine() {
     Sphere newSphere(1.0f, 128, 64, true, 2);
 
     earth = newSphere;
+    sunAngle = new float(0.0f);
 }
 
 // Initialize OpenGL
@@ -233,7 +236,7 @@ bool OpenGLEngine::initGLSL()
     uniformMatrixModelView           = glGetUniformLocation(progId, "matrixModelView");
     uniformMatrixModelViewProjection = glGetUniformLocation(progId, "matrixModelViewProjection");
     uniformMatrixNormal              = glGetUniformLocation(progId, "matrixNormal");
-    uniformLightPosition             = glGetUniformLocation(progId, "lightPosition");
+    // uniformLightPosition             = glGetUniformLocation(progId, "lightPosition");
     uniformLightAmbient              = glGetUniformLocation(progId, "lightAmbient");
     uniformLightDiffuse              = glGetUniformLocation(progId, "lightDiffuse");
     uniformLightSpecular             = glGetUniformLocation(progId, "lightSpecular");
@@ -247,8 +250,11 @@ bool OpenGLEngine::initGLSL()
     attribVertexNormal   = glGetAttribLocation(progId, "vertexNormal");
     attribVertexTexCoord = glGetAttribLocation(progId, "vertexTexCoord");
 
+    uniformLightDirection = glGetUniformLocation(progId, "lightDirection");
+
     // set uniform values
     //float lightPosition[] = {-2, 0, 1, 0};
+    float lightDirection[] = {-1.0, 0.0, 1.0, 0.0};
     float lightAmbient[]  = {0.0f, 0.1f, 0.3f, 1};
     float lightDiffuse[]  = {0.7f, 0.7f, 0.7f, 1};
     float lightSpecular[] = {1.0f, 1.0f, 1.0f, 1};
@@ -258,6 +264,7 @@ bool OpenGLEngine::initGLSL()
     float materialShininess  = 16;
 
     // glUniform4fv(uniformLightPosition, 1, lightPosition);
+    glUniform4fv(uniformLightDirection, 1, lightDirection);
     glUniform4fv(uniformLightAmbient, 1, lightAmbient);
     glUniform4fv(uniformLightDiffuse, 1, lightDiffuse);
     glUniform4fv(uniformLightSpecular, 1, lightSpecular);
@@ -269,9 +276,7 @@ bool OpenGLEngine::initGLSL()
     glUniform1i(uniformMap0, 0);
     glUniform1i(uniformTextureUsed, 1);
 
-    // Directional light setup
-    float lightDir[] = {-1.0f, 0.0f, .5f, 0.0f};
-    glUniform4fv(glGetUniformLocation(progId, "lightPosition"), 1, lightDir);
+    // glUniform4fv(glGetUniformLocation(progId, "lightDirection"), 1, lightDir);
 
     // unbind GLSL
     glUseProgram(0);
@@ -593,11 +598,28 @@ void OpenGLEngine::frame(double frameTime)
     Matrix4 matrixModelViewProjection = matrixProjection * matrixModelView;
     Matrix4 matrixNormal = matrixModelView;
 
+    // float lightDir[] = {*sunAngle, 0.0f, -*sunAngle, 0.0f};
+    int lightSector = *sunAngle / 90;
+    int lightAmount = static_cast<int>(*sunAngle) % 90;
+
+    
+
     // set matric uniforms for right sphere
     matrixModelView = matrixView * matrixModel3;
     matrixModelViewProjection = matrixProjection * matrixModelView;
     matrixNormal = matrixModelView;
     matrixNormal.setColumn(3, Vector4(0,0,0,1));
+
+    // Calculate Light Direction
+    float radians = *sunAngle * 3.1416 / 180.0;
+    float radiansX = abs(cameraAngleX) * 3.1416 / 180.0;
+    float radiansY = cameraAngleY * 3.1416 / 180.0;
+
+    float weight = cameraAngleX / 90.0;
+
+    float lightDir[] = {cos(radians - radiansY), sin(radians - radiansY) * -weight, sin(radians - radiansY) * (1 - abs(weight)), 0.0f};
+    glUniform4fv(glGetUniformLocation(progId, "lightDirection"), 1, lightDir);
+
     glUniformMatrix4fv(uniformMatrixModelView, 1, false, matrixModelView.get());
     glUniformMatrix4fv(uniformMatrixModelViewProjection, 1, false, matrixModelViewProjection.get());
     glUniformMatrix4fv(uniformMatrixNormal, 1, false, matrixNormal.get());
@@ -617,7 +639,7 @@ void OpenGLEngine::frame(double frameTime)
     glBindVertexArray(0);
     glUseProgram(0);
 
-    showInfo();
+    //showInfo();
 
     // GUI
     ImGui_ImplOpenGL3_NewFrame();
@@ -625,7 +647,16 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::NewFrame();
 
     ImGui::Begin("Test Window");
-    ImGui::Text("Test");
+    ImGui::Text("Space Debris Tracker");
+    ImGui::Text(std::to_string(cameraAngleX).c_str());
+    ImGui::Text(std::to_string(cameraAngleY).c_str());
+    ImGui::Text(std::to_string(weight).c_str());
+    ImGui::Text("Input Date (DD/MM/YYYY)");
+    ImGui::InputText("Day", day, 3);
+    ImGui::InputText("Month", month, 3);
+    ImGui::InputText("Year", year, 5);
+    ImGui::Button("Go");
+    ImGui::SliderFloat("Sun Angle", this->sunAngle, 0.0f, 359.9f, "%.1f");
     ImGui::End();
 
     ImGui::Render();
@@ -735,6 +766,13 @@ void OpenGLEngine::cursorPosCallback(GLFWwindow* window, double x, double y)
     {
         cameraAngleY += (x - mouseX);
         cameraAngleX += (y - mouseY);
+
+        if (cameraAngleX > 90.0) {
+            cameraAngleX = 90.0;
+        }
+        if (cameraAngleX < -90.0) {
+            cameraAngleX = -90.0;
+        }
         mouseX = x;
         mouseY = y;
     }
