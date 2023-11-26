@@ -82,6 +82,8 @@ void OpenGLEngine::init() {
     glfwSetMouseButtonCallback(window, mouseButtonCallbackWrapper);
     glfwSetCursorPosCallback(window, cursorPosCallbackWrapper);
     glfwSetErrorCallback(errorCallback);
+    glfwSetScrollCallback(window, scrollCallbackWrapper);
+
 
     // load BMP image
     texId = loadTexture("earth2048.bmp", true);
@@ -639,7 +641,7 @@ void OpenGLEngine::frame(double frameTime)
     glBindVertexArray(0);
     glUseProgram(0);
 
-    //showInfo();
+    showInfo();
 
     // GUI
     ImGui_ImplOpenGL3_NewFrame();
@@ -691,6 +693,8 @@ void OpenGLEngine::framebufferSizeCallback(GLFWwindow* window, int w, int h)
     std::cout << "Framebuffer resized: " << fbWidth << "x" << fbHeight
               << " (Window: " << windowWidth << "x" << windowHeight << ")" << std::endl;
 }
+
+
 
 void OpenGLEngine::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -780,5 +784,14 @@ void OpenGLEngine::cursorPosCallback(GLFWwindow* window, double x, double y)
     {
         cameraDistance -= (y - mouseY) * 0.2f;
         mouseY = y;
+    }
+}
+
+void OpenGLEngine::scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
+    if (yoffset) {
+        cameraDistance += yoffset * 0.2f;
+        if (cameraDistance < 2.0) {
+            cameraDistance = 2.0;
+        }
     }
 }

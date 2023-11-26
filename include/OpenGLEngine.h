@@ -57,6 +57,7 @@ class OpenGLEngine {
     void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
     void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
     void cursorPosCallback(GLFWwindow* window, double x, double y);
+    void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
     
     static void framebufferSizeCallbackWrapper(GLFWwindow* window, int width, int height) {
         OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
@@ -83,6 +84,13 @@ class OpenGLEngine {
         OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
         if (engine) {
             engine->cursorPosCallback(window, x, y);
+        }
+    }
+
+    static void scrollCallbackWrapper(GLFWwindow* window, double xoffset, double yoffset) {
+        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
+        if (engine) {
+            engine->scrollCallback(window, xoffset, yoffset);
         }
     }
 
