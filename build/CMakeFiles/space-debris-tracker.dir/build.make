@@ -69,10 +69,136 @@ include CMakeFiles/space-debris-tracker.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/space-debris-tracker.dir/flags.make
 
+CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/AstroFuncDll.c
+CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/AstroFuncDll.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/AstroFuncDll.c" > CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/AstroFuncDll.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.s
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/DllMainDll.c
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll.c" > CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.s
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/DllMainDll_Service.c
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll_Service.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll_Service.c" > CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll_Service.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.s
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/DllUtils.c
+CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllUtils.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllUtils.c" > CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllUtils.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.s
+
+CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/EnvConstDll.c
+CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/EnvConstDll.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/EnvConstDll.c" > CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/EnvConstDll.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.s
+
+CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/Sgp4PropDll.c
+CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/Sgp4PropDll.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/Sgp4PropDll.c" > CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/Sgp4PropDll.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.s
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/TimeFuncDll.c
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll.c" > CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.s
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/TimeFuncDll_Service.c
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll_Service.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll_Service.c" > CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll_Service.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.s
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
+CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/include/tle/TleDll.c
+CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o -MF CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o.d -o CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TleDll.c"
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TleDll.c" > CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.i
+
+CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TleDll.c" -o CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.s
+
 CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/BitmapFontData.cpp
 CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/BitmapFontData.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.i: cmake_force
@@ -86,7 +212,7 @@ CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Bmp.cpp
 CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Bmp.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.i: cmake_force
@@ -100,7 +226,7 @@ CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Matrices.cpp
 CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Matrices.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.i: cmake_force
@@ -114,7 +240,7 @@ CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/OpenGLEngine.cpp
 CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/OpenGLEngine.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.i: cmake_force
@@ -128,7 +254,7 @@ CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Sphere.cpp
 CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Sphere.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.i: cmake_force
@@ -142,7 +268,7 @@ CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Timer.cpp
 CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Timer.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.i: cmake_force
@@ -156,7 +282,7 @@ CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/Tokenizer.cpp
 CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Tokenizer.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.i: cmake_force
@@ -170,7 +296,7 @@ CMakeFiles/space-debris-tracker.dir/src/Tokenizer.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/gl.c.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/gl.c.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/gl.c
 CMakeFiles/space-debris-tracker.dir/src/gl.c.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/space-debris-tracker.dir/src/gl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/space-debris-tracker.dir/src/gl.c.o"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/gl.c.o -MF CMakeFiles/space-debris-tracker.dir/src/gl.c.o.d -o CMakeFiles/space-debris-tracker.dir/src/gl.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/gl.c"
 
 CMakeFiles/space-debris-tracker.dir/src/gl.c.i: cmake_force
@@ -184,7 +310,7 @@ CMakeFiles/space-debris-tracker.dir/src/gl.c.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.i: cmake_force
@@ -198,7 +324,7 @@ CMakeFiles/space-debris-tracker.dir/src/imgui.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_demo.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_demo.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.i: cmake_force
@@ -212,7 +338,7 @@ CMakeFiles/space-debris-tracker.dir/src/imgui_demo.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_draw.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_draw.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.i: cmake_force
@@ -226,7 +352,7 @@ CMakeFiles/space-debris-tracker.dir/src/imgui_draw.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_impl_glfw.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_impl_glfw.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.i: cmake_force
@@ -240,7 +366,7 @@ CMakeFiles/space-debris-tracker.dir/src/imgui_impl_glfw.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_impl_opengl3.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_impl_opengl3.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.i: cmake_force
@@ -254,7 +380,7 @@ CMakeFiles/space-debris-tracker.dir/src/imgui_impl_opengl3.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_tables.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_tables.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.i: cmake_force
@@ -268,7 +394,7 @@ CMakeFiles/space-debris-tracker.dir/src/imgui_tables.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/imgui_widgets.cpp
 CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/imgui_widgets.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.i: cmake_force
@@ -282,7 +408,7 @@ CMakeFiles/space-debris-tracker.dir/src/imgui_widgets.cpp.s: cmake_force
 CMakeFiles/space-debris-tracker.dir/src/main.cpp.o: CMakeFiles/space-debris-tracker.dir/flags.make
 CMakeFiles/space-debris-tracker.dir/src/main.cpp.o: /Users/blake/projects/cpp/COP3530/Project\ 3/Space-Debris-Tracker/src/main.cpp
 CMakeFiles/space-debris-tracker.dir/src/main.cpp.o: CMakeFiles/space-debris-tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/space-debris-tracker.dir/src/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-debris-tracker.dir/src/main.cpp.o -MF CMakeFiles/space-debris-tracker.dir/src/main.cpp.o.d -o CMakeFiles/space-debris-tracker.dir/src/main.cpp.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/main.cpp"
 
 CMakeFiles/space-debris-tracker.dir/src/main.cpp.i: cmake_force
@@ -295,6 +421,15 @@ CMakeFiles/space-debris-tracker.dir/src/main.cpp.s: cmake_force
 
 # Object files for target space-debris-tracker
 space__debris__tracker_OBJECTS = \
+"CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o" \
+"CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o" \
+"CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o" \
+"CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o" \
+"CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o" \
+"CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o" \
+"CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o" \
+"CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o" \
+"CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o" \
 "CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o" \
 "CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o" \
 "CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o" \
@@ -315,6 +450,15 @@ space__debris__tracker_OBJECTS = \
 # External object files for target space-debris-tracker
 space__debris__tracker_EXTERNAL_OBJECTS =
 
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o
+space-debris-tracker: CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o
@@ -334,7 +478,7 @@ space-debris-tracker: CMakeFiles/space-debris-tracker.dir/src/main.cpp.o
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/build.make
 space-debris-tracker: /usr/local/lib/libglfw3.a
 space-debris-tracker: CMakeFiles/space-debris-tracker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable space-debris-tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable space-debris-tracker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/space-debris-tracker.dir/link.txt --verbose=$(VERBOSE)
 	./space-debris-tracker
 

@@ -129,6 +129,222 @@ space-debris-tracker/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/build
 .PHONY : space-debris-tracker/fast
 
+include/tle/AstroFuncDll.o: include/tle/AstroFuncDll.c.o
+.PHONY : include/tle/AstroFuncDll.o
+
+# target to build an object file
+include/tle/AstroFuncDll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o
+.PHONY : include/tle/AstroFuncDll.c.o
+
+include/tle/AstroFuncDll.i: include/tle/AstroFuncDll.c.i
+.PHONY : include/tle/AstroFuncDll.i
+
+# target to preprocess a source file
+include/tle/AstroFuncDll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.i
+.PHONY : include/tle/AstroFuncDll.c.i
+
+include/tle/AstroFuncDll.s: include/tle/AstroFuncDll.c.s
+.PHONY : include/tle/AstroFuncDll.s
+
+# target to generate assembly for a file
+include/tle/AstroFuncDll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.s
+.PHONY : include/tle/AstroFuncDll.c.s
+
+include/tle/DllMainDll.o: include/tle/DllMainDll.c.o
+.PHONY : include/tle/DllMainDll.o
+
+# target to build an object file
+include/tle/DllMainDll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o
+.PHONY : include/tle/DllMainDll.c.o
+
+include/tle/DllMainDll.i: include/tle/DllMainDll.c.i
+.PHONY : include/tle/DllMainDll.i
+
+# target to preprocess a source file
+include/tle/DllMainDll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.i
+.PHONY : include/tle/DllMainDll.c.i
+
+include/tle/DllMainDll.s: include/tle/DllMainDll.c.s
+.PHONY : include/tle/DllMainDll.s
+
+# target to generate assembly for a file
+include/tle/DllMainDll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.s
+.PHONY : include/tle/DllMainDll.c.s
+
+include/tle/DllMainDll_Service.o: include/tle/DllMainDll_Service.c.o
+.PHONY : include/tle/DllMainDll_Service.o
+
+# target to build an object file
+include/tle/DllMainDll_Service.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o
+.PHONY : include/tle/DllMainDll_Service.c.o
+
+include/tle/DllMainDll_Service.i: include/tle/DllMainDll_Service.c.i
+.PHONY : include/tle/DllMainDll_Service.i
+
+# target to preprocess a source file
+include/tle/DllMainDll_Service.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.i
+.PHONY : include/tle/DllMainDll_Service.c.i
+
+include/tle/DllMainDll_Service.s: include/tle/DllMainDll_Service.c.s
+.PHONY : include/tle/DllMainDll_Service.s
+
+# target to generate assembly for a file
+include/tle/DllMainDll_Service.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.s
+.PHONY : include/tle/DllMainDll_Service.c.s
+
+include/tle/DllUtils.o: include/tle/DllUtils.c.o
+.PHONY : include/tle/DllUtils.o
+
+# target to build an object file
+include/tle/DllUtils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o
+.PHONY : include/tle/DllUtils.c.o
+
+include/tle/DllUtils.i: include/tle/DllUtils.c.i
+.PHONY : include/tle/DllUtils.i
+
+# target to preprocess a source file
+include/tle/DllUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.i
+.PHONY : include/tle/DllUtils.c.i
+
+include/tle/DllUtils.s: include/tle/DllUtils.c.s
+.PHONY : include/tle/DllUtils.s
+
+# target to generate assembly for a file
+include/tle/DllUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.s
+.PHONY : include/tle/DllUtils.c.s
+
+include/tle/EnvConstDll.o: include/tle/EnvConstDll.c.o
+.PHONY : include/tle/EnvConstDll.o
+
+# target to build an object file
+include/tle/EnvConstDll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o
+.PHONY : include/tle/EnvConstDll.c.o
+
+include/tle/EnvConstDll.i: include/tle/EnvConstDll.c.i
+.PHONY : include/tle/EnvConstDll.i
+
+# target to preprocess a source file
+include/tle/EnvConstDll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.i
+.PHONY : include/tle/EnvConstDll.c.i
+
+include/tle/EnvConstDll.s: include/tle/EnvConstDll.c.s
+.PHONY : include/tle/EnvConstDll.s
+
+# target to generate assembly for a file
+include/tle/EnvConstDll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.s
+.PHONY : include/tle/EnvConstDll.c.s
+
+include/tle/Sgp4PropDll.o: include/tle/Sgp4PropDll.c.o
+.PHONY : include/tle/Sgp4PropDll.o
+
+# target to build an object file
+include/tle/Sgp4PropDll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o
+.PHONY : include/tle/Sgp4PropDll.c.o
+
+include/tle/Sgp4PropDll.i: include/tle/Sgp4PropDll.c.i
+.PHONY : include/tle/Sgp4PropDll.i
+
+# target to preprocess a source file
+include/tle/Sgp4PropDll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.i
+.PHONY : include/tle/Sgp4PropDll.c.i
+
+include/tle/Sgp4PropDll.s: include/tle/Sgp4PropDll.c.s
+.PHONY : include/tle/Sgp4PropDll.s
+
+# target to generate assembly for a file
+include/tle/Sgp4PropDll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.s
+.PHONY : include/tle/Sgp4PropDll.c.s
+
+include/tle/TimeFuncDll.o: include/tle/TimeFuncDll.c.o
+.PHONY : include/tle/TimeFuncDll.o
+
+# target to build an object file
+include/tle/TimeFuncDll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o
+.PHONY : include/tle/TimeFuncDll.c.o
+
+include/tle/TimeFuncDll.i: include/tle/TimeFuncDll.c.i
+.PHONY : include/tle/TimeFuncDll.i
+
+# target to preprocess a source file
+include/tle/TimeFuncDll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.i
+.PHONY : include/tle/TimeFuncDll.c.i
+
+include/tle/TimeFuncDll.s: include/tle/TimeFuncDll.c.s
+.PHONY : include/tle/TimeFuncDll.s
+
+# target to generate assembly for a file
+include/tle/TimeFuncDll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.s
+.PHONY : include/tle/TimeFuncDll.c.s
+
+include/tle/TimeFuncDll_Service.o: include/tle/TimeFuncDll_Service.c.o
+.PHONY : include/tle/TimeFuncDll_Service.o
+
+# target to build an object file
+include/tle/TimeFuncDll_Service.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o
+.PHONY : include/tle/TimeFuncDll_Service.c.o
+
+include/tle/TimeFuncDll_Service.i: include/tle/TimeFuncDll_Service.c.i
+.PHONY : include/tle/TimeFuncDll_Service.i
+
+# target to preprocess a source file
+include/tle/TimeFuncDll_Service.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.i
+.PHONY : include/tle/TimeFuncDll_Service.c.i
+
+include/tle/TimeFuncDll_Service.s: include/tle/TimeFuncDll_Service.c.s
+.PHONY : include/tle/TimeFuncDll_Service.s
+
+# target to generate assembly for a file
+include/tle/TimeFuncDll_Service.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.s
+.PHONY : include/tle/TimeFuncDll_Service.c.s
+
+include/tle/TleDll.o: include/tle/TleDll.c.o
+.PHONY : include/tle/TleDll.o
+
+# target to build an object file
+include/tle/TleDll.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o
+.PHONY : include/tle/TleDll.c.o
+
+include/tle/TleDll.i: include/tle/TleDll.c.i
+.PHONY : include/tle/TleDll.i
+
+# target to preprocess a source file
+include/tle/TleDll.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.i
+.PHONY : include/tle/TleDll.c.i
+
+include/tle/TleDll.s: include/tle/TleDll.c.s
+.PHONY : include/tle/TleDll.s
+
+# target to generate assembly for a file
+include/tle/TleDll.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.s
+.PHONY : include/tle/TleDll.c.s
+
 src/BitmapFontData.o: src/BitmapFontData.cpp.o
 .PHONY : src/BitmapFontData.o
 
@@ -522,6 +738,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... space-debris-tracker"
+	@echo "... include/tle/AstroFuncDll.o"
+	@echo "... include/tle/AstroFuncDll.i"
+	@echo "... include/tle/AstroFuncDll.s"
+	@echo "... include/tle/DllMainDll.o"
+	@echo "... include/tle/DllMainDll.i"
+	@echo "... include/tle/DllMainDll.s"
+	@echo "... include/tle/DllMainDll_Service.o"
+	@echo "... include/tle/DllMainDll_Service.i"
+	@echo "... include/tle/DllMainDll_Service.s"
+	@echo "... include/tle/DllUtils.o"
+	@echo "... include/tle/DllUtils.i"
+	@echo "... include/tle/DllUtils.s"
+	@echo "... include/tle/EnvConstDll.o"
+	@echo "... include/tle/EnvConstDll.i"
+	@echo "... include/tle/EnvConstDll.s"
+	@echo "... include/tle/Sgp4PropDll.o"
+	@echo "... include/tle/Sgp4PropDll.i"
+	@echo "... include/tle/Sgp4PropDll.s"
+	@echo "... include/tle/TimeFuncDll.o"
+	@echo "... include/tle/TimeFuncDll.i"
+	@echo "... include/tle/TimeFuncDll.s"
+	@echo "... include/tle/TimeFuncDll_Service.o"
+	@echo "... include/tle/TimeFuncDll_Service.i"
+	@echo "... include/tle/TimeFuncDll_Service.s"
+	@echo "... include/tle/TleDll.o"
+	@echo "... include/tle/TleDll.i"
+	@echo "... include/tle/TleDll.s"
 	@echo "... src/BitmapFontData.o"
 	@echo "... src/BitmapFontData.i"
 	@echo "... src/BitmapFontData.s"

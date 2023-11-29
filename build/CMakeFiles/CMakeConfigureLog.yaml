@@ -4,600 +4,6 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      The system is: Windows - 10.0.19045 - AMD64
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/mingw/bin/gcc.exe 
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      0
-      
-      
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
-      
-      The C compiler identification is GNU, found in:
-        D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/3.27.1/CompilerIdC/a.exe
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/mingw/bin/g++.exe 
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      0
-      
-      
-      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
-      
-      The CXX compiler identification is GNU, found in:
-        D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/3.27.1/CompilerIdCXX/a.exe
-      
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    checks:
-      - "Detecting C compiler ABI info"
-    directories:
-      source: "D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-qdlwp6"
-      binary: "D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-qdlwp6"
-    cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_C_ABI_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-qdlwp6'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw/bin/mingw32-make.exe -f Makefile cmTC_a864c/fast
-        C:/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a864c.dir\\build.make CMakeFiles/cmTC_a864c.dir/build
-        mingw32-make.exe[1]: Entering directory 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-qdlwp6'
-        Building C object CMakeFiles/cmTC_a864c.dir/CMakeCCompilerABI.c.obj
-        C:\\mingw\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
-        Using built-in specs.
-        COLLECT_GCC=C:\\mingw\\bin\\gcc.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../../../src/gcc-7.3.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 --enable-shared --enable-static --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/lib -L/c/mingw730/prerequisites/x86_64-zlib-static/lib -L/c/mingw730/prerequisites/x86_64-w64-mingw32-static/lib '
-        Thread model: win32
-        gcc version 7.3.0 (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona'
-         C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/cc1.exe -quiet -v -iprefix C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=core2 -march=nocona -auxbase-strip CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj -version -o C:\\Users\\Blake\\AppData\\Local\\Temp\\cc0mwr1P.s
-        GNU C11 (x86_64-win32-seh-rev0, Built by MinGW-W64 project) version 7.3.0 (x86_64-w64-mingw32)
-        	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include"
-        ignoring nonexistent directory "C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64C:/msys64-2/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../include"
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"
-        ignoring nonexistent directory "C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/mingw/include"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include
-        End of search list.
-        GNU C11 (x86_64-win32-seh-rev0, Built by MinGW-W64 project) version 7.3.0 (x86_64-w64-mingw32)
-        	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        Compiler executable checksum: d4c969c5da48384c0111fd638b9c2cb3
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona'
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj C:\\Users\\Blake\\AppData\\Local\\Temp\\cc0mwr1P.s
-        GNU assembler version 2.30 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.30
-        COMPILER_PATH=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/;C:/mingw/bin/../libexec/gcc/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/
-        LIBRARY_PATH=C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/;C:/mingw/bin/../lib/gcc/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona'
-        Linking C executable cmTC_a864c.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a864c.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_a864c.dir/objects.a
-        C:\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_a864c.dir/objects.a @CMakeFiles\\cmTC_a864c.dir\\objects1.rsp
-        C:\\mingw\\bin\\gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_a864c.dir/objects.a -Wl,--no-whole-archive -o cmTC_a864c.exe -Wl,--out-implib,libcmTC_a864c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
-        Using built-in specs.
-        COLLECT_GCC=C:\\mingw\\bin\\gcc.exe
-        COLLECT_LTO_WRAPPER=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../../../src/gcc-7.3.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 --enable-shared --enable-static --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/lib -L/c/mingw730/prerequisites/x86_64-zlib-static/lib -L/c/mingw730/prerequisites/x86_64-w64-mingw32-static/lib '
-        Thread model: win32
-        gcc version 7.3.0 (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 
-        COMPILER_PATH=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/;C:/mingw/bin/../libexec/gcc/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/
-        LIBRARY_PATH=C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/;C:/mingw/bin/../lib/gcc/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a864c.exe' '-mtune=core2' '-march=nocona'
-         C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/collect2.exe -plugin C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/liblto_plugin-0.dll -plugin-opt=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Blake\\AppData\\Local\\Temp\\cckhahpV.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt --sysroot=C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_a864c.exe C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0 -LC:/mingw/bin/../lib/gcc -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../.. --whole-archive CMakeFiles\\cmTC_a864c.dir/objects.a --no-whole-archive --out-implib libcmTC_a864c.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a864c.exe' '-mtune=core2' '-march=nocona'
-        mingw32-make.exe[1]: Leaving directory 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-qdlwp6'
-        
-      exitCode: 0
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Parsed C implicit include dir info: rv=done
-        found start of include info
-        found start of implicit include info
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include]
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed]
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include]
-        end of search list found
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include]
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed]
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include] ==> [C:/mingw/x86_64-w64-mingw32/include]
-        implicit include dirs: [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed;C:/mingw/x86_64-w64-mingw32/include]
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-qdlwp6']
-        ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw/bin/mingw32-make.exe -f Makefile cmTC_a864c/fast]
-        ignore line: [C:/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a864c.dir\\build.make CMakeFiles/cmTC_a864c.dir/build]
-        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-qdlwp6']
-        ignore line: [Building C object CMakeFiles/cmTC_a864c.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\mingw\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\mingw\\bin\\gcc.exe]
-        ignore line: [Target: x86_64-w64-mingw32]
-        ignore line: [Configured with: ../../../src/gcc-7.3.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 --enable-shared --enable-static --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/lib -L/c/mingw730/prerequisites/x86_64-zlib-static/lib -L/c/mingw730/prerequisites/x86_64-w64-mingw32-static/lib ']
-        ignore line: [Thread model: win32]
-        ignore line: [gcc version 7.3.0 (x86_64-win32-seh-rev0  Built by MinGW-W64 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona']
-        ignore line: [ C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/cc1.exe -quiet -v -iprefix C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=core2 -march=nocona -auxbase-strip CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj -version -o C:\\Users\\Blake\\AppData\\Local\\Temp\\cc0mwr1P.s]
-        ignore line: [GNU C11 (x86_64-win32-seh-rev0  Built by MinGW-W64 project) version 7.3.0 (x86_64-w64-mingw32)]
-        ignore line: [	compiled by GNU C version 7.3.0  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.18-GMP]
-        ignore line: []
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include"]
-        ignore line: [ignoring nonexistent directory "C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64C:/msys64-2/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../include"]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"]
-        ignore line: [ignoring nonexistent directory "C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/mingw/include"]
-        ignore line: [#include "..." search starts here:]
-        ignore line: [#include <...> search starts here:]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include]
-        ignore line: [End of search list.]
-        ignore line: [GNU C11 (x86_64-win32-seh-rev0  Built by MinGW-W64 project) version 7.3.0 (x86_64-w64-mingw32)]
-        ignore line: [	compiled by GNU C version 7.3.0  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.18-GMP]
-        ignore line: []
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [Compiler executable checksum: d4c969c5da48384c0111fd638b9c2cb3]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona']
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj C:\\Users\\Blake\\AppData\\Local\\Temp\\cc0mwr1P.s]
-        ignore line: [GNU assembler version 2.30 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.30]
-        ignore line: [COMPILER_PATH=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/]
-        ignore line: [C:/mingw/bin/../libexec/gcc/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/]
-        ignore line: [LIBRARY_PATH=C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/]
-        ignore line: [C:/mingw/bin/../lib/gcc/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a864c.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona']
-        ignore line: [Linking C executable cmTC_a864c.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a864c.dir\\link.txt --verbose=1]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_a864c.dir/objects.a]
-        ignore line: [C:\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_a864c.dir/objects.a @CMakeFiles\\cmTC_a864c.dir\\objects1.rsp]
-        ignore line: [C:\\mingw\\bin\\gcc.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_a864c.dir/objects.a -Wl --no-whole-archive -o cmTC_a864c.exe -Wl --out-implib libcmTC_a864c.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\mingw\\bin\\gcc.exe]
-        ignore line: [COLLECT_LTO_WRAPPER=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe]
-        ignore line: [Target: x86_64-w64-mingw32]
-        ignore line: [Configured with: ../../../src/gcc-7.3.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 --enable-shared --enable-static --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/lib -L/c/mingw730/prerequisites/x86_64-zlib-static/lib -L/c/mingw730/prerequisites/x86_64-w64-mingw32-static/lib ']
-        ignore line: [Thread model: win32]
-        ignore line: [gcc version 7.3.0 (x86_64-win32-seh-rev0  Built by MinGW-W64 project) ]
-        ignore line: [COMPILER_PATH=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/]
-        ignore line: [C:/mingw/bin/../libexec/gcc/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/]
-        ignore line: [LIBRARY_PATH=C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/]
-        ignore line: [C:/mingw/bin/../lib/gcc/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a864c.exe' '-mtune=core2' '-march=nocona']
-        link line: [ C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/collect2.exe -plugin C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/liblto_plugin-0.dll -plugin-opt=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Blake\\AppData\\Local\\Temp\\cckhahpV.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt --sysroot=C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_a864c.exe C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0 -LC:/mingw/bin/../lib/gcc -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../.. --whole-archive CMakeFiles\\cmTC_a864c.dir/objects.a --no-whole-archive --out-implib libcmTC_a864c.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o]
-          arg [C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/collect2.exe] ==> ignore
-          arg [-plugin] ==> ignore
-          arg [C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/liblto_plugin-0.dll] ==> ignore
-          arg [-plugin-opt=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\Blake\\AppData\\Local\\Temp\\cckhahpV.res] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
-          arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
-          arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
-          arg [-plugin-opt=-pass-through=-luser32] ==> ignore
-          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
-          arg [-plugin-opt=-pass-through=-liconv] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
-          arg [--sysroot=C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64] ==> ignore
-          arg [-m] ==> ignore
-          arg [i386pep] ==> ignore
-          arg [-Bdynamic] ==> search dynamic
-          arg [-o] ==> ignore
-          arg [cmTC_a864c.exe] ==> ignore
-          arg [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
-          arg [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o] ==> obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0]
-          arg [-LC:/mingw/bin/../lib/gcc] ==> dir [C:/mingw/bin/../lib/gcc]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../..] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../..]
-          arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_a864c.dir/objects.a] ==> ignore
-          arg [--no-whole-archive] ==> ignore
-          arg [--out-implib] ==> ignore
-          arg [libcmTC_a864c.dll.a] ==> ignore
-          arg [--major-image-version] ==> ignore
-          arg [0] ==> ignore
-          arg [--minor-image-version] ==> ignore
-          arg [0] ==> ignore
-          arg [-lmingw32] ==> lib [mingw32]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lgcc_eh] ==> lib [gcc_eh]
-          arg [-lmoldname] ==> lib [moldname]
-          arg [-lmingwex] ==> lib [mingwex]
-          arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [-ladvapi32] ==> lib [advapi32]
-          arg [-lshell32] ==> lib [shell32]
-          arg [-luser32] ==> lib [user32]
-          arg [-lkernel32] ==> lib [kernel32]
-          arg [-liconv] ==> lib [iconv]
-          arg [-lmingw32] ==> lib [mingw32]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lgcc_eh] ==> lib [gcc_eh]
-          arg [-lmoldname] ==> lib [moldname]
-          arg [-lmingwex] ==> lib [mingwex]
-          arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o] ==> obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o]
-        remove lib [gcc_eh]
-        remove lib [msvcrt]
-        remove lib [gcc_eh]
-        remove lib [msvcrt]
-        collapse obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/mingw/x86_64-w64-mingw32/lib/crt2.o]
-        collapse obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o]
-        collapse obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0]
-        collapse library dir [C:/mingw/bin/../lib/gcc] ==> [C:/mingw/lib/gcc]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/mingw/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib] ==> [C:/mingw/lib]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/mingw/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../..] ==> [C:/mingw/lib]
-        implicit libs: [mingw32;gcc;moldname;mingwex;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex]
-        implicit objs: [C:/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o]
-        implicit dirs: [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0;C:/mingw/lib/gcc;C:/mingw/x86_64-w64-mingw32/lib;C:/mingw/lib]
-        implicit fwks: []
-      
-      
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    checks:
-      - "Detecting CXX compiler ABI info"
-    directories:
-      source: "D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-ugbcc5"
-      binary: "D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-ugbcc5"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_CXX_ABI_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-ugbcc5'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw/bin/mingw32-make.exe -f Makefile cmTC_78203/fast
-        C:/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_78203.dir\\build.make CMakeFiles/cmTC_78203.dir/build
-        mingw32-make.exe[1]: Entering directory 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-ugbcc5'
-        Building CXX object CMakeFiles/cmTC_78203.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\mingw\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
-        Using built-in specs.
-        COLLECT_GCC=C:\\mingw\\bin\\g++.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../../../src/gcc-7.3.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 --enable-shared --enable-static --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/lib -L/c/mingw730/prerequisites/x86_64-zlib-static/lib -L/c/mingw730/prerequisites/x86_64-w64-mingw32-static/lib '
-        Thread model: win32
-        gcc version 7.3.0 (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona'
-         C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/cc1plus.exe -quiet -v -iprefix C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=core2 -march=nocona -auxbase-strip CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj -version -o C:\\Users\\Blake\\AppData\\Local\\Temp\\ccHMhvUn.s
-        GNU C++14 (x86_64-win32-seh-rev0, Built by MinGW-W64 project) version 7.3.0 (x86_64-w64-mingw32)
-        	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include"
-        ignoring nonexistent directory "C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64C:/msys64-2/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../include"
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"
-        ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"
-        ignoring nonexistent directory "C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/mingw/include"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include
-        End of search list.
-        GNU C++14 (x86_64-win32-seh-rev0, Built by MinGW-W64 project) version 7.3.0 (x86_64-w64-mingw32)
-        	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        Compiler executable checksum: 0a188eef8a5d0757d516bbf71573e0cd
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona'
-         C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Blake\\AppData\\Local\\Temp\\ccHMhvUn.s
-        GNU assembler version 2.30 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.30
-        COMPILER_PATH=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/;C:/mingw/bin/../libexec/gcc/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/
-        LIBRARY_PATH=C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/;C:/mingw/bin/../lib/gcc/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona'
-        Linking CXX executable cmTC_78203.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_78203.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_78203.dir/objects.a
-        C:\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_78203.dir/objects.a @CMakeFiles\\cmTC_78203.dir\\objects1.rsp
-        C:\\mingw\\bin\\g++.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_78203.dir/objects.a -Wl,--no-whole-archive -o cmTC_78203.exe -Wl,--out-implib,libcmTC_78203.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
-        Using built-in specs.
-        COLLECT_GCC=C:\\mingw\\bin\\g++.exe
-        COLLECT_LTO_WRAPPER=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../../../src/gcc-7.3.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 --enable-shared --enable-static --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/lib -L/c/mingw730/prerequisites/x86_64-zlib-static/lib -L/c/mingw730/prerequisites/x86_64-w64-mingw32-static/lib '
-        Thread model: win32
-        gcc version 7.3.0 (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 
-        COMPILER_PATH=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/;C:/mingw/bin/../libexec/gcc/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/
-        LIBRARY_PATH=C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/;C:/mingw/bin/../lib/gcc/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_78203.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona'
-         C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/collect2.exe -plugin C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/liblto_plugin-0.dll -plugin-opt=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Blake\\AppData\\Local\\Temp\\ccbsMhbt.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt --sysroot=C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_78203.exe C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0 -LC:/mingw/bin/../lib/gcc -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../.. --whole-archive CMakeFiles\\cmTC_78203.dir/objects.a --no-whole-archive --out-implib libcmTC_78203.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_78203.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona'
-        mingw32-make.exe[1]: Leaving directory 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-ugbcc5'
-        
-      exitCode: 0
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Parsed CXX implicit include dir info: rv=done
-        found start of include info
-        found start of implicit include info
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++]
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32]
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward]
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include]
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed]
-          add: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include]
-        end of search list found
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++]
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32]
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward]
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include]
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed]
-        collapse include dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include] ==> [C:/mingw/x86_64-w64-mingw32/include]
-        implicit include dirs: [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed;C:/mingw/x86_64-w64-mingw32/include]
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-ugbcc5']
-        ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/mingw/bin/mingw32-make.exe -f Makefile cmTC_78203/fast]
-        ignore line: [C:/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_78203.dir\\build.make CMakeFiles/cmTC_78203.dir/build]
-        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/C++/COP3530/Project 3/SpaceDebrisTracker/build/CMakeFiles/CMakeScratch/TryCompile-ugbcc5']
-        ignore line: [Building CXX object CMakeFiles/cmTC_78203.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\mingw\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\mingw\\bin\\g++.exe]
-        ignore line: [Target: x86_64-w64-mingw32]
-        ignore line: [Configured with: ../../../src/gcc-7.3.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 --enable-shared --enable-static --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/lib -L/c/mingw730/prerequisites/x86_64-zlib-static/lib -L/c/mingw730/prerequisites/x86_64-w64-mingw32-static/lib ']
-        ignore line: [Thread model: win32]
-        ignore line: [gcc version 7.3.0 (x86_64-win32-seh-rev0  Built by MinGW-W64 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona']
-        ignore line: [ C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/cc1plus.exe -quiet -v -iprefix C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/ -U_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=core2 -march=nocona -auxbase-strip CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj -version -o C:\\Users\\Blake\\AppData\\Local\\Temp\\ccHMhvUn.s]
-        ignore line: [GNU C++14 (x86_64-win32-seh-rev0  Built by MinGW-W64 project) version 7.3.0 (x86_64-w64-mingw32)]
-        ignore line: [	compiled by GNU C version 7.3.0  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.18-GMP]
-        ignore line: []
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include"]
-        ignore line: [ignoring nonexistent directory "C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64C:/msys64-2/mingw64/lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../include"]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"]
-        ignore line: [ignoring duplicate directory "C:/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"]
-        ignore line: [ignoring nonexistent directory "C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/mingw/include"]
-        ignore line: [#include "..." search starts here:]
-        ignore line: [#include <...> search starts here:]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed]
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include]
-        ignore line: [End of search list.]
-        ignore line: [GNU C++14 (x86_64-win32-seh-rev0  Built by MinGW-W64 project) version 7.3.0 (x86_64-w64-mingw32)]
-        ignore line: [	compiled by GNU C version 7.3.0  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.18-GMP]
-        ignore line: []
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [Compiler executable checksum: 0a188eef8a5d0757d516bbf71573e0cd]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona']
-        ignore line: [ C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Blake\\AppData\\Local\\Temp\\ccHMhvUn.s]
-        ignore line: [GNU assembler version 2.30 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.30]
-        ignore line: [COMPILER_PATH=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/]
-        ignore line: [C:/mingw/bin/../libexec/gcc/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/]
-        ignore line: [LIBRARY_PATH=C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/]
-        ignore line: [C:/mingw/bin/../lib/gcc/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_78203.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona']
-        ignore line: [Linking CXX executable cmTC_78203.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_78203.dir\\link.txt --verbose=1]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_78203.dir/objects.a]
-        ignore line: [C:\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_78203.dir/objects.a @CMakeFiles\\cmTC_78203.dir\\objects1.rsp]
-        ignore line: [C:\\mingw\\bin\\g++.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_78203.dir/objects.a -Wl --no-whole-archive -o cmTC_78203.exe -Wl --out-implib libcmTC_78203.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\mingw\\bin\\g++.exe]
-        ignore line: [COLLECT_LTO_WRAPPER=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe]
-        ignore line: [Target: x86_64-w64-mingw32]
-        ignore line: [Configured with: ../../../src/gcc-7.3.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 --enable-shared --enable-static --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=win32 --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-isl=/c/mingw730/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-win32-seh-rev0, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/include -I/c/mingw730/prerequisites/x86_64-zlib-static/include -I/c/mingw730/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/c/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64/opt/lib -L/c/mingw730/prerequisites/x86_64-zlib-static/lib -L/c/mingw730/prerequisites/x86_64-w64-mingw32-static/lib ']
-        ignore line: [Thread model: win32]
-        ignore line: [gcc version 7.3.0 (x86_64-win32-seh-rev0  Built by MinGW-W64 project) ]
-        ignore line: [COMPILER_PATH=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/]
-        ignore line: [C:/mingw/bin/../libexec/gcc/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/bin/]
-        ignore line: [LIBRARY_PATH=C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/]
-        ignore line: [C:/mingw/bin/../lib/gcc/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_78203.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona']
-        link line: [ C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/collect2.exe -plugin C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/liblto_plugin-0.dll -plugin-opt=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Blake\\AppData\\Local\\Temp\\ccbsMhbt.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt --sysroot=C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64 -m i386pep -Bdynamic -o cmTC_78203.exe C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0 -LC:/mingw/bin/../lib/gcc -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../.. --whole-archive CMakeFiles\\cmTC_78203.dir/objects.a --no-whole-archive --out-implib libcmTC_78203.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o]
-          arg [C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/collect2.exe] ==> ignore
-          arg [-plugin] ==> ignore
-          arg [C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/liblto_plugin-0.dll] ==> ignore
-          arg [-plugin-opt=C:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/7.3.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\Blake\\AppData\\Local\\Temp\\ccbsMhbt.res] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
-          arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
-          arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
-          arg [-plugin-opt=-pass-through=-luser32] ==> ignore
-          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
-          arg [-plugin-opt=-pass-through=-liconv] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
-          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
-          arg [--sysroot=C:/mingw730/x86_64-730-win32-seh-rt_v5-rev0/mingw64] ==> ignore
-          arg [-m] ==> ignore
-          arg [i386pep] ==> ignore
-          arg [-Bdynamic] ==> search dynamic
-          arg [-o] ==> ignore
-          arg [cmTC_78203.exe] ==> ignore
-          arg [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
-          arg [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o] ==> obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0]
-          arg [-LC:/mingw/bin/../lib/gcc] ==> dir [C:/mingw/bin/../lib/gcc]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib]
-          arg [-LC:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../..] ==> dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../..]
-          arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_78203.dir/objects.a] ==> ignore
-          arg [--no-whole-archive] ==> ignore
-          arg [--out-implib] ==> ignore
-          arg [libcmTC_78203.dll.a] ==> ignore
-          arg [--major-image-version] ==> ignore
-          arg [0] ==> ignore
-          arg [--minor-image-version] ==> ignore
-          arg [0] ==> ignore
-          arg [-lstdc++] ==> lib [stdc++]
-          arg [-lmingw32] ==> lib [mingw32]
-          arg [-lgcc_s] ==> lib [gcc_s]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lmoldname] ==> lib [moldname]
-          arg [-lmingwex] ==> lib [mingwex]
-          arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [-ladvapi32] ==> lib [advapi32]
-          arg [-lshell32] ==> lib [shell32]
-          arg [-luser32] ==> lib [user32]
-          arg [-lkernel32] ==> lib [kernel32]
-          arg [-liconv] ==> lib [iconv]
-          arg [-lmingw32] ==> lib [mingw32]
-          arg [-lgcc_s] ==> lib [gcc_s]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lmoldname] ==> lib [moldname]
-          arg [-lmingwex] ==> lib [mingwex]
-          arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o] ==> obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o]
-        remove lib [msvcrt]
-        remove lib [msvcrt]
-        collapse obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/mingw/x86_64-w64-mingw32/lib/crt2.o]
-        collapse obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o]
-        collapse obj [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0] ==> [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0]
-        collapse library dir [C:/mingw/bin/../lib/gcc] ==> [C:/mingw/lib/gcc]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/mingw/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../lib] ==> [C:/mingw/lib]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/mingw/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/mingw/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../..] ==> [C:/mingw/lib]
-        implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex]
-        implicit objs: [C:/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/crtbegin.o;C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/crtend.o]
-        implicit dirs: [C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0;C:/mingw/lib/gcc;C:/mingw/x86_64-w64-mingw32/lib;C:/mingw/lib]
-        implicit fwks: []
-      
-      
-...
-
----
-events:
-  -
-    kind: "message-v1"
-    backtrace:
       - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineSystem.cmake:211 (message)"
       - "CMakeLists.txt:3 (project)"
     message: |
@@ -655,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-kef7gv"
-      binary: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-kef7gv"
+      source: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-OpkHO5"
+      binary: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-OpkHO5"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -667,18 +73,18 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-kef7gv'
+        Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-OpkHO5'
         
-        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0e408/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0e408.dir/build.make CMakeFiles/cmTC_0e408.dir/build
-        Building C object CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o
-        /usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6edd1/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6edd1.dir/build.make CMakeFiles/cmTC_6edd1.dir/build
+        Building C object CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 14.0.3 (clang-1403.0.22.14.1)
         Target: arm64-apple-darwin22.5.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v "-fcoverage-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-kef7gv" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant "-fdebug-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-kef7gv" -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v "-fcoverage-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-OpkHO5" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant "-fdebug-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-OpkHO5" -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.5.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"
@@ -689,14 +95,14 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_0e408
-        /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e408.dir/link.txt --verbose=1
-        /usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -o cmTC_0e408 
+        Linking C executable cmTC_6edd1
+        /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6edd1.dir/link.txt --verbose=1
+        /usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -o cmTC_6edd1 
         Apple clang version 14.0.3 (clang-1403.0.22.14.1)
         Target: arm64-apple-darwin22.5.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_0e408 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_6edd1 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:ld64-857.1
         BUILD 16:59:58 Feb 24 2023
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -735,18 +141,18 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-kef7gv']
+        ignore line: [Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-OpkHO5']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0e408/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0e408.dir/build.make CMakeFiles/cmTC_0e408.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6edd1/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6edd1.dir/build.make CMakeFiles/cmTC_6edd1.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
         ignore line: [Target: arm64-apple-darwin22.5.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v "-fcoverage-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-kef7gv" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant "-fdebug-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-kef7gv" -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v "-fcoverage-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-OpkHO5" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant "-fdebug-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-OpkHO5" -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.5.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"]
@@ -757,14 +163,14 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_0e408]
-        ignore line: [/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e408.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -o cmTC_0e408 ]
+        ignore line: [Linking C executable cmTC_6edd1]
+        ignore line: [/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6edd1.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -o cmTC_6edd1 ]
         ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
         ignore line: [Target: arm64-apple-darwin22.5.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_0e408 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_6edd1 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -779,11 +185,11 @@ events:
           arg [-syslibroot] ==> ignore
           arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_0e408] ==> ignore
+          arg [cmTC_6edd1] ==> ignore
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_0e408.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_6edd1.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
         Library search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
@@ -807,8 +213,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-AhPuHR"
-      binary: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-AhPuHR"
+      source: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-2tyFO4"
+      binary: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-2tyFO4"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -819,18 +225,18 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-AhPuHR'
+        Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-2tyFO4'
         
-        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_df5d5/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_df5d5.dir/build.make CMakeFiles/cmTC_df5d5.dir/build
-        Building CXX object CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_96c17/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_96c17.dir/build.make CMakeFiles/cmTC_96c17.dir/build
+        Building CXX object CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 14.0.3 (clang-1403.0.22.14.1)
         Target: arm64-apple-darwin22.5.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v "-fcoverage-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-AhPuHR" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro "-fdebug-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-AhPuHR" -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v "-fcoverage-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-2tyFO4" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro "-fdebug-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-2tyFO4" -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.5.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"
@@ -842,14 +248,14 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_df5d5
-        /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df5d5.dir/link.txt --verbose=1
-        /usr/bin/clang++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_df5d5 
+        Linking CXX executable cmTC_96c17
+        /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96c17.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_96c17 
         Apple clang version 14.0.3 (clang-1403.0.22.14.1)
         Target: arm64-apple-darwin22.5.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_df5d5 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_96c17 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld  PROJECT:ld64-857.1
         BUILD 16:59:58 Feb 24 2023
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -890,18 +296,18 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-AhPuHR']
+        ignore line: [Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-2tyFO4']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_df5d5/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_df5d5.dir/build.make CMakeFiles/cmTC_df5d5.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_96c17/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_96c17.dir/build.make CMakeFiles/cmTC_96c17.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
         ignore line: [Target: arm64-apple-darwin22.5.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v "-fcoverage-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-AhPuHR" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro "-fdebug-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-AhPuHR" -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v "-fcoverage-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-2tyFO4" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro "-fdebug-compilation-dir=/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-2tyFO4" -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.5.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"]
@@ -913,14 +319,14 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_df5d5]
-        ignore line: [/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df5d5.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/clang++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_df5d5 ]
+        ignore line: [Linking CXX executable cmTC_96c17]
+        ignore line: [/opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96c17.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/clang++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_96c17 ]
         ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
         ignore line: [Target: arm64-apple-darwin22.5.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_df5d5 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_96c17 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -935,11 +341,11 @@ events:
           arg [-syslibroot] ==> ignore
           arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_df5d5] ==> ignore
+          arg [cmTC_96c17] ==> ignore
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_df5d5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_96c17.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
@@ -955,10 +361,6 @@ events:
         implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
       
       
-...
-
----
-events:
   -
     kind: "try_compile-v1"
     backtrace:
@@ -972,8 +374,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-6LWLrb"
-      binary: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-6LWLrb"
+      source: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-Nv9vRs"
+      binary: "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-Nv9vRs"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -984,15 +386,15 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-6LWLrb'
+        Change Dir: '/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-Nv9vRs'
         
-        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_47d7f/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_47d7f.dir/build.make CMakeFiles/cmTC_47d7f.dir/build
-        Building C object CMakeFiles/cmTC_47d7f.dir/src.c.o
-        /usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -MD -MT CMakeFiles/cmTC_47d7f.dir/src.c.o -MF CMakeFiles/cmTC_47d7f.dir/src.c.o.d -o CMakeFiles/cmTC_47d7f.dir/src.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-6LWLrb/src.c"
-        Linking C executable cmTC_47d7f
-        /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47d7f.dir/link.txt --verbose=1
-        /usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_47d7f.dir/src.c.o -o cmTC_47d7f 
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_13040/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_13040.dir/build.make CMakeFiles/cmTC_13040.dir/build
+        Building C object CMakeFiles/cmTC_13040.dir/src.c.o
+        /usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -MD -MT CMakeFiles/cmTC_13040.dir/src.c.o -MF CMakeFiles/cmTC_13040.dir/src.c.o.d -o CMakeFiles/cmTC_13040.dir/src.c.o -c "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build/CMakeFiles/CMakeScratch/TryCompile-Nv9vRs/src.c"
+        Linking C executable cmTC_13040
+        /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13040.dir/link.txt --verbose=1
+        /usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_13040.dir/src.c.o -o cmTC_13040 
         
       exitCode: 0
 ...

@@ -32,6 +32,7 @@
 
 #include "OpenGLEngine.h"
 #include "Vectors.h"
+#include "TLEReader.h"
 
 // Constructor
 OpenGLEngine::OpenGLEngine() {
@@ -86,7 +87,7 @@ void OpenGLEngine::init() {
 
 
     // load BMP image
-    texId = loadTexture("earth2048.bmp", true);
+    texId = loadTexture("earth10k.bmp", true);
     if(texId)
     {
         std::cout << "Loaded a texture: ID=" << texId << std::endl;
@@ -111,6 +112,11 @@ void OpenGLEngine::init() {
     ImGui_ImplOpenGL3_Init("#version 330");
 
     glfwSwapInterval(1);
+
+    // Read TLE Data
+    TLEReader tle;
+
+    tle.ReadFile("2023_332.txt");
 }
 
 void OpenGLEngine::shutdown() {
@@ -257,10 +263,10 @@ bool OpenGLEngine::initGLSL()
     // set uniform values
     //float lightPosition[] = {-2, 0, 1, 0};
     float lightDirection[] = {-1.0, 0.0, 1.0, 0.0};
-    float lightAmbient[]  = {0.0f, 0.1f, 0.3f, 1};
+    float lightAmbient[]  = {0.0f, 0.4f, 0.6f, 2};
     float lightDiffuse[]  = {0.7f, 0.7f, 0.7f, 1};
     float lightSpecular[] = {1.0f, 1.0f, 1.0f, 1};
-    float materialAmbient[]  = {0.0f, 0.2f, 0.3f, 1};
+    float materialAmbient[]  = {1.0f, 0.2f, 0.3f, 1};
     float materialDiffuse[]  = {1.7f, 1.7f, 1.7f, 1};
     float materialSpecular[] = {0.4f, 0.4f, 0.4f, 0};
     float materialShininess  = 16;
@@ -430,39 +436,39 @@ void OpenGLEngine::showInfo()
     // call it once before drawing text to configure orthographic projection
     bmFont.setWindowSize(windowWidth, windowHeight);
 
-    std::stringstream ss;
-    ss << std::fixed << std::setprecision(3);
+    // std::stringstream ss;
+    // ss << std::fixed << std::setprecision(3);
 
-    int x = 1;
-    int y = windowHeight - bmFont.getBaseline();
-    bmFont.setColor(1, 1, 1, 1);
+    // int x = 1;
+    // int y = windowHeight - bmFont.getBaseline();
+    // bmFont.setColor(1, 1, 1, 1);
 
-    ss << "Sphere Radius: " << earth.getRadius() << std::ends;
-    bmFont.drawText(x, y, ss.str().c_str());
-    ss.str("");
-    y -= bmFont.getHeight();
+    // ss << "Sphere Radius: " << earth.getRadius() << std::ends;
+    // bmFont.drawText(x, y, ss.str().c_str());
+    // ss.str("");
+    // y -= bmFont.getHeight();
 
-    ss << "Sector Count: " << earth.getSectorCount() << std::ends;
-    bmFont.drawText(x, y, ss.str().c_str());
-    ss.str("");
-    y -= bmFont.getHeight();
+    // ss << "Sector Count: " << earth.getSectorCount() << std::ends;
+    // bmFont.drawText(x, y, ss.str().c_str());
+    // ss.str("");
+    // y -= bmFont.getHeight();
 
-    ss << "Stack Count: " << earth.getStackCount() << std::ends;
-    bmFont.drawText(x, y, ss.str().c_str());
-    ss.str("");
-    y -= bmFont.getHeight();
+    // ss << "Stack Count: " << earth.getStackCount() << std::ends;
+    // bmFont.drawText(x, y, ss.str().c_str());
+    // ss.str("");
+    // y -= bmFont.getHeight();
 
-    ss << "Vertex Count: " << earth.getVertexCount() << std::ends;
-    bmFont.drawText(x, y, ss.str().c_str());
-    ss.str("");
-    y -= bmFont.getHeight();
+    // ss << "Vertex Count: " << earth.getVertexCount() << std::ends;
+    // bmFont.drawText(x, y, ss.str().c_str());
+    // ss.str("");
+    // y -= bmFont.getHeight();
 
-    ss << "Index Count: " << earth.getIndexCount() << std::ends;
-    bmFont.drawText(x, y, ss.str().c_str());
-    ss.str("");
+    // ss << "Index Count: " << earth.getIndexCount() << std::ends;
+    // bmFont.drawText(x, y, ss.str().c_str());
+    // ss.str("");
 
-    // unset floating format
-    ss << std::resetiosflags(std::ios_base::fixed | std::ios_base::floatfield);
+    // // unset floating format
+    // ss << std::resetiosflags(std::ios_base::fixed | std::ios_base::floatfield);
 
     showFPS();
 
@@ -541,8 +547,7 @@ void OpenGLEngine::toPerspective()
 {
     const float N = 0.1f;
     const float F = 100.0f;
-    const float PI = acos(-1.0f);
-    const float FOV_Y = 40.0f / 180.0f * PI;    // in radian
+    const float FOV_Y = 40.0f / 180.0f * acos(-1.0f);    // in radian
 
     // get current dimensions
     glfwGetWindowSize(window, &windowWidth, &windowHeight); // get window size
@@ -576,23 +581,23 @@ void OpenGLEngine::preFrame(double frameTime)
 
 void OpenGLEngine::frame(double frameTime)
 {
-    // clear buffer
+    // Clear buffer
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
-    // transform camera (view)
+    // Transform camera (view)
     Matrix4 matrixView;
     matrixView.translate(0, 0, -cameraDistance);
 
-    // common model matrix
+    // Common model matrix
     Matrix4 matrixModelCommon;
     matrixModelCommon.rotateY(cameraAngleY);
     matrixModelCommon.rotateX(cameraAngleX);
 
-    // model matrix for each instance
-    Matrix4 matrixModel3(matrixModelCommon);    // right
-    matrixModel3.translate(0, 0, 0);         // shift right
+    // Model matrix for each instance
+    Matrix4 matrixModel(matrixModelCommon);
+    matrixModel.translate(0.5, 0, 0);
 
-    // bind GLSL, texture
+    // Bind GLSL, texture
     glUseProgram(progId);
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texId);
@@ -606,8 +611,8 @@ void OpenGLEngine::frame(double frameTime)
 
     
 
-    // set matric uniforms for right sphere
-    matrixModelView = matrixView * matrixModel3;
+    // Set matrix uniforms
+    matrixModelView = matrixView * matrixModel;
     matrixModelViewProjection = matrixProjection * matrixModelView;
     matrixNormal = matrixModelView;
     matrixNormal.setColumn(3, Vector4(0,0,0,1));
@@ -626,17 +631,17 @@ void OpenGLEngine::frame(double frameTime)
     glUniformMatrix4fv(uniformMatrixModelViewProjection, 1, false, matrixModelViewProjection.get());
     glUniformMatrix4fv(uniformMatrixNormal, 1, false, matrixNormal.get());
 
-    // right sphere is rendered with texture
+    // Rendered with texture
     glUniform1i(uniformTextureUsed, 1);
 
-    // draw right sphere
+    // Draw earth
     glBindVertexArray(vaoId2);
     glDrawElements(GL_TRIANGLES,            // primitive type
                    earth.getIndexCount(), // # of indices
                    GL_UNSIGNED_INT,         // data type
                    (void*)0);               // ptr to indices
 
-    // unbind
+    // Unbind
     glBindTexture(GL_TEXTURE_2D, 0);
     glBindVertexArray(0);
     glUseProgram(0);
@@ -790,8 +795,8 @@ void OpenGLEngine::cursorPosCallback(GLFWwindow* window, double x, double y)
 void OpenGLEngine::scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
     if (yoffset) {
         cameraDistance += yoffset * 0.2f;
-        if (cameraDistance < 2.0) {
-            cameraDistance = 2.0;
+        if (cameraDistance < 1.0) {
+            cameraDistance = 1.0;
         }
     }
 }

@@ -15,7 +15,7 @@ elseif(UNIX AND NOT APPLE)
     set(UNIX_LIBRARIES ...)
 endif()
 
-file(GLOB_RECURSE SOURCES "src/*.cpp" "src/gl.c")
+file(GLOB_RECURSE SOURCES "src/*.cpp" "src/gl.c" "include/tle/*.c")
 
 add_executable(space-debris-tracker ${SOURCES})
 

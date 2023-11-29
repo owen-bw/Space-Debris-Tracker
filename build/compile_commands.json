@@ -1,6 +1,60 @@
 [
 {
   "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/AstroFuncDll.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/AstroFuncDll.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll_Service.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll_Service.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllUtils.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllUtils.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/EnvConstDll.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/EnvConstDll.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/Sgp4PropDll.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/Sgp4PropDll.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll_Service.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll_Service.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TleDll.c\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TleDll.c",
+  "output": "CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
   "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/BitmapFontData.cpp\"",
   "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/BitmapFontData.cpp",
   "output": "CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o"

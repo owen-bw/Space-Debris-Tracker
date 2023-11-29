@@ -8,6 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/AstroFuncDll.c" "CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/AstroFuncDll.c.o.d"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll.c" "CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll.c.o.d"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllMainDll_Service.c" "CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/DllMainDll_Service.c.o.d"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/DllUtils.c" "CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/DllUtils.c.o.d"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/EnvConstDll.c" "CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/EnvConstDll.c.o.d"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/Sgp4PropDll.c" "CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/Sgp4PropDll.c.o.d"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll.c" "CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll.c.o.d"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TimeFuncDll_Service.c" "CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/TimeFuncDll_Service.c.o.d"
+  "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include/tle/TleDll.c" "CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/include/tle/TleDll.c.o.d"
   "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/gl.c" "CMakeFiles/space-debris-tracker.dir/src/gl.c.o" "gcc" "CMakeFiles/space-debris-tracker.dir/src/gl.c.o.d"
   "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/BitmapFontData.cpp" "CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o" "gcc" "CMakeFiles/space-debris-tracker.dir/src/BitmapFontData.cpp.o.d"
   "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Bmp.cpp" "CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o" "gcc" "CMakeFiles/space-debris-tracker.dir/src/Bmp.cpp.o.d"
