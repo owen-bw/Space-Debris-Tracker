@@ -1,4 +1,5 @@
 #include "debris.h"
+#include <iostream>
 
 
 #ifdef __cplusplus
@@ -42,5 +43,17 @@ class TLEReader {
         LoadSgp4PropDll();
         
         Sgp4LoadFileAll(fileName);
+
+        int numSats = TleGetCount();
+
+        std::cout << numSats << std::endl;
+
+        vector<__int64> satKeys(numSats);
+
+        TleGetLoaded(2, satKeys.data());
+
+        for (int i = 0; i < numSats; i++) {
+
+        }
     }
 };

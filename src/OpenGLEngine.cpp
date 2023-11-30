@@ -10,6 +10,7 @@
 #include "fontCourier20.h"
 #include "Matrices.h"
 #include "Timer.h"
+#include "Vectors.h"
 
 // https://www.glfw.org/
 #include <gl.h>
@@ -31,7 +32,6 @@
 #include <string>
 
 #include "OpenGLEngine.h"
-#include "Vectors.h"
 #include "TLEReader.h"
 
 // Constructor
@@ -162,9 +162,11 @@ bool OpenGLEngine::initSharedMem()
 
     drawMode = 0; // 0:fill, 1: wireframe, 2:points
 
-    vaoId1 = vaoId2 = 0;
-    vboId1 = vboId2 = 0;
-    iboId1 = iboId2 = 0;
+    vao = 0;
+    pointsVao = 0;
+    vbo = 0;
+    pointsVbo = 0;
+    ibo = 0;
     texId = 0;
 
     // debug
@@ -215,7 +217,7 @@ bool OpenGLEngine::initGLSL()
     glCompileShader(fsId);
 
     //@@ debug
-    int vsStatus, fsStatus;
+    int vsStatus, fsStatus, psStatus;
     glGetShaderiv(vsId, GL_COMPILE_STATUS, &vsStatus);
     if(vsStatus == GL_FALSE)
     {
@@ -314,21 +316,24 @@ bool OpenGLEngine::initGLSL()
 ///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::initVBO()
 {
-    // earth
-    if(!vaoId2)
-        glGenVertexArrays(1, &vaoId2);
-    glBindVertexArray(vaoId2);
 
-    if(!vboId2)
-        glGenBuffers(1, &vboId2);
+    GLfloat points[] = {
+        1.0f, 1.0f, 1.0f,
+        -1.0f, -1.0f, -1.0f
+    };
 
-    glBindBuffer(GL_ARRAY_BUFFER, vboId2);
+    // Earth
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+    glGenBuffers(1, &vbo);
+
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, earth.getInterleavedVertexSize(), earth.getInterleavedVertices(), GL_STATIC_DRAW);
 
-    if(!iboId2)
-        glGenBuffers(1, &iboId2);
+    // Index Array
+    glGenBuffers(1, &ibo);
 
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboId2);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, earth.getIndexSize(), earth.getIndices(), GL_STATIC_DRAW);
 
     glEnableVertexAttribArray(attribVertexPosition);
@@ -339,8 +344,22 @@ void OpenGLEngine::initVBO()
     glVertexAttribPointer(attribVertexPosition, 3, GL_FLOAT, false, stride, 0);
     glVertexAttribPointer(attribVertexNormal, 3, GL_FLOAT, false, stride, (void*)(3 * sizeof(float)));
     glVertexAttribPointer(attribVertexTexCoord, 2, GL_FLOAT, false, stride, (void*)(6 * sizeof(float)));
+    
+    // Points
+    glGenBuffers(1, &pointsVbo);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(points), points, GL_STATIC_DRAW);
 
-    // unbind
+    glGenVertexArrays(1, &pointsVao);
+    glBindVertexArray(pointsVao);
+
+
+    glEnableVertexAttribArray(attribVertexPosition);
+    glVertexAttribPointer(attribVertexPosition, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    glBindVertexArray(0);
+
+    // Unbind
     glBindVertexArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
@@ -349,22 +368,21 @@ void OpenGLEngine::initVBO()
 
 void OpenGLEngine::clearSharedMem()
 {
-    // clean up VBOs
-    glDeleteBuffers(1, &vboId1);
-    glDeleteBuffers(1, &iboId1);
-    glDeleteBuffers(1, &vboId2);
-    glDeleteBuffers(1, &iboId2);
-    vboId1 = iboId1 = 0;
-    vboId2 = iboId2 = 0;
+    // Clean up Earth
+    glDeleteBuffers(1, &vbo);
+    glDeleteBuffers(1, &ibo);
+    vbo = ibo = 0;
+    glDeleteVertexArrays(1, &vao);
+    vao = vao = 0;
 
-    // clean up VAOs
-    glDeleteVertexArrays(1, &vaoId1);
-    glDeleteVertexArrays(1, &vaoId2);
-    vaoId1 = vaoId2 = 0;
+    // Clean up points
+    glDeleteBuffers(1, &pointsVbo);
+    glDeleteVertexArrays(1, &pointsVao);
 
-    // clean up tex
+    // Clean up textures
     glDeleteTextures(1, &texId);
     texId = 0;
+
 }
 
 
@@ -635,11 +653,16 @@ void OpenGLEngine::frame(double frameTime)
     glUniform1i(uniformTextureUsed, 1);
 
     // Draw earth
-    glBindVertexArray(vaoId2);
-    glDrawElements(GL_TRIANGLES,            // primitive type
-                   earth.getIndexCount(), // # of indices
-                   GL_UNSIGNED_INT,         // data type
-                   (void*)0);               // ptr to indices
+    glBindVertexArray(vao);
+    glDrawElements(GL_TRIANGLES, earth.getIndexCount(), GL_UNSIGNED_INT, (void*)0);
+    glBindVertexArray(0);
+
+    // Draw Points
+    glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_TRUE);
+    glPointSize(10);
+    glBindVertexArray(pointsVao);
+    glDrawArrays(GL_POINTS, 0, 2);
+    glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_FALSE);
 
     // Unbind
     glBindTexture(GL_TEXTURE_2D, 0);
@@ -668,6 +691,9 @@ void OpenGLEngine::frame(double frameTime)
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+
+    
 
     glfwSwapBuffers(window);
 }

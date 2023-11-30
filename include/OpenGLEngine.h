@@ -117,16 +117,18 @@ class OpenGLEngine {
     float cameraAngleY;
     float cameraDistance;
     int drawMode;
-    GLuint vaoId1, vaoId2;      // IDs of VAO for vertex array states
-    GLuint vboId1, vboId2;      // IDs of VBO for vertex arrays
-    GLuint iboId1, iboId2;      // IDs of VBO for index array
+    GLuint vao;
+    GLuint pointsVao;
+    GLuint vbo;
+    GLuint pointsVbo;
+    GLuint ibo;
     GLuint texId;
     BitmapFontData bmFont;
     Matrix4 matrixModelView;
     Matrix4 matrixProjection;
 
     // GLSL
-    GLuint progId = 0;                  // ID of GLSL program
+    GLuint progId = 0;
     GLint viewLoc;
     GLint uniformMatrixModelView;
     GLint uniformMatrixModelViewProjection;
@@ -181,8 +183,7 @@ class OpenGLEngine {
     const char* fsSource = R"(
     // GLSL version (OpenGL 3.3)
     #version 330
-    // uniforms
-    //uniform vec4 lightPosition;             // should be in the eye space
+    // uniforms           // should be in the eye space
     uniform vec4 lightAmbient;              // light ambient color
     uniform vec4 lightDiffuse;              // light diffuse color
     uniform vec4 lightSpecular;             // light specular color
@@ -199,6 +200,9 @@ class OpenGLEngine {
     in vec2 texCoord0;
 
     uniform vec4 lightDirection;
+
+    // used if object is point
+    uniform bool isPoint;
 
     // output
     out vec4 fragColor;
@@ -218,15 +222,6 @@ class OpenGLEngine {
             light = normalize(lightDirection.xyz - esVertex);
         }
 
-        // if(lightPosition.w == 0.0)
-        // {
-        //     light = normalize(lightPosition.xyz);
-        // }
-        // else
-        // {
-        //     light = normalize(lightPosition.xyz - esVertex);
-        // }
-
         vec3 view = normalize(-esVertex);
         vec3 reflectVec = reflect(-light, normal);  // 2 * N * (N dot L) - L
 
@@ -237,8 +232,12 @@ class OpenGLEngine {
             color *= texture(map0, texCoord0).rgb;                  // modulate texture map
         float dotVR = max(dot(view, reflectVec), 0.0);
         color += pow(dotVR, materialShininess) * lightSpecular.rgb * materialSpecular.rgb; // add specular
-        fragColor = vec4(color, materialDiffuse.a);                 // set frag color
+        if (isPoint) {
+            fragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        } else {
+            fragColor = vec4(color, materialDiffuse.a);                 // set frag color
+        }
+        
     }
     )";
-
 };
