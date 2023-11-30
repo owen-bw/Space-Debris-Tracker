@@ -13,6 +13,7 @@
 #include <glfw3.h>
 
 #include <iostream>
+#include <vector>
 
 #pragma once
 
@@ -151,6 +152,10 @@ class OpenGLEngine {
     // Objects
     Sphere earth;
 
+    GLfloat* points;
+
+    int numSats = 0;
+    
     // Bui-Tuong Phong shading model with texture
     const char* vsSource = R"(
     // GLSL version (OpenGL 3.3)

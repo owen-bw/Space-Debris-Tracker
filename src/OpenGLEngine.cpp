@@ -71,6 +71,13 @@ void OpenGLEngine::init() {
     // glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+    // Read TLE Data
+    TLEReader tle;
+
+    points = tle.ReadFile("2023_332.txt", numSats);
+
+    cout << points[0] << points[1], points[2];
+
     initGL();
     initGLSL();
     initVBO();
@@ -112,11 +119,6 @@ void OpenGLEngine::init() {
     ImGui_ImplOpenGL3_Init("#version 330");
 
     glfwSwapInterval(1);
-
-    // Read TLE Data
-    TLEReader tle;
-
-    tle.ReadFile("2023_332.txt");
 }
 
 void OpenGLEngine::shutdown() {
@@ -316,12 +318,6 @@ bool OpenGLEngine::initGLSL()
 ///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::initVBO()
 {
-
-    GLfloat points[] = {
-        1.0f, 1.0f, 1.0f,
-        -1.0f, -1.0f, -1.0f
-    };
-
     // Earth
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
@@ -345,11 +341,12 @@ void OpenGLEngine::initVBO()
     glVertexAttribPointer(attribVertexNormal, 3, GL_FLOAT, false, stride, (void*)(3 * sizeof(float)));
     glVertexAttribPointer(attribVertexTexCoord, 2, GL_FLOAT, false, stride, (void*)(6 * sizeof(float)));
     
+    cout << "POINTS ARRAY: " << numSats << endl;
     // Points
     glGenBuffers(1, &pointsVbo);
     
     glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(points), points, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, numSats * 3 * sizeof(GLfloat), points, GL_STATIC_DRAW);
 
     glGenVertexArrays(1, &pointsVao);
     glBindVertexArray(pointsVao);
@@ -659,9 +656,9 @@ void OpenGLEngine::frame(double frameTime)
 
     // Draw Points
     glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_TRUE);
-    glPointSize(10);
+    glPointSize(5);
     glBindVertexArray(pointsVao);
-    glDrawArrays(GL_POINTS, 0, 2);
+    glDrawArrays(GL_POINTS, 0, numSats);
     glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_FALSE);
 
     // Unbind

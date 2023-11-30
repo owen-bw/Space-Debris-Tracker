@@ -465,6 +465,30 @@ src/Sphere.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.s
 .PHONY : src/Sphere.cpp.s
 
+src/TLEReader.o: src/TLEReader.cpp.o
+.PHONY : src/TLEReader.o
+
+# target to build an object file
+src/TLEReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/TLEReader.cpp.o
+.PHONY : src/TLEReader.cpp.o
+
+src/TLEReader.i: src/TLEReader.cpp.i
+.PHONY : src/TLEReader.i
+
+# target to preprocess a source file
+src/TLEReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/TLEReader.cpp.i
+.PHONY : src/TLEReader.cpp.i
+
+src/TLEReader.s: src/TLEReader.cpp.s
+.PHONY : src/TLEReader.s
+
+# target to generate assembly for a file
+src/TLEReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/TLEReader.cpp.s
+.PHONY : src/TLEReader.cpp.s
+
 src/Timer.o: src/Timer.cpp.o
 .PHONY : src/Timer.o
 
@@ -780,6 +804,9 @@ help:
 	@echo "... src/Sphere.o"
 	@echo "... src/Sphere.i"
 	@echo "... src/Sphere.s"
+	@echo "... src/TLEReader.o"
+	@echo "... src/TLEReader.i"
+	@echo "... src/TLEReader.s"
 	@echo "... src/Timer.o"
 	@echo "... src/Timer.i"
 	@echo "... src/Timer.s"

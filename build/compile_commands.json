@@ -85,6 +85,12 @@
 },
 {
   "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/TLEReader.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/TLEReader.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/TLEReader.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/TLEReader.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
   "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Timer.cpp\"",
   "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Timer.cpp",
   "output": "CMakeFiles/space-debris-tracker.dir/src/Timer.cpp.o"
