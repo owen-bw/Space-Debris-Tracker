@@ -1,4 +1,5 @@
 #include "TLEReader.h"
+#include <vector>
 #include "gl.h"
 
 GLfloat* TLEReader::ReadFile(char* fileName, int& numSats) {
@@ -26,23 +27,13 @@ GLfloat* TLEReader::ReadFile(char* fileName, int& numSats) {
 
     std::cout << numSats << std::endl;
 
-    vector<__int64> satKeys(numSats);
+    vector<__int64> constructKeys(numSats);
+
+    satKeys = constructKeys;
 
     TleGetLoaded(2, satKeys.data());
 
-    double 
-    pos[3],           //Position (km)
-    vel[3],           //Velocity (km/s)
-    llh[3],           // Latitude(deg), Longitude(deg), Height above Geoid (km)
-    meanKep[6],       //Mean Keplerian elements
-    oscKep[6],        //Osculating Keplerian elements
-    nodalApPer[3],    //Nodal period, apogee, perigee
-    epochDs50UTC,
-    mse,
-    ds50UTC;
-
     char  valueStr[GETSETSTRLEN];
-    const double earthRadiusKm = 6371.0;
 
     GLfloat* points = new GLfloat[numSats * 3];
 
@@ -55,11 +46,11 @@ GLfloat* TLEReader::ReadFile(char* fileName, int& numSats) {
         valueStr[GETSETSTRLEN-1] = 0;
         epochDs50UTC = DTGToUTC(valueStr);
 
-        Sgp4PropDs50UTC(satKeys[i], ds50UTC, &mse, pos, vel, llh);
+        Sgp4PropDs50UTC(satKeys[i], 1, &mse, pos, vel, llh);
 
         points[i * 3] = pos[0] / earthRadiusKm;
-        points[i * 3 + 1] = pos[1] / earthRadiusKm;
-        points[i * 3 + 2] = pos[2] / earthRadiusKm;
+        points[i * 3 + 1] = pos[2] / earthRadiusKm;
+        points[i * 3 + 2] = pos[1] / earthRadiusKm;
     }
 
     cout << points[0] << " " << points[1] << " " << points[2] << endl;
@@ -67,6 +58,16 @@ GLfloat* TLEReader::ReadFile(char* fileName, int& numSats) {
     return points;
 }
 
-void TLEReader::propagate() {
+void TLEReader::propagate(double frameTime, GLfloat* points, int numSats) {
+    for (int i = 0; i < numSats; i++) {
+        // TleGetField(satKeys[i], XF_TLE_EPOCH, valueStr);
+        // valueStr[GETSETSTRLEN-1] = 0;
+        // epochDs50UTC = DTGToUTC(valueStr);
 
+        Sgp4PropDs50UTC(satKeys[i], frameTime / (86400.0), &mse, pos, vel, llh);
+
+        points[i * 3] = pos[0] / earthRadiusKm;
+        points[i * 3 + 1] = pos[2] / earthRadiusKm;
+        points[i * 3 + 2] = pos[1] / earthRadiusKm;
+    }
 }

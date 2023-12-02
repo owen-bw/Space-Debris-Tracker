@@ -15,6 +15,8 @@
 #include <iostream>
 #include <vector>
 
+#include "TLEReader.h"
+
 #pragma once
 
 class OpenGLEngine {
@@ -109,7 +111,9 @@ class OpenGLEngine {
     int windowHeight;
     int fbWidth;
     int fbHeight;
+    int frameCounter;
     double runTime;
+    double totalTime;
     bool mouseLeftDown;
     bool mouseRightDown;
     bool mouseMiddleDown;
@@ -151,6 +155,8 @@ class OpenGLEngine {
 
     // Objects
     Sphere earth;
+
+    TLEReader tle;
 
     GLfloat* points;
 

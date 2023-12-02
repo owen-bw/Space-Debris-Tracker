@@ -72,9 +72,7 @@ void OpenGLEngine::init() {
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // Read TLE Data
-    TLEReader tle;
-
-    points = tle.ReadFile("2023_332.txt", numSats);
+    points = tle.ReadFile("2023_334.txt", numSats);
 
     cout << points[0] << points[1], points[2];
 
@@ -138,6 +136,7 @@ void OpenGLEngine::mainEventLoop() {
         double currTime = glfwGetTime();
         double frameTime = currTime - runTime;
         runTime = currTime;
+        totalTime += frameTime;
 
         // draw
         preFrame(frameTime);
@@ -155,6 +154,8 @@ bool OpenGLEngine::initSharedMem()
     windowHeight = fbHeight = WINDOW_HEIGHT;
 
     runTime = 0;
+    frameCounter = 0;
+    totalTime = 0.0;
 
     mouseLeftDown = mouseRightDown = mouseMiddleDown = false;
     mouseX = mouseY = 0;
@@ -592,6 +593,11 @@ void OpenGLEngine::toPerspective()
 ///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::preFrame(double frameTime)
 {
+    frameCounter++;
+    if (frameCounter == 1) {
+        tle.propagate(totalTime, points, numSats);
+        frameCounter = 0;
+    }
 }
 
 void OpenGLEngine::frame(double frameTime)
@@ -655,6 +661,8 @@ void OpenGLEngine::frame(double frameTime)
     glBindVertexArray(0);
 
     // Draw Points
+    glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
+    glBufferSubData(GL_ARRAY_BUFFER, 0, numSats * 3 * sizeof(GLfloat), points);
     glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_TRUE);
     glPointSize(5);
     glBindVertexArray(pointsVao);
