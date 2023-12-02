@@ -161,6 +161,7 @@ class OpenGLEngine {
     GLfloat* points;
 
     int numSats = 0;
+    double epoch;
     
     // Bui-Tuong Phong shading model with texture
     const char* vsSource = R"(

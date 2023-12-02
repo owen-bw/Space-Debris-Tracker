@@ -72,7 +72,7 @@ void OpenGLEngine::init() {
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // Read TLE Data
-    points = tle.ReadFile("2023_334.txt", numSats);
+    points = tle.ReadFile("2023_332.txt", numSats, epoch);
 
     cout << points[0] << points[1], points[2];
 
@@ -595,7 +595,7 @@ void OpenGLEngine::preFrame(double frameTime)
 {
     frameCounter++;
     if (frameCounter == 1) {
-        tle.propagate(totalTime, points, numSats);
+        tle.propagate(epoch + totalTime / (86400.0), points, numSats);
         frameCounter = 0;
     }
 }
@@ -685,7 +685,7 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::Text("Space Debris Tracker");
     ImGui::Text(std::to_string(cameraAngleX).c_str());
     ImGui::Text(std::to_string(cameraAngleY).c_str());
-    ImGui::Text(std::to_string(weight).c_str());
+    ImGui::Text(std::to_string(totalTime).c_str());
     ImGui::Text("Input Date (DD/MM/YYYY)");
     ImGui::InputText("Day", day, 3);
     ImGui::InputText("Month", month, 3);

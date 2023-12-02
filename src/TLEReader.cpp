@@ -2,7 +2,7 @@
 #include <vector>
 #include "gl.h"
 
-GLfloat* TLEReader::ReadFile(char* fileName, int& numSats) {
+GLfloat* TLEReader::ReadFile(char* fileName, int& numSats, double& epoch) {
     // Load MainDll dll
     LoadDllMainDll();
 
@@ -33,8 +33,6 @@ GLfloat* TLEReader::ReadFile(char* fileName, int& numSats) {
 
     TleGetLoaded(2, satKeys.data());
 
-    char  valueStr[GETSETSTRLEN];
-
     GLfloat* points = new GLfloat[numSats * 3];
 
     for (int i = 0; i < numSats; i++) {
@@ -44,27 +42,27 @@ GLfloat* TLEReader::ReadFile(char* fileName, int& numSats) {
 
         TleGetField(satKeys[i], XF_TLE_EPOCH, valueStr);
         valueStr[GETSETSTRLEN-1] = 0;
-        epochDs50UTC = DTGToUTC(valueStr);
+        epoch = DTGToUTC(valueStr);
 
-        Sgp4PropDs50UTC(satKeys[i], 1, &mse, pos, vel, llh);
+        Sgp4PropDs50UTC(satKeys[i], epoch, &mse, pos, vel, llh);
 
         points[i * 3] = pos[0] / earthRadiusKm;
         points[i * 3 + 1] = pos[2] / earthRadiusKm;
         points[i * 3 + 2] = pos[1] / earthRadiusKm;
     }
 
-    cout << points[0] << " " << points[1] << " " << points[2] << endl;
+    //cout << points[0] << " " << points[1] << " " << points[2] << endl;
 
     return points;
 }
 
-void TLEReader::propagate(double frameTime, GLfloat* points, int numSats) {
+void TLEReader::propagate(double time, GLfloat* points, int numSats) {
     for (int i = 0; i < numSats; i++) {
         // TleGetField(satKeys[i], XF_TLE_EPOCH, valueStr);
         // valueStr[GETSETSTRLEN-1] = 0;
         // epochDs50UTC = DTGToUTC(valueStr);
 
-        Sgp4PropDs50UTC(satKeys[i], frameTime / (86400.0), &mse, pos, vel, llh);
+        Sgp4PropDs50UTC(satKeys[i], time, &mse, pos, vel, llh);
 
         points[i * 3] = pos[0] / earthRadiusKm;
         points[i * 3 + 1] = pos[2] / earthRadiusKm;

@@ -38,7 +38,9 @@ class TLEReader {
     mse,
     ds50UTC;
 
+    char  valueStr[GETSETSTRLEN];
+
     public:
-    GLfloat* ReadFile(char* fileName, int& numSats);
-    void propagate(double deltaTime, GLfloat* points, int numSats);
+    GLfloat* ReadFile(char* fileName, int& numSats, double& epoch);
+    void propagate(double time, GLfloat* points, int numSats);
 };
