@@ -145,7 +145,7 @@ void OpenGLEngine::mainEventLoop() {
         double currTime = glfwGetTime();
         double frameTime = currTime - runTime;
         runTime = currTime;
-        totalTime += frameTime;
+        totalTime += frameTime * pow(10, simSpeed);
 
         // draw
         preFrame(frameTime);
@@ -165,6 +165,8 @@ bool OpenGLEngine::initSharedMem()
     runTime = 0;
     frameCounter = 0;
     totalTime = 0.0;
+    numSats = 0;
+    simSpeed = 0;
 
     mouseLeftDown = mouseRightDown = mouseMiddleDown = false;
     mouseX = mouseY = 0;
@@ -656,17 +658,28 @@ void OpenGLEngine::frame(double frameTime)
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
-    ImGui::Begin("Test Window");
-    ImGui::Text("Space Debris Tracker");
-    ImGui::Text(std::to_string(cameraAngleX).c_str());
-    ImGui::Text(std::to_string(cameraAngleY).c_str());
-    ImGui::Text(std::to_string(totalTime).c_str());
+    ImGui::Begin("Space Debris Tracker");
+    ImGui::Text("%.2f", totalTime);
     ImGui::Text("Input Date (DD/MM/YYYY)");
     ImGui::InputText("Day", day, 3);
+    ImGui::SameLine(0.0f, 0.0f);
     ImGui::InputText("Month", month, 3);
     ImGui::InputText("Year", year, 5);
     ImGui::Button("Go");
     ImGui::SliderFloat("Sun Angle", this->sunAngle, 0.0f, 359.9f, "%.1f");
+
+    // Simulation Speed
+    ImGui::Text("Speed");
+    if (ImGui::ArrowButton("##left", ImGuiDir_Left)) { 
+        if (simSpeed > -1) {
+            simSpeed--;
+        }
+    }
+    ImGui::SameLine(0.0f, 0.0f);
+    if (ImGui::ArrowButton("##right", ImGuiDir_Right)) { 
+        simSpeed++; 
+    }
+
     ImGui::End();
 
     ImGui::Render();

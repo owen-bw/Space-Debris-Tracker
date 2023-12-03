@@ -25,9 +25,9 @@ class OpenGLEngine {
     OpenGLEngine();
 
     // ImGUI
-    char day[3];
-    char month[3];
-    char year[5];
+    char day[3] = {'\0'};
+    char month[3] = {'\0'};
+    char year[3] = {'\0'};
 
     float* sunAngle;
 
@@ -160,8 +160,9 @@ class OpenGLEngine {
 
     GLfloat* points;
 
-    int numSats = 0;
+    int numSats;
     double epoch;
+    int simSpeed;
     
     // Bui-Tuong Phong shading model with texture
     const char* vsSource = R"(
