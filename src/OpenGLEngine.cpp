@@ -1,3 +1,12 @@
+/****************************************************************/
+/*                       OpenGL Implementation                  */
+/*                           Blake Owen                         */
+/*        This implementation was refectored and modified from  */
+/*        the OpenGL sphere example provided by songho:         */
+/*        http://www.songho.ca/opengl/gl_sphere.html            */
+/*                                                              */
+/****************************************************************/
+
 // https://github.com/ocornut/imgui
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -72,7 +81,7 @@ void OpenGLEngine::init() {
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // Read TLE Data
-    points = tle.ReadFile("2023_332.txt", numSats, epoch);
+    points = tle.ReadFile("2023_334.txt", numSats, epoch);
 
     cout << points[0] << points[1], points[2];
 
@@ -452,40 +461,6 @@ void OpenGLEngine::showInfo()
     // call it once before drawing text to configure orthographic projection
     bmFont.setWindowSize(windowWidth, windowHeight);
 
-    // std::stringstream ss;
-    // ss << std::fixed << std::setprecision(3);
-
-    // int x = 1;
-    // int y = windowHeight - bmFont.getBaseline();
-    // bmFont.setColor(1, 1, 1, 1);
-
-    // ss << "Sphere Radius: " << earth.getRadius() << std::ends;
-    // bmFont.drawText(x, y, ss.str().c_str());
-    // ss.str("");
-    // y -= bmFont.getHeight();
-
-    // ss << "Sector Count: " << earth.getSectorCount() << std::ends;
-    // bmFont.drawText(x, y, ss.str().c_str());
-    // ss.str("");
-    // y -= bmFont.getHeight();
-
-    // ss << "Stack Count: " << earth.getStackCount() << std::ends;
-    // bmFont.drawText(x, y, ss.str().c_str());
-    // ss.str("");
-    // y -= bmFont.getHeight();
-
-    // ss << "Vertex Count: " << earth.getVertexCount() << std::ends;
-    // bmFont.drawText(x, y, ss.str().c_str());
-    // ss.str("");
-    // y -= bmFont.getHeight();
-
-    // ss << "Index Count: " << earth.getIndexCount() << std::ends;
-    // bmFont.drawText(x, y, ss.str().c_str());
-    // ss.str("");
-
-    // // unset floating format
-    // ss << std::resetiosflags(std::ios_base::fixed | std::ios_base::floatfield);
-
     showFPS();
 
     // go back to perspective mode
@@ -664,7 +639,7 @@ void OpenGLEngine::frame(double frameTime)
     glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
     glBufferSubData(GL_ARRAY_BUFFER, 0, numSats * 3 * sizeof(GLfloat), points);
     glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_TRUE);
-    glPointSize(5);
+    glPointSize(3.4);
     glBindVertexArray(pointsVao);
     glDrawArrays(GL_POINTS, 0, numSats);
     glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_FALSE);
@@ -804,8 +779,8 @@ void OpenGLEngine::cursorPosCallback(GLFWwindow* window, double x, double y)
 {
     if(mouseLeftDown)
     {
-        cameraAngleY += (x - mouseX);
-        cameraAngleX += (y - mouseY);
+        cameraAngleY += (x - mouseX) * 0.1f;
+        cameraAngleX += (y - mouseY) * 0.1f;
 
         if (cameraAngleX > 90.0) {
             cameraAngleX = 90.0;
@@ -818,14 +793,17 @@ void OpenGLEngine::cursorPosCallback(GLFWwindow* window, double x, double y)
     }
     if(mouseRightDown)
     {
-        cameraDistance -= (y - mouseY) * 0.2f;
+        cameraDistance -= (y - mouseY) * 0.1f;
+        if (cameraDistance < 1.0) {
+            cameraDistance = 1.0;
+        }
         mouseY = y;
     }
 }
 
 void OpenGLEngine::scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
     if (yoffset) {
-        cameraDistance += yoffset * 0.2f;
+        cameraDistance -= yoffset * 0.1f;
         if (cameraDistance < 1.0) {
             cameraDistance = 1.0;
         }
