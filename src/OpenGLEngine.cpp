@@ -688,12 +688,12 @@ void OpenGLEngine::frame(double frameTime)
     to_string(tdate.year) + " " + 
     ossHours.str() + ":" + 
     ossMinutes.str()+ " " + 
-    ossSeconds.str();
+    ossSeconds.str() + " UTC";
 
     ImGui::Begin("Space Debris Tracker");
     //ImGui::Text("%.2f", epoch + totalTime / (86400.0));
     ImGui::Text(datetime.data());
-    ImGui::Text("Input Date (DD/MM/YYYY)");
+    ImGui::Text("Input Date (DD/MM/YYYY/HH/MM/SS)");
     ImGui::SetNextItemWidth(25);
     ImGui::InputText("Day", day, 3);
     ImGui::SameLine();

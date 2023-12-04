@@ -38,14 +38,14 @@ GLfloat* TLEReader::ReadFile(string fileName, int& numSats, double& epoch) {
 
     GLfloat* points = new GLfloat[numSats * 3];
 
+    TleGetField(satKeys[0], XF_TLE_EPOCH, valueStr);
+    valueStr[GETSETSTRLEN-1] = 0;
+    epoch = DTGToUTC(valueStr);
+
     for (int i = 0; i < numSats; i++) {
         if (Sgp4InitSat(satKeys[i]) != 0) {
             ShowMsgAndTerminate();
         }
-
-        TleGetField(satKeys[i], XF_TLE_EPOCH, valueStr);
-        valueStr[GETSETSTRLEN-1] = 0;
-        epoch = DTGToUTC(valueStr);
 
         Sgp4PropDs50UTC(satKeys[i], epoch, &mse, pos, vel, llh);
 
@@ -61,10 +61,6 @@ GLfloat* TLEReader::ReadFile(string fileName, int& numSats, double& epoch) {
 
 void TLEReader::propagate(double time, GLfloat* points, int numSats) {
     for (int i = 0; i < numSats; i++) {
-        // TleGetField(satKeys[i], XF_TLE_EPOCH, valueStr);
-        // valueStr[GETSETSTRLEN-1] = 0;
-        // epochDs50UTC = DTGToUTC(valueStr);
-
         Sgp4PropDs50UTC(satKeys[i], time, &mse, pos, vel, llh);
 
         points[i * 3] = pos[0] / earthRadiusKm;
