@@ -199,9 +199,6 @@ bool OpenGLEngine::initSharedMem()
     ibo = 0;
     texId = 0;
 
-    // debug
-    earth.printSelf();
-
     return true;
 }
 
@@ -369,7 +366,6 @@ void OpenGLEngine::initVBO()
     glVertexAttribPointer(attribVertexNormal, 3, GL_FLOAT, false, stride, (void*)(3 * sizeof(float)));
     glVertexAttribPointer(attribVertexTexCoord, 2, GL_FLOAT, false, stride, (void*)(6 * sizeof(float)));
     
-    cout << "POINTS ARRAY: " << numSats << endl;
     // Points
     glGenBuffers(1, &pointsVbo);
     

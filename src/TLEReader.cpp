@@ -53,7 +53,7 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch) {
         points[i * 3 + 1] = pos[2] / earthRadiusKm;
         points[i * 3 + 2] = pos[1] / earthRadiusKm;
     }
-    
+
     return points;
 }
 
