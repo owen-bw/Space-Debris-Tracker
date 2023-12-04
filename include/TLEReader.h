@@ -58,3 +58,4 @@ class TLEReader {
 };
 
 Datetime doubleToDate(double time);
+double dateToDouble(Datetime& tdate);

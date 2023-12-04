@@ -674,32 +674,55 @@ void OpenGLEngine::frame(double frameTime)
 
     Datetime tdate = doubleToDate(epoch + totalTime / (86400.0));
 
-    std::ostringstream hours;
-    hours << std::setw(2) << std::setfill('0') << tdate.hours;
+    std::ostringstream ossHours;
+    ossHours << std::setw(2) << std::setfill('0') << tdate.hours;
 
-    std::ostringstream minutes;
-    minutes << std::setw(2) << std::setfill('0') << tdate.minutes;
+    std::ostringstream ossMinutes;
+    ossMinutes << std::setw(2) << std::setfill('0') << tdate.minutes;
+
+    std::ostringstream ossSeconds;
+    ossSeconds << std::setw(2) << std::setfill('0') << tdate.seconds;
 
     string datetime = months.at(tdate.month) + " " + 
     to_string(tdate.day) + ", " + 
     to_string(tdate.year) + " " + 
-    hours.str() + ":" + 
-    minutes.str()+ " " + 
-    to_string(tdate.seconds);
+    ossHours.str() + ":" + 
+    ossMinutes.str()+ " " + 
+    ossSeconds.str();
 
     ImGui::Begin("Space Debris Tracker");
     //ImGui::Text("%.2f", epoch + totalTime / (86400.0));
     ImGui::Text(datetime.data());
     ImGui::Text("Input Date (DD/MM/YYYY)");
-    ImGui::SetNextItemWidth(50);
+    ImGui::SetNextItemWidth(25);
     ImGui::InputText("Day", day, 3);
     ImGui::SameLine();
-    ImGui::SetNextItemWidth(50);
+    ImGui::SetNextItemWidth(25);
     ImGui::InputText("Month", month, 3);
     ImGui::SameLine();
-    ImGui::SetNextItemWidth(100);
+    ImGui::SetNextItemWidth(50);
     ImGui::InputText("Year", year, 5);
-    ImGui::Button("Go");
+    ImGui::SetNextItemWidth(25);
+    ImGui::InputText("Hours", hours, 3);
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(25);
+    ImGui::InputText("Minutes", minutes, 3);
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(25);
+    ImGui::InputText("Seconds", seconds, 3);
+    if (ImGui::Button("Go")) {
+        newTime.day = stoi(day);
+        newTime.month = stoi(month);
+        newTime.year = stoi(year);
+
+        newTime.hours = stoi(hours);
+        newTime.minutes = stoi(minutes);
+        newTime.seconds = stoi(seconds);
+
+        totalTime = 0.0;
+
+        epoch = dateToDouble(newTime);
+    }
     ImGui::SliderFloat("Sun Angle", this->sunAngle, 0.0f, 359.9f, "%.1f");
 
     // Simulation Speed

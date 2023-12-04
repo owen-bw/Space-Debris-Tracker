@@ -27,7 +27,13 @@ class OpenGLEngine {
     // ImGUI
     char day[3] = {'\0'};
     char month[3] = {'\0'};
-    char year[3] = {'\0'};
+    char year[5] = {'\0'};
+
+    char hours[3] = {'\0'};
+    char minutes[3] = {'\0'};
+    char seconds[3] = {'\0'};
+
+    Datetime newTime;
 
     float* sunAngle;
 

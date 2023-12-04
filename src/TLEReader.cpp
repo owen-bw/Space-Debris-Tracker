@@ -76,7 +76,7 @@ void TLEReader::propagate(double time, GLfloat* points, int numSats) {
 Datetime doubleToDate(double time) {
     int64_t totalSeconds = static_cast<int64_t>(time * 86400);
 
-    std::time_t baseTime = std::mktime(new std::tm{0, 0, 0, 1, 0, 50}); // January 1, 1950
+    std::time_t baseTime = std::mktime(new std::tm{0, 0, 0, 1, 0, 50});
     std::time_t targetTime = baseTime + totalSeconds;
 
     std::tm* timeStruct = std::gmtime(&targetTime);
@@ -90,4 +90,23 @@ Datetime doubleToDate(double time) {
     result.seconds = timeStruct->tm_sec;
 
     return result;
+}
+
+double dateToDouble(Datetime& tdate) {
+    std::tm timeStruct = {};
+    timeStruct.tm_year = tdate.year - 1900;
+    timeStruct.tm_mon = tdate.month - 1;
+    timeStruct.tm_mday = tdate.day;
+    timeStruct.tm_hour = tdate.hours;
+    timeStruct.tm_min = tdate.minutes;
+    timeStruct.tm_sec = tdate.seconds;
+
+    std::time_t timeSinceEpoch = std::mktime(&timeStruct);
+
+    std::time_t localTime = timeSinceEpoch - timezone;
+
+    std::time_t baseTime = std::mktime(new std::tm{0, 0, 0, 1, 0, 50}); // Jan 1, 1950
+    double daysSince1950 = difftime(localTime, baseTime) / (60 * 60 * 24);
+
+    return daysSince1950;
 }
