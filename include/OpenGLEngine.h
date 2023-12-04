@@ -163,6 +163,7 @@ class OpenGLEngine {
     int numSats;
     double epoch;
     int simSpeed;
+    bool isPaused;
     
     // Bui-Tuong Phong shading model with texture
     const char* vsSource = R"(

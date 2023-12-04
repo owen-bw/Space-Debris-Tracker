@@ -39,9 +39,24 @@
 #include <sstream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 
 #include "OpenGLEngine.h"
 #include "TLEReader.h"
+
+unordered_map<int, string> months = {
+    {1, "January"}, 
+    {2, "February"}, 
+    {3, "March"}, 
+    {4, "April"}, 
+    {5, "May"}, 
+    {6, "June"}, 
+    {7, "July"}, 
+    {8, "August"}, 
+    {9, "September"}, 
+    {10, "October"}, 
+    {11, "November"}, 
+    {12, "December"}};
 
 // Constructor
 OpenGLEngine::OpenGLEngine() {
@@ -81,9 +96,7 @@ void OpenGLEngine::init() {
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // Read TLE Data
-    points = tle.ReadFile("2023_334.txt", numSats, epoch);
-
-    cout << points[0] << points[1], points[2];
+    points = tle.ReadFile("2023_332.txt", numSats, epoch);
 
     initGL();
     initGLSL();
@@ -145,8 +158,10 @@ void OpenGLEngine::mainEventLoop() {
         double currTime = glfwGetTime();
         double frameTime = currTime - runTime;
         runTime = currTime;
-        totalTime += frameTime * pow(10, simSpeed);
-
+        if (!isPaused) {
+            totalTime += frameTime * pow(10, simSpeed);
+        }
+        
         // draw
         preFrame(frameTime);
         frame(frameTime);
@@ -167,6 +182,7 @@ bool OpenGLEngine::initSharedMem()
     totalTime = 0.0;
     numSats = 0;
     simSpeed = 0;
+    isPaused = true;
 
     mouseLeftDown = mouseRightDown = mouseMiddleDown = false;
     mouseX = mouseY = 0;
@@ -570,10 +586,8 @@ void OpenGLEngine::toPerspective()
 ///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::preFrame(double frameTime)
 {
-    frameCounter++;
-    if (frameCounter == 1) {
+    if (!isPaused) {
         tle.propagate(epoch + totalTime / (86400.0), points, numSats);
-        frameCounter = 0;
     }
 }
 
@@ -658,12 +672,32 @@ void OpenGLEngine::frame(double frameTime)
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
+    Datetime tdate = doubleToDate(epoch + totalTime / (86400.0));
+
+    std::ostringstream hours;
+    hours << std::setw(2) << std::setfill('0') << tdate.hours;
+
+    std::ostringstream minutes;
+    minutes << std::setw(2) << std::setfill('0') << tdate.minutes;
+
+    string datetime = months.at(tdate.month) + " " + 
+    to_string(tdate.day) + ", " + 
+    to_string(tdate.year) + " " + 
+    hours.str() + ":" + 
+    minutes.str()+ " " + 
+    to_string(tdate.seconds);
+
     ImGui::Begin("Space Debris Tracker");
-    ImGui::Text("%.2f", totalTime);
+    //ImGui::Text("%.2f", epoch + totalTime / (86400.0));
+    ImGui::Text(datetime.data());
     ImGui::Text("Input Date (DD/MM/YYYY)");
+    ImGui::SetNextItemWidth(50);
     ImGui::InputText("Day", day, 3);
-    ImGui::SameLine(0.0f, 0.0f);
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(50);
     ImGui::InputText("Month", month, 3);
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(100);
     ImGui::InputText("Year", year, 5);
     ImGui::Button("Go");
     ImGui::SliderFloat("Sun Angle", this->sunAngle, 0.0f, 359.9f, "%.1f");
@@ -676,6 +710,10 @@ void OpenGLEngine::frame(double frameTime)
         }
     }
     ImGui::SameLine(0.0f, 0.0f);
+    if (ImGui::Button("Play/Pause")) {
+        isPaused = !isPaused;
+    }
+    ImGui::SameLine(0.0f, 0.0f);
     if (ImGui::ArrowButton("##right", ImGuiDir_Right)) { 
         simSpeed++; 
     }
@@ -684,9 +722,6 @@ void OpenGLEngine::frame(double frameTime)
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-
-    
 
     glfwSwapBuffers(window);
 }

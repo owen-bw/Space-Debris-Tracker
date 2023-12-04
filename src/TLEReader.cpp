@@ -1,8 +1,11 @@
 #include "TLEReader.h"
 #include <vector>
+#include <chrono>
+#include <iomanip>
+#include <iostream>
 #include "gl.h"
 
-GLfloat* TLEReader::ReadFile(char* fileName, int& numSats, double& epoch) {
+GLfloat* TLEReader::ReadFile(string fileName, int& numSats, double& epoch) {
     // Load MainDll dll
     LoadDllMainDll();
 
@@ -21,7 +24,7 @@ GLfloat* TLEReader::ReadFile(char* fileName, int& numSats, double& epoch) {
     // Load Sgp4Prop dll and assign function pointers
     LoadSgp4PropDll();
     
-    Sgp4LoadFileAll(fileName);
+    Sgp4LoadFileAll(fileName.data());
 
     numSats = TleGetCount();
 
@@ -68,4 +71,23 @@ void TLEReader::propagate(double time, GLfloat* points, int numSats) {
         points[i * 3 + 1] = pos[2] / earthRadiusKm;
         points[i * 3 + 2] = pos[1] / earthRadiusKm;
     }
+}
+
+Datetime doubleToDate(double time) {
+    int64_t totalSeconds = static_cast<int64_t>(time * 86400);
+
+    std::time_t baseTime = std::mktime(new std::tm{0, 0, 0, 1, 0, 50}); // January 1, 1950
+    std::time_t targetTime = baseTime + totalSeconds;
+
+    std::tm* timeStruct = std::gmtime(&targetTime);
+
+    Datetime result;
+    result.year = timeStruct->tm_year + 1900;
+    result.month = timeStruct->tm_mon + 1;
+    result.day = timeStruct->tm_mday;
+    result.hours = timeStruct->tm_hour;
+    result.minutes = timeStruct->tm_min;
+    result.seconds = timeStruct->tm_sec;
+
+    return result;
 }

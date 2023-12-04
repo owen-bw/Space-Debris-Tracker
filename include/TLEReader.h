@@ -2,7 +2,9 @@
 #include "gl.h"
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 
+using namespace std;
 
 #ifdef __cplusplus
 extern "C" 
@@ -23,6 +25,16 @@ extern "C"
 
 #pragma once
 
+struct Datetime {
+    int day;
+    int month;
+    int year;
+
+    int hours;
+    int minutes;
+    int seconds;
+};
+
 class TLEReader {
     vector<__int64> satKeys;
     const double earthRadiusKm = 6371.0;
@@ -41,6 +53,8 @@ class TLEReader {
     char  valueStr[GETSETSTRLEN];
 
     public:
-    GLfloat* ReadFile(char* fileName, int& numSats, double& epoch);
+    GLfloat* ReadFile(string fileName, int& numSats, double& epoch);
     void propagate(double time, GLfloat* points, int numSats);
 };
+
+Datetime doubleToDate(double time);
