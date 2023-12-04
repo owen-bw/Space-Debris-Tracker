@@ -98,6 +98,8 @@ void OpenGLEngine::init() {
     // Read TLE Data
     points = tle.ReadFiles(numSats, epoch);
 
+    newTime = doubleToDate(epoch);
+
     initGL();
     initGLSL();
     initVBO();
@@ -183,6 +185,7 @@ bool OpenGLEngine::initSharedMem()
     numSats = 0;
     simSpeed = 0;
     isPaused = true;
+    isValid = true;
 
     mouseLeftDown = mouseRightDown = mouseMiddleDown = false;
     mouseX = mouseY = 0;
@@ -707,18 +710,29 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::SetNextItemWidth(25);
     ImGui::InputText("Seconds", seconds, 3);
     if (ImGui::Button("Go")) {
-        newTime.day = stoi(day);
-        newTime.month = stoi(month);
-        newTime.year = stoi(year);
+        isValid = true;
+        try {
+            newTime.day = stoi(day);
+            newTime.month = stoi(month);
+            newTime.year = stoi(year);
 
-        newTime.hours = stoi(hours);
-        newTime.minutes = stoi(minutes);
-        newTime.seconds = stoi(seconds);
+            newTime.hours = stoi(hours);
+            newTime.minutes = stoi(minutes);
+            newTime.seconds = stoi(seconds);
+            
+            totalTime = 0.0;
 
-        totalTime = 0.0;
+            epoch = dateToDouble(newTime);
 
-        epoch = dateToDouble(newTime);
+            tle.propagate(epoch, points, numSats);
+        } catch (std::invalid_argument) {
+            isValid = false;
+        }
     }
+    if (!isValid) {
+        ImGui::Text("Error: Invalid Date-Time Format");
+    }
+
     ImGui::SliderFloat("Sun Angle", this->sunAngle, 0.0f, 359.9f, "%.1f");
 
     // Simulation Speed
@@ -741,6 +755,37 @@ void OpenGLEngine::frame(double frameTime)
     if (ImGui::ArrowButton("##right", ImGuiDir_Right)) { 
         simSpeed++; 
     }
+
+    ImGui::Text("Select Risk Detection Algorithm");
+    ImGui::RadioButton("Octree", &algorithmSelection, 0); ImGui::SameLine();
+    ImGui::RadioButton("Greedy", &algorithmSelection, 1); ImGui::SameLine();
+    if (ImGui::Button("Run")) {
+        // Run selected algorithm at current time
+    }
+
+    ImGui::BeginTable("Risk Assessment", 3, 0);
+    ImGui::TableSetupColumn("Sat ID");
+    ImGui::TableSetupColumn("Potential Risk");
+    ImGui::TableSetupColumn("Goto");
+    ImGui::TableHeadersRow();
+
+    for (int row = 0; row < 5; row++)
+    {
+        ImGui::TableNextRow();
+        for (int column = 0; column < 3; column++)
+        {
+            ImGui::TableSetColumnIndex(column);
+            char buf[32];
+            if (column == 3) {
+                ImGui::Button("Test");
+            }
+            sprintf(buf, "Test %d,%d", column, row);
+            ImGui::TextUnformatted(buf);
+            //ImGui::Button(buf, ImVec2(-FLT_MIN, 0.0f));
+        }
+    }
+    ImGui::EndTable();
+
 
     ImGui::End();
 

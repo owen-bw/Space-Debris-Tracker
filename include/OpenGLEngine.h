@@ -33,6 +33,8 @@ class OpenGLEngine {
     char minutes[3] = {'\0'};
     char seconds[3] = {'\0'};
 
+    bool isValid;
+
     Datetime newTime;
 
     float* sunAngle;
@@ -170,6 +172,8 @@ class OpenGLEngine {
     double epoch;
     int simSpeed;
     bool isPaused;
+
+    int algorithmSelection;
     
     // Bui-Tuong Phong shading model with texture
     const char* vsSource = R"(
