@@ -5,7 +5,7 @@
 #include <iostream>
 #include "gl.h"
 
-GLfloat* TLEReader::ReadFile(string fileName, int& numSats, double& epoch) {
+GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch) {
     // Load MainDll dll
     LoadDllMainDll();
 
@@ -24,7 +24,7 @@ GLfloat* TLEReader::ReadFile(string fileName, int& numSats, double& epoch) {
     // Load Sgp4Prop dll and assign function pointers
     LoadSgp4PropDll();
     
-    Sgp4LoadFileAll(fileName.data());
+    Sgp4LoadFileAll("2023_332.txt");
 
     numSats = TleGetCount();
 
@@ -53,9 +53,7 @@ GLfloat* TLEReader::ReadFile(string fileName, int& numSats, double& epoch) {
         points[i * 3 + 1] = pos[2] / earthRadiusKm;
         points[i * 3 + 2] = pos[1] / earthRadiusKm;
     }
-
-    //cout << points[0] << " " << points[1] << " " << points[2] << endl;
-
+    
     return points;
 }
 

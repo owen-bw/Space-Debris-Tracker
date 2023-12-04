@@ -53,7 +53,7 @@ class TLEReader {
     char  valueStr[GETSETSTRLEN];
 
     public:
-    GLfloat* ReadFile(string fileName, int& numSats, double& epoch);
+    GLfloat* ReadFiles(int& numSats, double& epoch);
     void propagate(double time, GLfloat* points, int numSats);
 };
 

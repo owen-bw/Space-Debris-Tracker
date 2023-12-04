@@ -96,7 +96,7 @@ void OpenGLEngine::init() {
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // Read TLE Data
-    points = tle.ReadFile("2023_332.txt", numSats, epoch);
+    points = tle.ReadFiles(numSats, epoch);
 
     initGL();
     initGLSL();
@@ -726,7 +726,12 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::SliderFloat("Sun Angle", this->sunAngle, 0.0f, 359.9f, "%.1f");
 
     // Simulation Speed
-    ImGui::Text("Speed");
+    if (!isPaused) {
+        ImGui::Text("Speed: %dx", (int)pow(10, simSpeed));
+    } else {
+        ImGui::Text("Paused");
+    }
+    
     if (ImGui::ArrowButton("##left", ImGuiDir_Left)) { 
         if (simSpeed > -1) {
             simSpeed--;
