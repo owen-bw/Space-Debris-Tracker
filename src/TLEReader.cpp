@@ -26,7 +26,7 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
     // Load Sgp4Prop dll and assign function pointers
     LoadSgp4PropDll();
     
-    Sgp4LoadFileAll("2023_332.txt");
+    Sgp4LoadFileAll("2023_334.txt");
 
     numSats = TleGetCount();
 
@@ -55,7 +55,7 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
         points[i * 3 + 1] = pos[2] / earthRadiusKm;
         points[i * 3 + 2] = pos[1] / earthRadiusKm;
         
-        SpaceDebris newDebris(i, i * 3, i * 3 + 2, i * 3 + 1);
+        SpaceDebris newDebris(i, pos[0] / earthRadiusKm, pos[2] / earthRadiusKm, pos[1] / earthRadiusKm);
 
         debris.push_back(newDebris);
     }

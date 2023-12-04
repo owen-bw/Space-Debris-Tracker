@@ -761,9 +761,11 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::RadioButton("Greedy", &algorithmSelection, 1); ImGui::SameLine();
     if (ImGui::Button("Run")) {
         // Run selected algorithm at current time
+        SpaceDebris start(0, 1.0, 1.0, 1.0);
+
         Octree octree(debris);
 
-        vector<int> local_optimum_octree = octree.find_local_optimum(debris.at(0));
+        vector<int> local_optimum_octree = octree.find_local_optimum(start);
 
         for (int id : local_optimum_octree) {
 
