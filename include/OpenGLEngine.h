@@ -16,6 +16,7 @@
 #include <vector>
 
 #include "TLEReader.h"
+#include "SpaceDebris.h"
 
 #pragma once
 
@@ -167,6 +168,8 @@ class OpenGLEngine {
     TLEReader tle;
 
     GLfloat* points;
+
+    vector<SpaceDebris> debris;
 
     int numSats;
     double epoch;

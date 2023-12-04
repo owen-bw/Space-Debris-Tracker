@@ -1,11 +1,13 @@
-#include "TLEReader.h"
 #include <vector>
 #include <chrono>
 #include <iomanip>
 #include <iostream>
-#include "gl.h"
 
-GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch) {
+#include "gl.h"
+#include "TLEReader.h"
+#include "SpaceDebris.h"
+
+GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& debris) {
     // Load MainDll dll
     LoadDllMainDll();
 
@@ -52,6 +54,10 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch) {
         points[i * 3] = pos[0] / earthRadiusKm;
         points[i * 3 + 1] = pos[2] / earthRadiusKm;
         points[i * 3 + 2] = pos[1] / earthRadiusKm;
+        
+        SpaceDebris newDebris(i, i * 3, i * 3 + 2, i * 3 + 1);
+
+        debris.push_back(newDebris);
     }
 
     return points;

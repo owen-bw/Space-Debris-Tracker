@@ -96,7 +96,7 @@ void OpenGLEngine::init() {
     // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // Read TLE Data
-    points = tle.ReadFiles(numSats, epoch);
+    points = tle.ReadFiles(numSats, epoch, debris);
 
     newTime = doubleToDate(epoch);
 
@@ -761,6 +761,15 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::RadioButton("Greedy", &algorithmSelection, 1); ImGui::SameLine();
     if (ImGui::Button("Run")) {
         // Run selected algorithm at current time
+        Octree octree(debris);
+
+        vector<int> local_optimum_octree = octree.find_local_optimum(debris.at(0));
+
+        for (int id : local_optimum_octree) {
+
+            cout << id << " ";
+
+        }
     }
 
     ImGui::BeginTable("Risk Assessment", 3, 0);

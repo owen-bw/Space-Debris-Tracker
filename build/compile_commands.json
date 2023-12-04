@@ -79,6 +79,12 @@
 },
 {
   "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
+  "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/SpaceDebris.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/SpaceDebris.cpp\"",
+  "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/SpaceDebris.cpp",
+  "output": "CMakeFiles/space-debris-tracker.dir/src/SpaceDebris.cpp.o"
+},
+{
+  "directory": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/build",
   "command": "/usr/bin/clang++  -I\"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/include\" -isystem /usr/local/include -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o -c \"/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Sphere.cpp\"",
   "file": "/Users/blake/projects/cpp/COP3530/Project 3/Space-Debris-Tracker/src/Sphere.cpp",
   "output": "CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o"

@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/space-debris-tracker.dir/src/Matrices.cpp.o.d"
   "CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o"
   "CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.o.d"
+  "CMakeFiles/space-debris-tracker.dir/src/SpaceDebris.cpp.o"
+  "CMakeFiles/space-debris-tracker.dir/src/SpaceDebris.cpp.o.d"
   "CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o"
   "CMakeFiles/space-debris-tracker.dir/src/Sphere.cpp.o.d"
   "CMakeFiles/space-debris-tracker.dir/src/TLEReader.cpp.o"

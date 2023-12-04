@@ -1,4 +1,4 @@
-#include "debris.h"
+#include "SpaceDebris.h"
 #include "gl.h"
 #include <iostream>
 #include <vector>
@@ -53,7 +53,7 @@ class TLEReader {
     char  valueStr[GETSETSTRLEN];
 
     public:
-    GLfloat* ReadFiles(int& numSats, double& epoch);
+    GLfloat* ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& debris);
     void propagate(double time, GLfloat* points, int numSats);
 };
 

@@ -441,6 +441,30 @@ src/OpenGLEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/OpenGLEngine.cpp.s
 .PHONY : src/OpenGLEngine.cpp.s
 
+src/SpaceDebris.o: src/SpaceDebris.cpp.o
+.PHONY : src/SpaceDebris.o
+
+# target to build an object file
+src/SpaceDebris.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/SpaceDebris.cpp.o
+.PHONY : src/SpaceDebris.cpp.o
+
+src/SpaceDebris.i: src/SpaceDebris.cpp.i
+.PHONY : src/SpaceDebris.i
+
+# target to preprocess a source file
+src/SpaceDebris.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/SpaceDebris.cpp.i
+.PHONY : src/SpaceDebris.cpp.i
+
+src/SpaceDebris.s: src/SpaceDebris.cpp.s
+.PHONY : src/SpaceDebris.s
+
+# target to generate assembly for a file
+src/SpaceDebris.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-debris-tracker.dir/build.make CMakeFiles/space-debris-tracker.dir/src/SpaceDebris.cpp.s
+.PHONY : src/SpaceDebris.cpp.s
+
 src/Sphere.o: src/Sphere.cpp.o
 .PHONY : src/Sphere.o
 
@@ -801,6 +825,9 @@ help:
 	@echo "... src/OpenGLEngine.o"
 	@echo "... src/OpenGLEngine.i"
 	@echo "... src/OpenGLEngine.s"
+	@echo "... src/SpaceDebris.o"
+	@echo "... src/SpaceDebris.i"
+	@echo "... src/SpaceDebris.s"
 	@echo "... src/Sphere.o"
 	@echo "... src/Sphere.i"
 	@echo "... src/Sphere.s"
