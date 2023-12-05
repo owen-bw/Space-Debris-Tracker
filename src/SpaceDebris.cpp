@@ -36,6 +36,7 @@ Octree::Octree(vector<SpaceDebris>& debris_list, double tolerance) {
 
     max_x = max_y = max_z = numeric_limits<double>::lowest();
     
+    // Set initial bounds of octree to the maximum volume
     for (const auto& debris : debris_list) {
 
         min_x = min(min_x, debris.x);
@@ -57,12 +58,13 @@ Octree::Octree(vector<SpaceDebris>& debris_list, double tolerance) {
 }
 
 void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_max, double y_min, double y_max, double z_min, double z_max, double& tolerance) {
-
+    // Insert node and return if tolerance is met
     if (x_max - x_min <= tolerance) {
       node->idList.push_back(debris);
       return;
     }
 
+    // Otherwise, segment new octree and calculate quadrant from coordinates
     double x_mid = (x_min + x_max) / 2;
 
     double y_mid = (y_min + y_max) / 2;
@@ -71,6 +73,7 @@ void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_m
 
     int child_index = 0;
 
+    // Convert x, y, z coordinates to quadrant
     bitset<3> quadrant = {0};
 
     if (debris.x > x_mid)
@@ -82,10 +85,12 @@ void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_m
 
     child_index = quadrant.to_ulong();
 
+    // If no node at new quadrant, create new octree
     if (!node->children[child_index]) {
       node->children[child_index] = new OctNode();
     }
 
+    // Calculate octree bounds
     double new_x_min = quadrant[0] ? x_mid : x_min;
         double new_x_max = quadrant[0] ? x_max : x_mid;
         double new_y_min = quadrant[1] ? y_mid : y_min;
@@ -93,25 +98,31 @@ void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_m
         double new_z_min = quadrant[2] ? z_mid : z_min;
         double new_z_max = quadrant[2] ? z_max : z_mid;
 
+    // Recursively traverse octree to construct
     insert(node->children[child_index], debris, new_x_min, new_x_max, new_y_min, new_y_max, new_z_min, new_z_max, tolerance);
 }
 
+// Traverse constructed octree and find nodes with multiple values
+// This would be any debris closer together than the specified tolerance
 void Octree::find_risky(OctNode* node, vector<SpaceDebris>& riskList) {
   if (node == nullptr) {
     return;
   } else if (node->idList.size() > 1) {
     for (int i = 0; i < node->idList.size() - 1; i++) {
+      // Save id and distance data for future sorting
       node->idList.at(i).riskyOther = node->idList.at(i + 1).id;
       node->idList.at(i).riskDistance = node->idList.at(i).distance(node->idList.at(i + 1));
       riskList.push_back(node->idList.at(i));
     }
   }
 
+  // Traverse octree
   for (int i = 0; i < 8; i++) {
     find_risky(node->children[i], riskList);
   }
 }
 
+// Procedure to call to calculate the riskList
 void Octree::find_risky_debris(vector<SpaceDebris>& riskList) {
   find_risky(root, riskList);
 }
