@@ -2,6 +2,7 @@
 #include <chrono>
 #include <iomanip>
 #include <iostream>
+#include <unordered_set>
 
 #include "gl.h"
 #include "TLEReader.h"
@@ -26,13 +27,15 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
     // Load Sgp4Prop dll and assign function pointers
     LoadSgp4PropDll();
     
-    Sgp4LoadFileAll("2023_334.txt");
+    Sgp4LoadFileAll("2023_332.txt");
 
     numSats = TleGetCount();
 
     std::cout << numSats << std::endl;
 
     vector<__int64> constructKeys(numSats);
+
+    unordered_set<int> isAdded;
 
     satKeys = constructKeys;
 
@@ -49,15 +52,30 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
             ShowMsgAndTerminate();
         }
 
-        Sgp4PropDs50UTC(satKeys[i], epoch, &mse, pos, vel, llh);
-
-        points[i * 3] = pos[0] / earthRadiusKm;
-        points[i * 3 + 1] = pos[2] / earthRadiusKm;
-        points[i * 3 + 2] = pos[1] / earthRadiusKm;
         
-        SpaceDebris newDebris(i, pos[0] / earthRadiusKm, pos[2] / earthRadiusKm, pos[1] / earthRadiusKm);
+        //if (i < 100) {
+            int satId;
+            char strId[512] = {'\0'};
 
-        debris.push_back(newDebris);
+            TleGetField(satKeys[i], XF_TLE_SATNUM, strId);
+            satId = stoi(strId);
+
+            if (isAdded.find(satId) == isAdded.end()) {
+                Sgp4PropDs50UTC(satKeys[i], epoch, &mse, pos, vel, llh);
+        
+                SpaceDebris newDebris(i, pos[0] / earthRadiusKm, pos[2] / earthRadiusKm, pos[1] / earthRadiusKm);
+                
+                points[i * 3] = pos[0] / earthRadiusKm;
+                points[i * 3 + 1] = pos[2] / earthRadiusKm;
+                points[i * 3 + 2] = pos[1] / earthRadiusKm;
+
+                newDebris.id = satId;
+
+                debris.push_back(newDebris);
+                isAdded.emplace(newDebris.id);
+                uniqueSats.emplace(i);
+            }
+        //}
     }
 
     return points;
@@ -65,11 +83,13 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
 
 void TLEReader::propagate(double time, GLfloat* points, int numSats) {
     for (int i = 0; i < numSats; i++) {
-        Sgp4PropDs50UTC(satKeys[i], time, &mse, pos, vel, llh);
+        if (uniqueSats.find(i) != uniqueSats.end()) {
+            Sgp4PropDs50UTC(satKeys[i], time, &mse, pos, vel, llh);
 
-        points[i * 3] = pos[0] / earthRadiusKm;
-        points[i * 3 + 1] = pos[2] / earthRadiusKm;
-        points[i * 3 + 2] = pos[1] / earthRadiusKm;
+            points[i * 3] = pos[0] / earthRadiusKm;
+            points[i * 3 + 1] = pos[2] / earthRadiusKm;
+            points[i * 3 + 2] = pos[1] / earthRadiusKm;
+        }
     }
 }
 

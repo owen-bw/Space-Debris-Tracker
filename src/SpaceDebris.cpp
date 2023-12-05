@@ -4,6 +4,8 @@
 #include <limits>
 #include <algorithm>
 #include <memory>
+#include <unordered_set>
+#include <utility>
 
 #include "SpaceDebris.h"
 
@@ -77,144 +79,150 @@ void Octree::insert(Node* node, int debris_id, double x_min, double x_max, doubl
 }
 
 int Octree::find_closest(const Node* node, const SpaceDebris& target, double x_min, double x_max, double y_min, double y_max, double z_min, double z_max) const {
-
-    if (!node) return -1;
-
-    double x_mid = (x_min + x_max) / 2;
-
-    double y_mid = (y_min + y_max) / 2;
-
-    double z_mid = (z_min + z_max) / 2;
-
-    int child_index = 0;
-
-    if (target.x > x_mid) child_index |= 1, x_min = x_mid; else x_max = x_mid;
-
-    if (target.y > y_mid) child_index |= 2, y_min = y_mid; else y_max = y_mid;
-
-    if (target.z > z_mid) child_index |= 4, z_min = z_mid; else z_max = z_mid;
-
-    int closest = -1;
-
-    double min_distance = numeric_limits<double>::max();
-
-    for (int debris_id : node->debris_ids) {
-
-        double dist = target.distance(debris_list[debris_id]);
-
-        if (dist < min_distance) {
-
-            min_distance = dist;
-
-            closest = debris_id;
-
-        }
-
+  if (!node) return -1;
+  double x_mid = (x_min + x_max) / 2;
+  double y_mid = (y_min + y_max) / 2;
+  double z_mid = (z_min + z_max) / 2;
+  int child_index = 0;
+  if (target.x > x_mid) child_index |= 1, x_min = x_mid; else x_max = x_mid;
+  if (target.y > y_mid) child_index |= 2, y_min = y_mid; else y_max = y_mid;
+  if (target.z > z_mid) child_index |= 4, z_min = z_mid; else z_max = z_mid;
+  int closest = -1;
+  double min_distance = numeric_limits<double>::max();
+  for (int debris_id : node->debris_ids) {
+    double dist = target.distance(debris_list[debris_id]);
+    if (dist < min_distance) {
+      min_distance = dist;
+      closest = debris_id;
     }
+  }
+  if (min_distance == numeric_limits<double>::max()) return -1; // Add this line to check if min_distance hasn't changed
+  for (int i = 0; i < 8; ++i) {
+    if (i == child_index) continue;
+    double dx = max(max(x_min - target.x, 0.0), target.x - x_max);
+    double dy = max(max(y_min - target.y, 0.0), target.y - y_max);
+    double dz = max(max(z_min - target.z, 0.0), target.z - z_max);
+    if (dx * dx + dy * dy + dz * dz < min_distance) {
+      int candidate = find_closest(node->children[i].get(), target, x_min, x_max, y_min, y_max, z_min, z_max);
+      if (candidate != -1) {
+        double dist = target.distance(debris_list[candidate]);
+        if (dist < min_distance) {
+          min_distance = dist;
+          closest = candidate;
+        }
+      }
+    }
+  }
+  return closest;
+}
 
-    for (int i = 0; i < 8; ++i) {
+// vector<int> Octree::find_local_optimum(const SpaceDebris& start) {
 
-        if (i == child_index) continue;
+//     vector<int> result;
 
-        double dx = max(max(x_min - target.x, 0.0), target.x - x_max);
+//     SpaceDebris current = start;
 
-        double dy = max(max(y_min - target.y, 0.0), target.y - y_max);
+//     while (true) {
 
-        double dz = max(max(z_min - target.z, 0.0), target.z - z_max);
+//         int closest_index = find_closest(root.get(), current, 0, 1, 0, 1, 0, 1);
 
+//         if (closest_index == -1) break;
 
-        if (dx * dx + dy * dy + dz * dz < min_distance) {
+//         result.push_back(debris_list[closest_index].id);
 
-            int candidate = find_closest(node->children[i].get(), target, x_min, x_max, y_min, y_max, z_min, z_max);
+//         current = debris_list[closest_index];
 
-            if (candidate != -1) {
+//     }
 
-                double dist = target.distance(debris_list[candidate]);
+//     return result;
+// }
 
-                if (dist < min_distance) {
+// #include <iostream>
 
-                    min_distance = dist;
+// #include <vector>
 
-                    closest = candidate;
+// #include <cmath>
 
+// #include <limits>
+
+// #include <algorithm>
+
+// using namespace std;
+
+// struct SpaceDebris {
+
+//     int id;
+
+//     double x, y, z;
+
+//     SpaceDebris(int id, double x, double y, double z)
+//         : id(id), x(x), y(y), z(z) {}
+
+//     double distance(const SpaceDebris& other) const {
+
+//         return sqrt(pow(x - other.x, 2) + pow(y - other.y, 2) + pow(z - other.z, 2));
+
+//     }
+
+// };
+
+pair<int, int> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list) {
+
+    //vector<SpaceDebris> result;
+    unordered_set<int> processed;
+
+    double min = numeric_limits<double>::max();
+    int minId = -1;
+
+    pair<int, int> minPair(-1, -1);
+
+    SpaceDebris current = start;
+
+    bool found;
+
+    do {
+
+        found = false;
+
+        double min_distance = numeric_limits<double>::max();
+
+        int closest_index = -1;
+
+        for (int i = 0; i < debris_list.size(); ++i) {
+
+            double dist = current.distance(debris_list[i]);
+
+            if (dist < min_distance && processed.find(debris_list[i].id) == processed.end()) {
+
+                min_distance = dist;
+
+                if (min_distance < min) {
+                  min = min_distance;
+                  minId = debris_list[closest_index].id;
+
+                  minPair.first = debris_list[i].id;
+                  minPair.second = debris_list[closest_index].id;
                 }
+
+                closest_index = i;
+
+                found = true;
 
             }
 
         }
 
-    }
+        if (found) {
 
-    return closest;
+            //result.push_back(debris_list[closest_index]);
+            processed.emplace(debris_list[closest_index].id);
+
+            current = debris_list[closest_index];
+
+        }
+
+    } while (found);
+
+    return minPair;
 
 }
-
-vector<int> Octree::find_local_optimum(const SpaceDebris& start) {
-
-    vector<int> result;
-
-    SpaceDebris current = start;
-
-    while (true) {
-
-        int closest_index = find_closest(root.get(), current, 0, 1, 0, 1, 0, 1);
-
-        if (closest_index == -1) break;
-
-        result.push_back(debris_list[closest_index].id);
-
-        current = debris_list[closest_index];
-
-    }
-
-    return result;
-}
-
-/*
-int main() { //Modify to allow user to select input tied to Blake's GUI
-
-    vector<SpaceDebris> debris_list = {
-
-        {1, 2.0, 3.0, 1.0},
-
-        {2, 5.0, 1.0, 3.0},
-
-        {3, 4.0, 6.0, 7.0},
-
-        {4, 9.0, 2.0, 5.0},
-
-        {5, 6.0, 8.0, 1.0},
-
-    };
-
-    SpaceDebris start(0, 1.0, 1.0, 1.0);
-
-    Octree octree(debris_list);
-
-    vector<int> local_optimum_octree = octree.find_local_optimum(start);
-
-    cout << "Octree: ";
-
-    for (int id : local_optimum_octree) {
-
-        cout << id << " ";
-
-    }
-
-    cout << endl;
-
-    // vector<int> local_optimum_greedy = find_local_optimum(start, debris_list);
-
-    // cout << "Greedy: ";
-
-    // for (int id : local_optimum_greedy) {
-
-    //     cout << id << " ";
-
-    // }
-
-    // cout << endl;
-
-    return 0;
-}
-*/

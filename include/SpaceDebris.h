@@ -7,6 +7,8 @@ using namespace std;
 
 struct SpaceDebris {
 
+    int intId;
+
     int id;
 
     double x, y, z;
@@ -45,3 +47,5 @@ private:
     int find_closest(const Node* node, const SpaceDebris& target, double x_min, double x_max, double y_min, double y_max, double z_min, double z_max) const;
 
 };
+
+pair<int, int> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list);

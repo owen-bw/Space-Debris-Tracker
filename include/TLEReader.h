@@ -2,7 +2,7 @@
 #include "gl.h"
 #include <iostream>
 #include <vector>
-#include <unordered_map>
+#include <unordered_set>
 
 using namespace std;
 
@@ -38,6 +38,7 @@ struct Datetime {
 class TLEReader {
     vector<__int64> satKeys;
     const double earthRadiusKm = 6371.0;
+    unordered_set<int> uniqueSats;
 
     double 
     pos[3],           //Position (km)

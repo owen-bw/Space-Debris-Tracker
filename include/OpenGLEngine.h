@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <vector>
+#include <unordered_set>
 
 #include "TLEReader.h"
 #include "SpaceDebris.h"
@@ -170,6 +171,8 @@ class OpenGLEngine {
     GLfloat* points;
 
     vector<SpaceDebris> debris;
+
+    unordered_set<int> uniqueSatIds;
 
     int numSats;
     double epoch;

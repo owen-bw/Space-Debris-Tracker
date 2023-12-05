@@ -43,6 +43,7 @@
 
 #include "OpenGLEngine.h"
 #include "TLEReader.h"
+#include "SpaceDebris.h"
 
 unordered_map<int, string> months = {
     {1, "January"}, 
@@ -97,6 +98,10 @@ void OpenGLEngine::init() {
 
     // Read TLE Data
     points = tle.ReadFiles(numSats, epoch, debris);
+
+    // for (int i = 0; i < debris.size(); i++) {
+    //     cout << debris.at(i).id << ": " << debris.at(i).x << ", " << debris.at(i).y << ", " << debris.at(i).z << endl;
+    // }
 
     newTime = doubleToDate(epoch);
 
@@ -761,17 +766,32 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::RadioButton("Greedy", &algorithmSelection, 1); ImGui::SameLine();
     if (ImGui::Button("Run")) {
         // Run selected algorithm at current time
-        SpaceDebris start(0, 1.0, 1.0, 1.0);
+        cout << "Run pressed" << endl;
 
-        Octree octree(debris);
+        SpaceDebris start(-1, 0, 0, 0);
 
-        vector<int> local_optimum_octree = octree.find_local_optimum(start);
+        pair<int, int> result = find_local_optimum(start, debris);
 
-        for (int id : local_optimum_octree) {
+        cout << "Local optimum pair: ";
 
-            cout << id << " ";
+        cout << result.first << ", " << result.second << endl;
 
-        }
+        // for (int i = 0; i < result.size() - 1; i++) {
+
+        //     cout << result.at(i).id << ": " << result.at(i).distance(result.at(i + 1)) << endl;
+        // }
+        
+        // SpaceDebris start(0, 1.0, 1.0, 1.0);
+
+        // Octree octree(debris);
+
+        // vector<int> local_optimum_octree = octree.find_local_optimum(start);
+
+        // for (int id : local_optimum_octree) {
+
+        //     cout << id << " ";
+
+        // }
     }
 
     ImGui::BeginTable("Risk Assessment", 3, 0);
