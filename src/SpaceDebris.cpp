@@ -38,17 +38,11 @@ Octree::Octree(vector<SpaceDebris>& debris_list, double tolerance) {
     
     // Set initial bounds of octree to the maximum volume
     for (const auto& debris : debris_list) {
-
         min_x = min(min_x, debris.x);
-
         max_x = max(max_x, debris.x);
-
         min_y = min(min_y, debris.y);
-
         max_y = max(max_y, debris.y);
-
         min_z = min(min_z, debris.z);
-
         max_z = max(max_z, debris.z);
     }
 
@@ -75,7 +69,6 @@ void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_m
 
     // Convert x, y, z coordinates to quadrant
     bitset<3> quadrant = {0};
-
     if (debris.x > x_mid)
       quadrant[0] = 1;
     if (debris.y > y_mid)
@@ -83,6 +76,7 @@ void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_m
     if (debris.z > z_mid)
       quadrant[2] = 1;
 
+    // Convert bitset to integer index
     child_index = quadrant.to_ulong();
 
     // If no node at new quadrant, create new octree
@@ -92,11 +86,11 @@ void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_m
 
     // Calculate octree bounds
     double new_x_min = quadrant[0] ? x_mid : x_min;
-        double new_x_max = quadrant[0] ? x_max : x_mid;
-        double new_y_min = quadrant[1] ? y_mid : y_min;
-        double new_y_max = quadrant[1] ? y_max : y_mid;
-        double new_z_min = quadrant[2] ? z_mid : z_min;
-        double new_z_max = quadrant[2] ? z_max : z_mid;
+    double new_x_max = quadrant[0] ? x_max : x_mid;
+    double new_y_min = quadrant[1] ? y_mid : y_min;
+    double new_y_max = quadrant[1] ? y_max : y_mid;
+    double new_z_min = quadrant[2] ? z_mid : z_min;
+    double new_z_max = quadrant[2] ? z_max : z_mid;
 
     // Recursively traverse octree to construct
     insert(node->children[child_index], debris, new_x_min, new_x_max, new_y_min, new_y_max, new_z_min, new_z_max, tolerance);
@@ -109,8 +103,10 @@ void Octree::find_risky(OctNode* node, vector<SpaceDebris>& riskList) {
     return;
   } else if (node->idList.size() > 1) {
     for (int i = 0; i < node->idList.size() - 1; i++) {
+      
       // Save id and distance data for future sorting
       double dist = node->idList.at(i).distance(node->idList.at(i + 1));
+
       if (dist > 0.0) {
         node->idList.at(i).riskyOther = node->idList.at(i + 1).id;
         node->idList.at(i).riskDistance = dist;
@@ -135,21 +131,27 @@ vector<SpaceDebris> find_local_optimum(vector<SpaceDebris>& debris_list, double 
     vector<SpaceDebris> result;
     unordered_set<int> addedIds;
     for (int p = 1; p <= iterations; p++) {
+
       for (int i = 0; i < debris_list.size() - p; i += p) {
+
         double dist = debris_list.at(i).distance(debris_list.at(i + 1));
+
         if (dist <= tolerance && dist > 0.0 && (addedIds.find(debris_list.at(i).id) == addedIds.end())) {
+
           addedIds.emplace(debris_list.at(i).id);
+
           debris_list.at(i).riskyOther = debris_list.at(i + 1).id;
           debris_list.at(i).riskDistance = dist;
+
           result.push_back(debris_list.at(i));
         }
       }
     }
     
     return result;
-
 }
 
+// Comparison procedures for sorting
 bool compareDebrisDistanceLess(SpaceDebris d1, SpaceDebris d2) {
     return (d1.riskDistance < d2.riskDistance);
 }
