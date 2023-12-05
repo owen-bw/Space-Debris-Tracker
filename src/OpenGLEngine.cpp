@@ -766,16 +766,28 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::RadioButton("Greedy", &algorithmSelection, 1); ImGui::SameLine();
     if (ImGui::Button("Run")) {
         // Run selected algorithm at current time
-        cout << "Run pressed" << endl;
+        if (algorithmSelection == 1) {
+            cout << "Running greedy path algorithm..." << endl;
 
-        SpaceDebris start(-1, 0, 0, 0);
+            SpaceDebris start(-1, 0, 0, 0);
 
-        pair<int, int> result = find_local_optimum(start, debris);
+            pair<int, int> result = find_local_optimum(start, debris);
 
-        cout << "Local optimum pair: ";
+            cout << "Local optimum pair: ";
 
-        cout << result.first << ", " << result.second << endl;
+            cout << result.first << ", " << result.second << endl;
+        } else {
+            cout << "Running octree algorithm..." << endl;
 
+            vector<int> riskList;
+
+            Octree otree(debris, 0.001);
+            otree.find_risky_debris(riskList);
+
+            for (int i = 0; i < riskList.size(); i++) {
+                cout << riskList.at(i) << endl;
+            }
+        }
         // for (int i = 0; i < result.size() - 1; i++) {
 
         //     cout << result.at(i).id << ": " << result.at(i).distance(result.at(i + 1)) << endl;

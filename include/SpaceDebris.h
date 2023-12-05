@@ -21,31 +21,32 @@ struct SpaceDebris {
     }
 };
 
+struct OctNode {
+
+    OctNode* children[8] = {nullptr};
+
+    vector<int> idList;
+
+    //SpaceDebris debrisObject;
+};
+
 class Octree {
 
 public:
 
-    Octree(const vector<SpaceDebris>& debris_list);
+    Octree(vector<SpaceDebris>& debris_list, double tolerance);
 
-    vector<int> find_local_optimum(const SpaceDebris& start);
+    void find_risky_debris(vector<int>& riskList);
 
 private:
 
-    struct Node {
-
-        unique_ptr<Node> children[8];
-
-        vector<int> debris_ids;
-    };
-
-    unique_ptr<Node> root;
+    OctNode* root;
 
     vector<SpaceDebris> debris_list;
 
-    void insert(Node* node, int debris_id, double x_min, double x_max, double y_min, double y_max, double z_min, double z_max);
-
-    int find_closest(const Node* node, const SpaceDebris& target, double x_min, double x_max, double y_min, double y_max, double z_min, double z_max) const;
-
+    void insert(OctNode* node, SpaceDebris& debris, double x_min, double x_max, double y_min, double y_max, double z_min, double z_max, double& tolerance);
+    
+    void find_risky(OctNode* node, vector<int>& riskList);
 };
 
 pair<int, int> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list);
