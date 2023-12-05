@@ -7,9 +7,11 @@ using namespace std;
 
 struct SpaceDebris {
 
-    int intId;
-
     int id;
+
+    int riskyOther = -1;
+
+    double riskDistance;
 
     double x, y, z;
 

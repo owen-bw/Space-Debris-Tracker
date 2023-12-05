@@ -66,6 +66,9 @@ OpenGLEngine::OpenGLEngine() {
     earth = newSphere;
     sunAngle = new float(0.0f);
     tolerance = new float(0.001f);
+    iterations = new int(1);
+
+    selectedPoint = nullptr;
 }
 
 // Initialize OpenGL
@@ -679,6 +682,18 @@ void OpenGLEngine::frame(double frameTime)
         glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_FALSE);
     }
 
+    // Draw Selected Point
+    if (selectedPoint != nullptr) {
+        glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, 3 * sizeof(GLfloat), selectedPoint);
+        glUniform1i(glGetUniformLocation(progId, "isSelected"), GL_TRUE);
+        glPointSize(12);
+        glBindVertexArray(pointsVao);
+        glDrawArrays(GL_POINTS, 0, 1);
+        glUniform1i(glGetUniformLocation(progId, "isSelected"), GL_FALSE);
+    }
+
+
     // Unbind
     glBindTexture(GL_TEXTURE_2D, 0);
     glBindVertexArray(0);
@@ -774,7 +789,9 @@ void OpenGLEngine::frame(double frameTime)
         if (!isPaused) {
             riskList.clear();
             delete[] riskyPoints;
+            delete[] selectedPoint;
             riskyPoints = nullptr;
+            selectedPoint = nullptr;
         }
     }
     ImGui::SameLine(0.0f, 0.0f);
@@ -786,6 +803,9 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::RadioButton("Octree", &algorithmSelection, 0); 
     ImGui::SameLine();
     ImGui::RadioButton("Greedy", &algorithmSelection, 1);
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(100);
+    ImGui::InputInt("Iterations", iterations);
     ImGui::Text("Tolerance (Distance between risky nodes):");
     ImGui::SliderFloat("Tolerance", this->tolerance, 0.00001f, 0.1f, "%.5f");
     if (ImGui::Button("Run")) {
@@ -803,7 +823,7 @@ void OpenGLEngine::frame(double frameTime)
             delete[] riskyPoints;
 
             SpaceDebris start(-1, 0, 0, 0);
-            riskList = find_local_optimum(debris, *tolerance, 2);
+            riskList = find_local_optimum(debris, *tolerance, *iterations);
             numRisky = riskList.size();
 
             riskyPoints = new GLfloat[riskList.size() * 3];
@@ -837,7 +857,7 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::BeginTable("Risk Assessment", 3, 0);
     ImGui::TableSetupColumn("Sat ID");
     ImGui::TableSetupColumn("Nearest Body");
-    ImGui::TableSetupColumn("Goto");
+    ImGui::TableSetupColumn("Select");
     ImGui::TableHeadersRow();
 
     for (int row = 0; row < riskList.size(); row++)
@@ -849,17 +869,11 @@ void OpenGLEngine::frame(double frameTime)
             if (column == 0) {
                 ImGui::Text("%d", riskList.at(row).id);
             } else if (column == 1) {
-                
+                ImGui::Text("%d", riskList.at(row).riskyOther);
             } else {
                 ImGui::PushID(row);
-                if (ImGui::Button("Goto")) {
-                    for (int i = 0; i < debris.size(); i++) {
-                        if (debris.at(i).id == riskList.at(row).id) {
-                            cameraCenter.x = debris.at(i).x;
-                            cameraCenter.y = debris.at(i).y;
-                            cameraCenter.z = debris.at(i).z;
-                        }
-                    }
+                if (ImGui::Button("Select")) {
+                    selectedPoint = new GLfloat[3] {(float)riskList.at(row).x, (float)riskList.at(row).y, (float)riskList.at(row).z};
                 }
                 ImGui::PopID();
             }

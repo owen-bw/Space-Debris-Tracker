@@ -184,12 +184,15 @@ class OpenGLEngine {
     GLfloat* riskyPoints;
     int numRisky;
 
+    GLfloat* selectedPoint;
+
     vector<SpaceDebris> debris;
 
     unordered_set<int> uniqueSatIds;
 
     vector<SpaceDebris> riskList;
     float* tolerance;
+    int* iterations;
 
     int numSats;
     double epoch;
@@ -251,6 +254,7 @@ class OpenGLEngine {
     // used if object is point
     uniform bool isPoint;
     uniform bool isRisky;
+    uniform bool isSelected;
 
     // output
     out vec4 fragColor;
@@ -282,6 +286,8 @@ class OpenGLEngine {
         color += pow(dotVR, materialShininess) * lightSpecular.rgb * materialSpecular.rgb; // add specular
         if (isPoint) {
             fragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        } else if (isSelected) {
+            fragColor = vec4(0.0, 1.0, 0.0, 1.0);
         } else if (isRisky) {
             fragColor = vec4(1.0, 0.0, 0.0, 1.0);
         } else {

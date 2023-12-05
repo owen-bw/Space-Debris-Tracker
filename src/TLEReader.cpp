@@ -28,6 +28,8 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
     LoadSgp4PropDll();
     
     Sgp4LoadFileAll("2023_332.txt");
+    Sgp4LoadFileAll("2023_337.txt");
+    Sgp4LoadFileAll("2023_338.txt");
 
     numSats = TleGetCount();
 
@@ -94,7 +96,7 @@ void TLEReader::propagate(double time, GLfloat* points, int numSats, bool setDeb
 
                 TleGetField(satKeys[i], XF_TLE_SATNUM, strId);
                 satId = stoi(strId);
-                
+
                 SpaceDebris newDebris(i, pos[0] / earthRadiusKm, pos[2] / earthRadiusKm, pos[1] / earthRadiusKm);
                 newDebris.id = satId;
 

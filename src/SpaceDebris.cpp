@@ -89,7 +89,9 @@ void Octree::find_risky(OctNode* node, vector<SpaceDebris>& riskList) {
   if (node == nullptr) {
     return;
   } else if (node->idList.size() > 1) {
-    for (int i = 0; i < node->idList.size(); i++) {
+    for (int i = 0; i < node->idList.size() - 1; i++) {
+      node->idList.at(i).riskyOther = node->idList.at(i + 1).id;
+      node->idList.at(i).riskDistance = node->idList.at(i).distance(node->idList.at(i + 1));
       riskList.push_back(node->idList.at(i));
     }
   }
@@ -159,7 +161,10 @@ vector<SpaceDebris> find_local_optimum(vector<SpaceDebris>& debris_list, double 
     vector<SpaceDebris> result;
     for (int p = 1; p <= iterations; p++) {
       for (int i = 0; i < debris_list.size() - p; i += p) {
-        if (debris_list.at(i).distance(debris_list.at(i + 1)) <= tolerance) {
+        double dist = debris_list.at(i).distance(debris_list.at(i + 1));
+        if (dist <= tolerance) {
+          debris_list.at(i).riskyOther = debris_list.at(i + 1).id;
+          debris_list.at(i).riskDistance = dist;
           result.push_back(debris_list.at(i));
         }
       }
