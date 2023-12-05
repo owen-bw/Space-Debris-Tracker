@@ -771,11 +771,14 @@ void OpenGLEngine::frame(double frameTime)
 
             SpaceDebris start(-1, 0, 0, 0);
 
-            pair<int, int> result = find_local_optimum(start, debris);
+            vector<SpaceDebris> result = find_local_optimum(start, debris);
 
-            cout << "Local optimum pair: ";
+            cout << "Greedy path result: ";
 
-            cout << result.first << ", " << result.second << endl;
+            for (int i = 0; i < result.size() - 1; i++) {
+                cout << result.at(i).id << ": " << result.at(i).distance(result.at(i + 1)) << endl; 
+            }
+
         } else {
             cout << "Running octree algorithm..." << endl;
 
@@ -801,10 +804,11 @@ void OpenGLEngine::frame(double frameTime)
         ImGui::TableNextRow();
         for (int column = 0; column < 3; column++)
         {
+            ImGui::TableSetColumnIndex(column);
             if (column == 0) {
                 ImGui::Text("%d", riskList.at(row));
             } else if (column == 1) {
-
+                
             } else {
                 ImGui::Button("Goto");
             }
