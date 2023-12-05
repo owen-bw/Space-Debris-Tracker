@@ -58,7 +58,7 @@ class TLEReader {
     __int64 getKey(int i) {return satKeys.at(i);}
     bool isAdded(int id) {return (addedSet.find(id) != addedSet.end());}
     GLfloat* ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& debris);
-    void propagate(double time, GLfloat* points, int numSats);
+    void propagate(double time, GLfloat* points, int numSats, bool setDebris, vector<SpaceDebris>& debris);
 };
 
 Datetime doubleToDate(double time);

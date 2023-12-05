@@ -595,7 +595,7 @@ void OpenGLEngine::toPerspective()
 void OpenGLEngine::preFrame(double frameTime)
 {
     if (!isPaused) {
-        tle.propagate(epoch + totalTime / (86400.0), points, numSats);
+        tle.propagate(epoch + totalTime / (86400.0), points, numSats, false, debris);
     }
 }
 
@@ -744,7 +744,7 @@ void OpenGLEngine::frame(double frameTime)
 
             epoch = dateToDouble(newTime);
 
-            tle.propagate(epoch, points, numSats);
+            tle.propagate(epoch, points, numSats, false, debris);
         } catch (std::invalid_argument) {
             isValid = false;
         }
@@ -793,19 +793,7 @@ void OpenGLEngine::frame(double frameTime)
         isPaused = true;
         debris.clear();
 
-        for (int i = 0; i < numSats; i++) {
-            int satId;
-            char strId[512] = {'\0'};
-
-            TleGetField(tle.getKey(i), XF_TLE_SATNUM, strId);
-            satId = stoi(strId);
-
-            if (tle.isAdded(satId)) {
-                SpaceDebris newDebris(i, points[i * 3], points[i * 3 + 1], points[i * 3 + 2]);
-                
-            debris.push_back(newDebris);
-            }
-        }
+        tle.propagate(epoch + totalTime / (86400.0), points, numSats, true, debris);
         
         if (algorithmSelection == 1) {
             cout << "Running greedy path algorithm..." << endl;
@@ -815,7 +803,7 @@ void OpenGLEngine::frame(double frameTime)
             delete[] riskyPoints;
 
             SpaceDebris start(-1, 0, 0, 0);
-            riskList = find_local_optimum(start, debris, *tolerance);
+            riskList = find_local_optimum(debris, *tolerance, 2);
             numRisky = riskList.size();
 
             riskyPoints = new GLfloat[riskList.size() * 3];

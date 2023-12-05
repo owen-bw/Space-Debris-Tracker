@@ -104,53 +104,67 @@ void Octree::find_risky_debris(vector<SpaceDebris>& riskList) {
 }
 
 // Greedy Algorithm
-vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance) {
-    vector<SpaceDebris> result;
-    unordered_set<int> processed;
+// vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance) {
+//     vector<SpaceDebris> result;
+//     unordered_set<int> processed;
 
-    SpaceDebris current = start;
+//     SpaceDebris current = start;
 
-    bool found;
+//     bool found;
 
-    double dist;
+//     double dist;
 
-    do {
+//     do {
 
-        found = false;
+//         found = false;
 
-        double min_distance = numeric_limits<double>::max();
+//         double min_distance = numeric_limits<double>::max();
 
-        int closest_index = -1;
+//         int closest_index = -1;
 
-        for (int i = 0; i < debris_list.size(); ++i) {
+//         for (int i = 0; i < debris_list.size(); ++i) {
 
-            dist = current.distance(debris_list[i]);
+//             dist = current.distance(debris_list[i]);
 
-            if (dist < min_distance && processed.find(debris_list[i].id) == processed.end()) {
+//             if (dist < min_distance && processed.find(debris_list[i].id) == processed.end()) {
 
-                min_distance = dist;
+//                 min_distance = dist;
 
-                closest_index = i;
+//                 closest_index = i;
 
-                found = true;
+//                 found = true;
 
-            }
+//             }
 
-        }
+//         }
 
-        if (found) {
-            if (dist <= tolerance) {
-              result.push_back(debris_list[closest_index]);
-            }
+//         if (found) {
+//             if (dist <= tolerance) {
+//               result.push_back(debris_list[closest_index]);
+//             }
             
-            processed.emplace(debris_list[closest_index].id);
+//             processed.emplace(debris_list[closest_index].id);
 
-            current = debris_list[closest_index];
+//             current = debris_list[closest_index];
 
+//         }
+
+//     } while (found);
+
+//     return result;
+
+// }
+
+vector<SpaceDebris> find_local_optimum(vector<SpaceDebris>& debris_list, double tolerance, int iterations) {
+    vector<SpaceDebris> result;
+    for (int p = 1; p <= iterations; p++) {
+      for (int i = 0; i < debris_list.size() - p; i += p) {
+        if (debris_list.at(i).distance(debris_list.at(i + 1)) <= tolerance) {
+          result.push_back(debris_list.at(i));
         }
-
-    } while (found);
-
+      }
+    }
+    
     return result;
 
 }

@@ -79,7 +79,7 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
     return points;
 }
 
-void TLEReader::propagate(double time, GLfloat* points, int numSats) {
+void TLEReader::propagate(double time, GLfloat* points, int numSats, bool setDebris, vector<SpaceDebris>& debris) {
     for (int i = 0; i < numSats; i++) {
         if (uniqueSats.find(i) != uniqueSats.end()) {
             Sgp4PropDs50UTC(satKeys[i], time, &mse, pos, vel, llh);
@@ -87,6 +87,19 @@ void TLEReader::propagate(double time, GLfloat* points, int numSats) {
             points[i * 3] = pos[0] / earthRadiusKm;
             points[i * 3 + 1] = pos[2] / earthRadiusKm;
             points[i * 3 + 2] = pos[1] / earthRadiusKm;
+
+            if (setDebris) {
+                int satId;
+                char strId[512] = {'\0'};
+
+                TleGetField(satKeys[i], XF_TLE_SATNUM, strId);
+                satId = stoi(strId);
+                
+                SpaceDebris newDebris(i, pos[0] / earthRadiusKm, pos[2] / earthRadiusKm, pos[1] / earthRadiusKm);
+                newDebris.id = satId;
+
+                debris.push_back(newDebris);
+            }
         }
     }
 }
