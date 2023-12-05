@@ -198,6 +198,9 @@ bool OpenGLEngine::initSharedMem()
 
     cameraAngleX = cameraAngleY = 0.0f;
     cameraDistance = CAMERA_DISTANCE;
+    cameraCenter.x = 0.5;
+    cameraCenter.y = 0.0;
+    cameraCenter.z = 0.0;
 
     drawMode = 0; // 0:fill, 1: wireframe, 2:points
 
@@ -612,7 +615,7 @@ void OpenGLEngine::frame(double frameTime)
 
     // Model matrix for each instance
     Matrix4 matrixModel(matrixModelCommon);
-    matrixModel.translate(0.5, 0, 0);
+    matrixModel.translate(0.0, 0.0, 0.0);
 
     // Bind GLSL, texture
     glUseProgram(progId);
@@ -763,24 +766,21 @@ void OpenGLEngine::frame(double frameTime)
     }
 
     ImGui::Text("Select Risk Detection Algorithm");
-    ImGui::RadioButton("Octree", &algorithmSelection, 0); ImGui::SameLine();
-    ImGui::RadioButton("Greedy", &algorithmSelection, 1); ImGui::SameLine();
-    ImGui::SliderFloat("Tolerance (Distance)", this->tolerance, 0.00001f, 0.1f, "%.5f");
+    ImGui::RadioButton("Octree", &algorithmSelection, 0); 
+    ImGui::SameLine();
+    ImGui::RadioButton("Greedy", &algorithmSelection, 1);
+    ImGui::Text("Tolerance (Distance between risky nodes):");
+    ImGui::SliderFloat("Tolerance", this->tolerance, 0.00001f, 0.1f, "%.5f");
     if (ImGui::Button("Run")) {
         // Run selected algorithm at current time
         if (algorithmSelection == 1) {
             cout << "Running greedy path algorithm..." << endl;
+            cout << "Tolerance: " << *tolerance << endl;
+
+            riskList.clear();
 
             SpaceDebris start(-1, 0, 0, 0);
-
-            vector<SpaceDebris> result = find_local_optimum(start, debris, *tolerance);
-
-            cout << "Greedy path result: ";
-
-            for (int i = 0; i < result.size() - 1; i++) {
-                cout << result.at(i).id << ": " << result.at(i).distance(result.at(i + 1)) << endl; 
-            }
-
+            riskList = find_local_optimum(start, debris, *tolerance);
         } else {
             cout << "Running octree algorithm..." << endl;
             cout << "Tolerance: " << *tolerance << endl;
@@ -789,10 +789,6 @@ void OpenGLEngine::frame(double frameTime)
 
             Octree otree(debris, *tolerance);
             otree.find_risky_debris(riskList);
-
-            for (int i = 0; i < riskList.size(); i++) {
-                cout << riskList.at(i) << endl;
-            }
         }
     }
 
@@ -813,7 +809,17 @@ void OpenGLEngine::frame(double frameTime)
             } else if (column == 1) {
                 
             } else {
-                ImGui::Button("Goto");
+                ImGui::PushID(row);
+                if (ImGui::Button("Goto")) {
+                    for (int i = 0; i < debris.size(); i++) {
+                        if (debris.at(i).id == riskList.at(row)) {
+                            cameraCenter.x = debris.at(i).x;
+                            cameraCenter.y = debris.at(i).y;
+                            cameraCenter.z = debris.at(i).z;
+                        }
+                    }
+                }
+                ImGui::PopID();
             }
         }
     }

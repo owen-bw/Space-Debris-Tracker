@@ -21,6 +21,12 @@
 
 #pragma once
 
+struct xyz {
+    float x;
+    float y;
+    float z;
+};
+
 class OpenGLEngine {
     public:
     // Constructor
@@ -132,6 +138,9 @@ class OpenGLEngine {
     float cameraAngleY;
     float cameraDistance;
     int drawMode;
+
+    xyz cameraCenter;
+
     GLuint vao;
     GLuint pointsVao;
     GLuint vbo;
