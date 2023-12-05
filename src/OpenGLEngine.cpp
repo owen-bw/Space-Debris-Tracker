@@ -96,23 +96,18 @@ void OpenGLEngine::init() {
     gladLoadGL(glfwGetProcAddress);
     glfwSetWindowUserPointer(window, this);
  
-    // glGenBuffers(1, &vertex_buffer);
-    // glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
-    // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
     // Read TLE Data
     points = tle.ReadFiles(numSats, epoch, debris);
 
-    // for (int i = 0; i < debris.size(); i++) {
-    //     cout << debris.at(i).id << ": " << debris.at(i).x << ", " << debris.at(i).y << ", " << debris.at(i).z << endl;
-    // }
-
+    // Initialize epoch
     newTime = doubleToDate(epoch);
 
+    // Initialize graphics
     initGL();
     initGLSL();
     initVBO();
 
+    // Load font
     bmFont.loadFont(fontCourier20, bitmapCourier20);
 
     // init GLFW callbacks
@@ -124,24 +119,19 @@ void OpenGLEngine::init() {
     glfwSetScrollCallback(window, scrollCallbackWrapper);
 
 
-    // load BMP image
+    // Load Earth texture
     texId = loadTexture("earth10k.bmp", true);
-    if(texId)
-    {
-        std::cout << "Loaded a texture: ID=" << texId << std::endl;
-    }
-    else
-    {
-        std::cout << "[ERROR] Failed to load a texture" << std::endl;
-    }
 
+    // Calculate perspective matrix projection
     toPerspective();
 
-    const GLubyte* renderer = glGetString(GL_RENDERER); // get renderer string
-    const GLubyte* version = glGetString(GL_VERSION); // version as a string
+    // Get renderer info
+    const GLubyte* renderer = glGetString(GL_RENDERER);
+    const GLubyte* version = glGetString(GL_VERSION);
     std::cout << "Renderer: " << renderer << std::endl;
     std::cout << "OpenGL version supported: " << version << std::endl;
 
+    // Initialize ImGui
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
@@ -165,7 +155,7 @@ void OpenGLEngine::shutdown() {
 void OpenGLEngine::mainEventLoop() {
 
     while (!glfwWindowShouldClose(window)) {
-        // get frame time
+        // Time calculations
         double currTime = glfwGetTime();
         double frameTime = currTime - runTime;
         runTime = currTime;
@@ -173,7 +163,7 @@ void OpenGLEngine::mainEventLoop() {
             totalTime += frameTime * pow(10, simSpeed);
         }
         
-        // draw
+        // Draw frame
         preFrame(frameTime);
         frame(frameTime);
         postFrame(frameTime);
@@ -219,26 +209,20 @@ bool OpenGLEngine::initSharedMem()
 
 void OpenGLEngine::initGL()
 {
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 4);      // 4-byte pixel alignment
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
 
-    // enable /disable features
-    //glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
-    //glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
     glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     glEnable(GL_LIGHTING);
 
 
-    glClearColor(0, 0, 0, 0);                   // background color
-    glClearStencil(0);                          // clear stencil buffer
-    glClearDepth(1.0f);                         // 0 is near, 1 is far
+    glClearColor(0, 0, 0, 0);
+    glClearStencil(0);
+    glClearDepth(1.0f);
     glDepthFunc(GL_LEQUAL);
 }
 
-///////////////////////////////////////////////////////////////////////////////
-// create glsl programs
-///////////////////////////////////////////////////////////////////////////////
 bool OpenGLEngine::initGLSL()
 {
     const int MAX_LENGTH = 2048;
@@ -288,7 +272,6 @@ bool OpenGLEngine::initGLSL()
     uniformMatrixModelView           = glGetUniformLocation(progId, "matrixModelView");
     uniformMatrixModelViewProjection = glGetUniformLocation(progId, "matrixModelViewProjection");
     uniformMatrixNormal              = glGetUniformLocation(progId, "matrixNormal");
-    // uniformLightPosition             = glGetUniformLocation(progId, "lightPosition");
     uniformLightAmbient              = glGetUniformLocation(progId, "lightAmbient");
     uniformLightDiffuse              = glGetUniformLocation(progId, "lightDiffuse");
     uniformLightSpecular             = glGetUniformLocation(progId, "lightSpecular");
@@ -305,7 +288,6 @@ bool OpenGLEngine::initGLSL()
     uniformLightDirection = glGetUniformLocation(progId, "lightDirection");
 
     // set uniform values
-    //float lightPosition[] = {-2, 0, 1, 0};
     float lightDirection[] = {-1.0, 0.0, 1.0, 0.0};
     float lightAmbient[]  = {0.0f, 0.4f, 0.6f, 2};
     float lightDiffuse[]  = {0.7f, 0.7f, 0.7f, 1};
@@ -315,7 +297,6 @@ bool OpenGLEngine::initGLSL()
     float materialSpecular[] = {0.4f, 0.4f, 0.4f, 0};
     float materialShininess  = 16;
 
-    // glUniform4fv(uniformLightPosition, 1, lightPosition);
     glUniform4fv(uniformLightDirection, 1, lightDirection);
     glUniform4fv(uniformLightAmbient, 1, lightAmbient);
     glUniform4fv(uniformLightDiffuse, 1, lightDiffuse);
@@ -327,8 +308,6 @@ bool OpenGLEngine::initGLSL()
     
     glUniform1i(uniformMap0, 0);
     glUniform1i(uniformTextureUsed, 1);
-
-    // glUniform4fv(glGetUniformLocation(progId, "lightDirection"), 1, lightDir);
 
     // unbind GLSL
     glUseProgram(0);
@@ -351,11 +330,6 @@ bool OpenGLEngine::initGLSL()
     }
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////
-// copy vertex data to VBO and VA state to VAO
-///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::initVBO()
 {
     // Earth
@@ -419,24 +393,36 @@ void OpenGLEngine::clearSharedMem()
     glDeleteTextures(1, &texId);
     texId = 0;
 
+    // Clean up pointers
+    delete sunAngle;
+    delete tolerance;
+    delete iterations;
+
+    if (points != nullptr) {
+        delete[] points;
+    }
+
+    if (riskyPoints != nullptr) {
+        delete[] riskyPoints;
+    }
+
+    if (selectedPoint != nullptr) {
+        delete[] selectedPoint;
+    }
+
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////
-// load raw image as a texture
-///////////////////////////////////////////////////////////////////////////////
 GLuint OpenGLEngine::loadTexture(const char* fileName, bool wrap)
 {
     Image::Bmp bmp;
     if(!bmp.read(fileName))
-        return 0;     // exit if failed load image
+        return 0;
 
     // get bmp info
     int width = bmp.getWidth();
     int height = bmp.getHeight();
     const unsigned char* data = bmp.getDataRGB();
-    GLenum type = GL_UNSIGNED_BYTE;    // only allow BMP with 8-bit per channel
+    GLenum type = GL_UNSIGNED_BYTE;
 
     // We assume the image is 8-bit, 24-bit or 32-bit BMP
     GLenum format;
@@ -448,7 +434,7 @@ GLuint OpenGLEngine::loadTexture(const char* fileName, bool wrap)
     else if(bpp == 32)
         format = GL_RGBA;
     else
-        return 0;               // NOT supported, exit
+        return 0;
 
     // gen texture ID
     GLuint texture;
@@ -462,14 +448,9 @@ GLuint OpenGLEngine::loadTexture(const char* fileName, bool wrap)
 
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    //glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
 
-    // if wrap is true, the texture wraps over at the edges (repeat)
-    //       ... false, the texture ends at the edges (clamp)
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrap ? GL_REPEAT : GL_CLAMP);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrap ? GL_REPEAT : GL_CLAMP);
-    //glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    //glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
     // copy texture data
     glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, type, data);
@@ -478,11 +459,6 @@ GLuint OpenGLEngine::loadTexture(const char* fileName, bool wrap)
     return texture;
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////
-// display info messages
-///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::showInfo()
 {
     toOrtho();
@@ -496,12 +472,6 @@ void OpenGLEngine::showInfo()
     toPerspective();
 }
 
-
-
-
-///////////////////////////////////////////////////////////////////////////////
-// display frame rates
-///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::showFPS()
 {
     static Timer timer;
@@ -531,19 +501,14 @@ void OpenGLEngine::showFPS()
     bmFont.drawText(x, y, fps.c_str());
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////
-// set projection matrix as orthogonal
-///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::toOrtho()
 {
     const float N = -1.0f;
     const float F = 1.0f;
 
     // get current dimensions
-    glfwGetWindowSize(window, &windowWidth, &windowHeight); // get window size
-    glfwGetFramebufferSize(window, &fbWidth, &fbHeight);    // get framebuffer size
+    glfwGetWindowSize(window, &windowWidth, &windowHeight);
+    glfwGetFramebufferSize(window, &fbWidth, &fbHeight);
 
     // set viewport to be the entire framebuffer size
     glViewport(0, 0, (GLsizei)fbWidth, (GLsizei)fbHeight);
@@ -558,20 +523,15 @@ void OpenGLEngine::toOrtho()
     matrixProjection[14] = -(F + N) / (F - N);
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////
-// set the projection matrix as perspective
-///////////////////////////////////////////////////////////////////////////////
 void OpenGLEngine::toPerspective()
 {
     const float N = 0.1f;
     const float F = 100.0f;
-    const float FOV_Y = 40.0f / 180.0f * acos(-1.0f);    // in radian
+    const float FOV_Y = 40.0f / 180.0f * acos(-1.0f);
 
     // get current dimensions
-    glfwGetWindowSize(window, &windowWidth, &windowHeight); // get window size
-    glfwGetFramebufferSize(window, &fbWidth, &fbHeight);    // get framebuffer size
+    glfwGetWindowSize(window, &windowWidth, &windowHeight);
+    glfwGetFramebufferSize(window, &fbWidth, &fbHeight);
 
     // set viewport to be the entire framebuffer size
     glViewport(0, 0, (GLsizei)fbWidth, (GLsizei)fbHeight);
@@ -590,11 +550,9 @@ void OpenGLEngine::toPerspective()
     matrixProjection[15] =  0;
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////
-// render each frame
-///////////////////////////////////////////////////////////////////////////////
+/**************************************************/
+/*                 Frame Render                   */
+/**************************************************/
 void OpenGLEngine::preFrame(double frameTime)
 {
     if (!isPaused) {
@@ -676,7 +634,7 @@ void OpenGLEngine::frame(double frameTime)
         glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
         glBufferSubData(GL_ARRAY_BUFFER, 0, numRisky * 3 * sizeof(GLfloat), riskyPoints);
         glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_TRUE);
-        glPointSize(6);
+        glPointSize(8);
         glBindVertexArray(pointsVao);
         glDrawArrays(GL_POINTS, 0, numRisky);
         glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_FALSE);
@@ -869,17 +827,16 @@ void OpenGLEngine::frame(double frameTime)
     if (ImGuiTableSortSpecs* sort_specs = ImGui::TableGetSortSpecs())
     if (sort_specs->SpecsDirty)
     {
-        cout << "spec changed" << sort_specs->Specs->SortDirection << endl;
-        if (sort_specs->Specs->ColumnIndex == 1 && sort_specs->Specs->SortDirection == 1) {
+        if (sort_specs->Specs->ColumnIndex == 1 && sort_specs->Specs->SortDirection == 2) {
             sort(riskList.begin(), riskList.end(), compareDebrisDistanceLess);
         }
-        if (sort_specs->Specs->ColumnIndex == 1 && sort_specs->Specs->SortDirection == 2) {
+        else if (sort_specs->Specs->ColumnIndex == 1 && sort_specs->Specs->SortDirection == 1) {
             sort(riskList.begin(), riskList.end(), compareDebrisDistanceGreater);
         }
-        if (sort_specs->Specs->ColumnIndex == 0 && sort_specs->Specs->SortDirection == 1) {
+        else if (sort_specs->Specs->ColumnIndex == 0 && sort_specs->Specs->SortDirection == 2) {
             sort(riskList.begin(), riskList.end(), compareDebrisIdLess);
         }
-        if (sort_specs->Specs->ColumnIndex == 0 && sort_specs->Specs->SortDirection == 2) {
+        else if (sort_specs->Specs->ColumnIndex == 0 && sort_specs->Specs->SortDirection == 1) {
             sort(riskList.begin(), riskList.end(), compareDebrisIdGreater);
         }
         
@@ -930,11 +887,14 @@ void OpenGLEngine::postFrame(double frameTime)
         //std::cout << "FPS: " << fps << std::endl;
     }
 }
+/**************************************************/
+/*                  End Frame                     */
+/**************************************************/
 
 
-//=============================================================================
-// GLFW CALLBACKS
-//=============================================================================
+/**************************************************/
+/*               GLFW Callbacks                   */
+/**************************************************/
 
 void OpenGLEngine::framebufferSizeCallback(GLFWwindow* window, int w, int h)
 {
@@ -942,8 +902,6 @@ void OpenGLEngine::framebufferSizeCallback(GLFWwindow* window, int w, int h)
     std::cout << "Framebuffer resized: " << fbWidth << "x" << fbHeight
               << " (Window: " << windowWidth << "x" << windowHeight << ")" << std::endl;
 }
-
-
 
 void OpenGLEngine::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {

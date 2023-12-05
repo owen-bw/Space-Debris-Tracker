@@ -1,3 +1,12 @@
+/****************************************************************/
+/*                   OpenGL Implementation(Header)              */
+/*                           Blake Owen                         */
+/*        This implementation was refectored and modified from  */
+/*        the OpenGL sphere example provided by songho:         */
+/*        http://www.songho.ca/opengl/gl_sphere.html            */
+/*                                                              */
+/****************************************************************/
+
 // https://github.com/ocornut/imgui
 #include "imgui.h"
 
@@ -32,22 +41,9 @@ class OpenGLEngine {
     // Constructor
     OpenGLEngine();
 
-    // ImGUI
-    char day[3] = {'\0'};
-    char month[3] = {'\0'};
-    char year[5] = {'\0'};
+    // Window
+    GLFWwindow* window;
 
-    char hours[3] = {'\0'};
-    char minutes[3] = {'\0'};
-    char seconds[3] = {'\0'};
-
-    bool isValid;
-
-    Datetime newTime;
-
-    float* sunAngle;
-
-    // function prototypes
     void init();
 
     void preFrame(double frameTime);
@@ -67,56 +63,7 @@ class OpenGLEngine {
     void mainEventLoop();
     void shutdown();
 
-    // Window
-    GLFWwindow* window;
-
     private:
-    // glfw callbacks
-    void framebufferSizeCallback(GLFWwindow* window, int width, int height);
-    void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
-    void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
-    void cursorPosCallback(GLFWwindow* window, double x, double y);
-    void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
-    
-    static void framebufferSizeCallbackWrapper(GLFWwindow* window, int width, int height) {
-        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
-        if (engine) {
-            engine->framebufferSizeCallback(window, width, height);
-        }
-    }
-
-    static void keyCallbackWrapper(GLFWwindow* window, int key, int scancode, int action, int mods) {
-        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
-        if (engine) {
-            engine->keyCallback(window, key, scancode, action, mods);
-        }
-    }
-
-    static void mouseButtonCallbackWrapper(GLFWwindow* window, int button, int action, int mods) {
-        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
-        if (engine) {
-            engine->mouseButtonCallback(window, button, action, mods);
-        }
-    }
-
-    static void cursorPosCallbackWrapper(GLFWwindow* window, double x, double y) {
-        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
-        if (engine) {
-            engine->cursorPosCallback(window, x, y);
-        }
-    }
-
-    static void scrollCallbackWrapper(GLFWwindow* window, double xoffset, double yoffset) {
-        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
-        if (engine) {
-            engine->scrollCallback(window, xoffset, yoffset);
-        }
-    }
-
-    static void errorCallback(int error, const char* description) {
-        std::cout << "[ERROR]: " << description << std::endl;
-    }
-
     // Constants
     const int   WINDOW_WIDTH    = 1280;
     const int   WINDOW_HEIGHT   = 720;
@@ -138,9 +85,22 @@ class OpenGLEngine {
     float cameraAngleY;
     float cameraDistance;
     int drawMode;
-
+    bool isValid;
+    
+    Datetime newTime;
+    float* sunAngle;
     xyz cameraCenter;
 
+    // ImGUI
+    char day[3] = {'\0'};
+    char month[3] = {'\0'};
+    char year[5] = {'\0'};
+
+    char hours[3] = {'\0'};
+    char minutes[3] = {'\0'};
+    char seconds[3] = {'\0'};
+
+    // VAO / VBO
     GLuint vao;
     GLuint pointsVao;
     GLuint riskyVao;
@@ -170,27 +130,26 @@ class OpenGLEngine {
     GLint uniformMaterialShininess;
     GLint uniformMap0;
     GLint uniformTextureUsed;
-    GLint attribVertexPosition;     // 0
-    GLint attribVertexNormal;       // 1
-    GLint attribVertexTexCoord;     // 2
+    GLint attribVertexPosition;
+    GLint attribVertexNormal;
+    GLint attribVertexTexCoord;
 
     // Objects
     Sphere earth;
 
     TLEReader tle;
 
+    // Point arrays
     GLfloat* points;
-
     GLfloat* riskyPoints;
+    GLfloat* selectedPoint;
     int numRisky;
 
-    GLfloat* selectedPoint;
-
+    // Debris objects for risk calculations
     vector<SpaceDebris> debris;
-
     unordered_set<int> uniqueSatIds;
-
     vector<SpaceDebris> riskList;
+
     float* tolerance;
     int* iterations;
 
@@ -199,9 +158,10 @@ class OpenGLEngine {
     int simSpeed;
     bool isPaused;
 
+    // Current selected algorithm for risk assessment
     int algorithmSelection;
     
-    // Bui-Tuong Phong shading model with texture
+    // Bui-Tuong Phong shading model with texture (modified for points)
     const char* vsSource = R"(
     // GLSL version (OpenGL 3.3)
     #version 330
@@ -230,6 +190,7 @@ class OpenGLEngine {
     }
     )";
 
+    // Fragment shader
     const char* fsSource = R"(
     // GLSL version (OpenGL 3.3)
     #version 330
@@ -296,4 +257,51 @@ class OpenGLEngine {
         
     }
     )";
+
+    // GLFW Callbacks
+    void framebufferSizeCallback(GLFWwindow* window, int width, int height);
+    void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+    void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+    void cursorPosCallback(GLFWwindow* window, double x, double y);
+    void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
+    
+    // GLFW Callback Wrappers
+    static void framebufferSizeCallbackWrapper(GLFWwindow* window, int width, int height) {
+        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
+        if (engine) {
+            engine->framebufferSizeCallback(window, width, height);
+        }
+    }
+
+    static void keyCallbackWrapper(GLFWwindow* window, int key, int scancode, int action, int mods) {
+        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
+        if (engine) {
+            engine->keyCallback(window, key, scancode, action, mods);
+        }
+    }
+
+    static void mouseButtonCallbackWrapper(GLFWwindow* window, int button, int action, int mods) {
+        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
+        if (engine) {
+            engine->mouseButtonCallback(window, button, action, mods);
+        }
+    }
+
+    static void cursorPosCallbackWrapper(GLFWwindow* window, double x, double y) {
+        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
+        if (engine) {
+            engine->cursorPosCallback(window, x, y);
+        }
+    }
+
+    static void scrollCallbackWrapper(GLFWwindow* window, double xoffset, double yoffset) {
+        OpenGLEngine* engine = static_cast<OpenGLEngine*>(glfwGetWindowUserPointer(window));
+        if (engine) {
+            engine->scrollCallback(window, xoffset, yoffset);
+        }
+    }
+
+    static void errorCallback(int error, const char* description) {
+        std::cout << "[ERROR]: " << description << std::endl;
+    }
 };
