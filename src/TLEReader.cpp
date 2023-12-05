@@ -35,8 +35,6 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
 
     vector<__int64> constructKeys(numSats);
 
-    unordered_set<int> isAdded;
-
     satKeys = constructKeys;
 
     TleGetLoaded(2, satKeys.data());
@@ -60,7 +58,7 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
             TleGetField(satKeys[i], XF_TLE_SATNUM, strId);
             satId = stoi(strId);
 
-            if (isAdded.find(satId) == isAdded.end()) {
+            if (!isAdded(satId)) {
                 Sgp4PropDs50UTC(satKeys[i], epoch, &mse, pos, vel, llh);
         
                 SpaceDebris newDebris(i, pos[0] / earthRadiusKm, pos[2] / earthRadiusKm, pos[1] / earthRadiusKm);
@@ -72,7 +70,7 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
                 newDebris.id = satId;
 
                 debris.push_back(newDebris);
-                isAdded.emplace(newDebris.id);
+                addedSet.emplace(newDebris.id);
                 uniqueSats.emplace(i);
             }
         //}

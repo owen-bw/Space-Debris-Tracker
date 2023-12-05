@@ -669,13 +669,15 @@ void OpenGLEngine::frame(double frameTime)
     glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_FALSE);
 
     // Draw Risky Points
-    glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
-    glBufferSubData(GL_ARRAY_BUFFER, 0, numRisky * 3 * sizeof(GLfloat), riskyPoints);
-    glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_TRUE);
-    glPointSize(6);
-    glBindVertexArray(pointsVao);
-    glDrawArrays(GL_POINTS, 0, numRisky);
-    glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_FALSE);
+    if (riskyPoints != nullptr) {
+        glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, numRisky * 3 * sizeof(GLfloat), riskyPoints);
+        glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_TRUE);
+        glPointSize(6);
+        glBindVertexArray(pointsVao);
+        glDrawArrays(GL_POINTS, 0, numRisky);
+        glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_FALSE);
+    }
 
     // Unbind
     glBindTexture(GL_TEXTURE_2D, 0);
@@ -768,6 +770,12 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::SameLine(0.0f, 0.0f);
     if (ImGui::Button("Play/Pause")) {
         isPaused = !isPaused;
+
+        if (!isPaused) {
+            riskList.clear();
+            delete[] riskyPoints;
+            riskyPoints = nullptr;
+        }
     }
     ImGui::SameLine(0.0f, 0.0f);
     if (ImGui::ArrowButton("##right", ImGuiDir_Right)) { 
@@ -782,6 +790,23 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::SliderFloat("Tolerance", this->tolerance, 0.00001f, 0.1f, "%.5f");
     if (ImGui::Button("Run")) {
         // Run selected algorithm at current time
+        isPaused = true;
+        debris.clear();
+
+        for (int i = 0; i < numSats; i++) {
+            int satId;
+            char strId[512] = {'\0'};
+
+            TleGetField(tle.getKey(i), XF_TLE_SATNUM, strId);
+            satId = stoi(strId);
+
+            if (tle.isAdded(satId)) {
+                SpaceDebris newDebris(i, points[i * 3], points[i * 3 + 1], points[i * 3 + 2]);
+                
+            debris.push_back(newDebris);
+            }
+        }
+        
         if (algorithmSelection == 1) {
             cout << "Running greedy path algorithm..." << endl;
             cout << "Tolerance: " << *tolerance << endl;

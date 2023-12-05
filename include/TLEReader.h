@@ -39,6 +39,7 @@ class TLEReader {
     vector<__int64> satKeys;
     const double earthRadiusKm = 6371.0;
     unordered_set<int> uniqueSats;
+    unordered_set<int> addedSet;
 
     double 
     pos[3],           //Position (km)
@@ -54,6 +55,8 @@ class TLEReader {
     char  valueStr[GETSETSTRLEN];
 
     public:
+    __int64 getKey(int i) {return satKeys.at(i);}
+    bool isAdded(int id) {return (addedSet.find(id) != addedSet.end());}
     GLfloat* ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& debris);
     void propagate(double time, GLfloat* points, int numSats);
 };
