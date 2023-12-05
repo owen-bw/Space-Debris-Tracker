@@ -1,6 +1,8 @@
 /****************************************************************/
 /*                           TLEReader                          */
+/*                                                              */
 /*                           Blake Owen                         */
+/*                                                              */
 /*        This implementation uses the US SpaceForce publicly   */
 /*        released SGP4 propagation libraries for reading and   */
 /*        propagating TLE debris and satellite objects.         */

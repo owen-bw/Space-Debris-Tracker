@@ -1,6 +1,8 @@
 /****************************************************************/
 /*                       OpenGL Implementation                  */
+/*                                                              */
 /*                           Blake Owen                         */
+/*                                                              */
 /*        This implementation was refectored and modified from  */
 /*        the OpenGL sphere example provided by songho:         */
 /*        http://www.songho.ca/opengl/gl_sphere.html            */
