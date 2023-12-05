@@ -65,6 +65,7 @@ OpenGLEngine::OpenGLEngine() {
 
     earth = newSphere;
     sunAngle = new float(0.0f);
+    tolerance = new float(0.001f);
 }
 
 // Initialize OpenGL
@@ -764,6 +765,7 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::Text("Select Risk Detection Algorithm");
     ImGui::RadioButton("Octree", &algorithmSelection, 0); ImGui::SameLine();
     ImGui::RadioButton("Greedy", &algorithmSelection, 1); ImGui::SameLine();
+    ImGui::SliderFloat("Tolerance (Distance)", this->tolerance, 0.00001f, 0.1f, "%.5f");
     if (ImGui::Button("Run")) {
         // Run selected algorithm at current time
         if (algorithmSelection == 1) {
@@ -771,7 +773,7 @@ void OpenGLEngine::frame(double frameTime)
 
             SpaceDebris start(-1, 0, 0, 0);
 
-            vector<SpaceDebris> result = find_local_optimum(start, debris);
+            vector<SpaceDebris> result = find_local_optimum(start, debris, *tolerance);
 
             cout << "Greedy path result: ";
 
@@ -781,10 +783,11 @@ void OpenGLEngine::frame(double frameTime)
 
         } else {
             cout << "Running octree algorithm..." << endl;
+            cout << "Tolerance: " << *tolerance << endl;
 
             riskList.clear();
 
-            Octree otree(debris, 0.0005);
+            Octree otree(debris, *tolerance);
             otree.find_risky_debris(riskList);
 
             for (int i = 0; i < riskList.size(); i++) {

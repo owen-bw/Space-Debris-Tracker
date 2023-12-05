@@ -104,18 +104,15 @@ void Octree::find_risky_debris(vector<int>& riskList) {
 }
 
 // Greedy Algorithm
-vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list) {
+vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance) {
     vector<SpaceDebris> result;
     unordered_set<int> processed;
-
-    double min = numeric_limits<double>::max();
-    int minId = -1;
-
-    pair<int, int> minPair(-1, -1);
 
     SpaceDebris current = start;
 
     bool found;
+
+    double dist;
 
     do {
 
@@ -127,19 +124,11 @@ vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<Sp
 
         for (int i = 0; i < debris_list.size(); ++i) {
 
-            double dist = current.distance(debris_list[i]);
+            dist = current.distance(debris_list[i]);
 
             if (dist < min_distance && processed.find(debris_list[i].id) == processed.end()) {
 
                 min_distance = dist;
-
-                if (min_distance < min) {
-                  min = min_distance;
-                  minId = debris_list[closest_index].id;
-
-                  minPair.first = debris_list[i].id;
-                  minPair.second = debris_list[closest_index].id;
-                }
 
                 closest_index = i;
 
@@ -150,8 +139,10 @@ vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<Sp
         }
 
         if (found) {
-
-            result.push_back(debris_list[closest_index]);
+            if (dist <= tolerance) {
+              result.push_back(debris_list[closest_index]);
+            }
+            
             processed.emplace(debris_list[closest_index].id);
 
             current = debris_list[closest_index];

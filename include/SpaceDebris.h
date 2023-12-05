@@ -49,4 +49,4 @@ private:
     void find_risky(OctNode* node, vector<int>& riskList);
 };
 
-vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list);
+vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance);

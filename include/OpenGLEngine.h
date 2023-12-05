@@ -175,6 +175,7 @@ class OpenGLEngine {
     unordered_set<int> uniqueSatIds;
 
     vector<int> riskList;
+    float* tolerance;
 
     int numSats;
     double epoch;
