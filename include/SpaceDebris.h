@@ -25,7 +25,7 @@ struct OctNode {
 
     OctNode* children[8] = {nullptr};
 
-    vector<int> idList;
+    vector<SpaceDebris> idList;
 
     //SpaceDebris debrisObject;
 };
@@ -36,7 +36,7 @@ public:
 
     Octree(vector<SpaceDebris>& debris_list, double tolerance);
 
-    void find_risky_debris(vector<int>& riskList);
+    void find_risky_debris(vector<SpaceDebris>& riskList);
 
 private:
 
@@ -46,7 +46,7 @@ private:
 
     void insert(OctNode* node, SpaceDebris& debris, double x_min, double x_max, double y_min, double y_max, double z_min, double z_max, double& tolerance);
     
-    void find_risky(OctNode* node, vector<int>& riskList);
+    void find_risky(OctNode* node, vector<SpaceDebris>& riskList);
 };
 
-vector<int> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance);
+vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance);

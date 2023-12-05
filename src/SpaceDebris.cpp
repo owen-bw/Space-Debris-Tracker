@@ -48,7 +48,7 @@ Octree::Octree(vector<SpaceDebris>& debris_list, double tolerance) {
 void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_max, double y_min, double y_max, double z_min, double z_max, double& tolerance) {
 
     if (x_max - x_min <= tolerance) {
-      node->idList.push_back(debris.id);
+      node->idList.push_back(debris);
       return;
     }
 
@@ -85,7 +85,7 @@ void Octree::insert(OctNode* node, SpaceDebris& debris, double x_min, double x_m
     insert(node->children[child_index], debris, new_x_min, new_x_max, new_y_min, new_y_max, new_z_min, new_z_max, tolerance);
 }
 
-void Octree::find_risky(OctNode* node, vector<int>& riskList) {
+void Octree::find_risky(OctNode* node, vector<SpaceDebris>& riskList) {
   if (node == nullptr) {
     return;
   } else if (node->idList.size() > 1) {
@@ -99,13 +99,13 @@ void Octree::find_risky(OctNode* node, vector<int>& riskList) {
   }
 }
 
-void Octree::find_risky_debris(vector<int>& riskList) {
+void Octree::find_risky_debris(vector<SpaceDebris>& riskList) {
   find_risky(root, riskList);
 }
 
 // Greedy Algorithm
-vector<int> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance) {
-    vector<int> result;
+vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance) {
+    vector<SpaceDebris> result;
     unordered_set<int> processed;
 
     SpaceDebris current = start;
@@ -140,7 +140,7 @@ vector<int> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebri
 
         if (found) {
             if (dist <= tolerance) {
-              result.push_back(debris_list[closest_index].id);
+              result.push_back(debris_list[closest_index]);
             }
             
             processed.emplace(debris_list[closest_index].id);

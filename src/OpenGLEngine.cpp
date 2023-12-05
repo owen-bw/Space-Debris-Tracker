@@ -663,10 +663,19 @@ void OpenGLEngine::frame(double frameTime)
     glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
     glBufferSubData(GL_ARRAY_BUFFER, 0, numSats * 3 * sizeof(GLfloat), points);
     glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_TRUE);
-    glPointSize(3.4);
+    glPointSize(3);
     glBindVertexArray(pointsVao);
     glDrawArrays(GL_POINTS, 0, numSats);
     glUniform1i(glGetUniformLocation(progId, "isPoint"), GL_FALSE);
+
+    // Draw Risky Points
+    glBindBuffer(GL_ARRAY_BUFFER, pointsVbo);
+    glBufferSubData(GL_ARRAY_BUFFER, 0, numRisky * 3 * sizeof(GLfloat), riskyPoints);
+    glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_TRUE);
+    glPointSize(6);
+    glBindVertexArray(pointsVao);
+    glDrawArrays(GL_POINTS, 0, numRisky);
+    glUniform1i(glGetUniformLocation(progId, "isRisky"), GL_FALSE);
 
     // Unbind
     glBindTexture(GL_TEXTURE_2D, 0);
@@ -778,17 +787,37 @@ void OpenGLEngine::frame(double frameTime)
             cout << "Tolerance: " << *tolerance << endl;
 
             riskList.clear();
+            delete[] riskyPoints;
 
             SpaceDebris start(-1, 0, 0, 0);
             riskList = find_local_optimum(start, debris, *tolerance);
+            numRisky = riskList.size();
+
+            riskyPoints = new GLfloat[riskList.size() * 3];
+
+            for (int i = 0; i < riskList.size(); i++) {
+                riskyPoints[i * 3] = riskList.at(i).x;
+                riskyPoints[i * 3 + 1] = riskList.at(i).y;
+                riskyPoints[i * 3 + 2] = riskList.at(i).z;
+            } 
         } else {
             cout << "Running octree algorithm..." << endl;
             cout << "Tolerance: " << *tolerance << endl;
 
             riskList.clear();
+            delete[] riskyPoints;
 
             Octree otree(debris, *tolerance);
             otree.find_risky_debris(riskList);
+            numRisky = riskList.size();
+
+            riskyPoints = new GLfloat[riskList.size() * 3];
+
+            for (int i = 0; i < riskList.size(); i++) {
+                riskyPoints[i * 3] = riskList.at(i).x;
+                riskyPoints[i * 3 + 1] = riskList.at(i).y;
+                riskyPoints[i * 3 + 2] = riskList.at(i).z;
+            } 
         }
     }
 
@@ -805,14 +834,14 @@ void OpenGLEngine::frame(double frameTime)
         {
             ImGui::TableSetColumnIndex(column);
             if (column == 0) {
-                ImGui::Text("%d", riskList.at(row));
+                ImGui::Text("%d", riskList.at(row).id);
             } else if (column == 1) {
                 
             } else {
                 ImGui::PushID(row);
                 if (ImGui::Button("Goto")) {
                     for (int i = 0; i < debris.size(); i++) {
-                        if (debris.at(i).id == riskList.at(row)) {
+                        if (debris.at(i).id == riskList.at(row).id) {
                             cameraCenter.x = debris.at(i).x;
                             cameraCenter.y = debris.at(i).y;
                             cameraCenter.z = debris.at(i).z;

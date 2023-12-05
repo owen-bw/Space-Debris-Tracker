@@ -143,8 +143,10 @@ class OpenGLEngine {
 
     GLuint vao;
     GLuint pointsVao;
+    GLuint riskyVao;
     GLuint vbo;
     GLuint pointsVbo;
+    GLuint riskyVbo;
     GLuint ibo;
     GLuint texId;
     BitmapFontData bmFont;
@@ -179,11 +181,14 @@ class OpenGLEngine {
 
     GLfloat* points;
 
+    GLfloat* riskyPoints;
+    int numRisky;
+
     vector<SpaceDebris> debris;
 
     unordered_set<int> uniqueSatIds;
 
-    vector<int> riskList;
+    vector<SpaceDebris> riskList;
     float* tolerance;
 
     int numSats;
@@ -245,6 +250,7 @@ class OpenGLEngine {
 
     // used if object is point
     uniform bool isPoint;
+    uniform bool isRisky;
 
     // output
     out vec4 fragColor;
@@ -276,6 +282,8 @@ class OpenGLEngine {
         color += pow(dotVR, materialShininess) * lightSpecular.rgb * materialSpecular.rgb; // add specular
         if (isPoint) {
             fragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        } else if (isRisky) {
+            fragColor = vec4(1.0, 0.0, 0.0, 1.0);
         } else {
             fragColor = vec4(color, materialDiffuse.a);                 // set frag color
         }
