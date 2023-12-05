@@ -110,9 +110,12 @@ void Octree::find_risky(OctNode* node, vector<SpaceDebris>& riskList) {
   } else if (node->idList.size() > 1) {
     for (int i = 0; i < node->idList.size() - 1; i++) {
       // Save id and distance data for future sorting
-      node->idList.at(i).riskyOther = node->idList.at(i + 1).id;
-      node->idList.at(i).riskDistance = node->idList.at(i).distance(node->idList.at(i + 1));
-      riskList.push_back(node->idList.at(i));
+      double dist = node->idList.at(i).distance(node->idList.at(i + 1));
+      if (dist > 0.0) {
+        node->idList.at(i).riskyOther = node->idList.at(i + 1).id;
+        node->idList.at(i).riskDistance = dist;
+        riskList.push_back(node->idList.at(i));
+      }
     }
   }
 
@@ -130,10 +133,12 @@ void Octree::find_risky_debris(vector<SpaceDebris>& riskList) {
 // Iterative solution
 vector<SpaceDebris> find_local_optimum(vector<SpaceDebris>& debris_list, double tolerance, int iterations) {
     vector<SpaceDebris> result;
+    unordered_set<int> addedIds;
     for (int p = 1; p <= iterations; p++) {
       for (int i = 0; i < debris_list.size() - p; i += p) {
         double dist = debris_list.at(i).distance(debris_list.at(i + 1));
-        if (dist <= tolerance) {
+        if (dist <= tolerance && dist > 0.0 && (addedIds.find(debris_list.at(i).id) == addedIds.end())) {
+          addedIds.emplace(debris_list.at(i).id);
           debris_list.at(i).riskyOther = debris_list.at(i + 1).id;
           debris_list.at(i).riskDistance = dist;
           result.push_back(debris_list.at(i));

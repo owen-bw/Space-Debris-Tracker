@@ -840,7 +840,7 @@ void OpenGLEngine::frame(double frameTime)
         sort_specs->SpecsDirty = false;
     }
 
-    for (int row = 0; row < riskList.size(); row++)
+    for (int row = 0; row < (riskList.size() > 10 ? 10 : riskList.size()); row++)
     {
         ImGui::TableNextRow();
         for (int column = 0; column < 3; column++)
@@ -849,7 +849,7 @@ void OpenGLEngine::frame(double frameTime)
             if (column == 0) {
                 ImGui::Text("%d", riskList.at(row).id);
             } else if (column == 1) {
-                ImGui::Text("%f", riskList.at(row).riskDistance);
+                ImGui::Text("%d: %f", riskList.at(row).riskyOther, riskList.at(row).riskDistance);
             } else if (column == 2) {
                 ImGui::PushID(row);
                 if (ImGui::Button("Select")) {
