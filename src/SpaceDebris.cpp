@@ -103,25 +103,7 @@ void Octree::find_risky_debris(vector<int>& riskList) {
   find_risky(root, riskList);
 }
 
-// vector<int> Octree::find_local_optimum(const SpaceDebris& start) {
-
-//     vector<int> result;
-
-//     SpaceDebris current = start;
-
-//     while (true) {
-
-//         int closest_index = find_closest(root.get(), current, 0, 1, 0, 1, 0, 1);
-
-//         if (closest_index == -1) break;
-
-//         result.push_back(debris_list[closest_index].id);
-
-//         current = debris_list[closest_index];
-
-//     }
-
-
+// Greedy Algorithm
 pair<int, int> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list) {
 
     //vector<SpaceDebris> result;

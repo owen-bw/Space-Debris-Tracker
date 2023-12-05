@@ -779,52 +779,35 @@ void OpenGLEngine::frame(double frameTime)
         } else {
             cout << "Running octree algorithm..." << endl;
 
-            vector<int> riskList;
+            riskList.clear();
 
-            Octree otree(debris, 0.001);
+            Octree otree(debris, 0.0005);
             otree.find_risky_debris(riskList);
 
             for (int i = 0; i < riskList.size(); i++) {
                 cout << riskList.at(i) << endl;
             }
         }
-        // for (int i = 0; i < result.size() - 1; i++) {
-
-        //     cout << result.at(i).id << ": " << result.at(i).distance(result.at(i + 1)) << endl;
-        // }
-        
-        // SpaceDebris start(0, 1.0, 1.0, 1.0);
-
-        // Octree octree(debris);
-
-        // vector<int> local_optimum_octree = octree.find_local_optimum(start);
-
-        // for (int id : local_optimum_octree) {
-
-        //     cout << id << " ";
-
-        // }
     }
 
     ImGui::BeginTable("Risk Assessment", 3, 0);
     ImGui::TableSetupColumn("Sat ID");
-    ImGui::TableSetupColumn("Potential Risk");
+    ImGui::TableSetupColumn("Nearest Body");
     ImGui::TableSetupColumn("Goto");
     ImGui::TableHeadersRow();
 
-    for (int row = 0; row < 5; row++)
+    for (int row = 0; row < riskList.size(); row++)
     {
         ImGui::TableNextRow();
         for (int column = 0; column < 3; column++)
         {
-            ImGui::TableSetColumnIndex(column);
-            char buf[32];
-            if (column == 3) {
-                ImGui::Button("Test");
+            if (column == 0) {
+                ImGui::Text("%d", riskList.at(row));
+            } else if (column == 1) {
+
+            } else {
+                ImGui::Button("Goto");
             }
-            sprintf(buf, "Test %d,%d", column, row);
-            ImGui::TextUnformatted(buf);
-            //ImGui::Button(buf, ImVec2(-FLT_MIN, 0.0f));
         }
     }
     ImGui::EndTable();

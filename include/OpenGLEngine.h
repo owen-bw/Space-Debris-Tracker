@@ -174,6 +174,8 @@ class OpenGLEngine {
 
     unordered_set<int> uniqueSatIds;
 
+    vector<int> riskList;
+
     int numSats;
     double epoch;
     int simSpeed;
