@@ -54,3 +54,8 @@ private:
 //vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance);
 
 vector<SpaceDebris> find_local_optimum(vector<SpaceDebris>& debris_list, double tolerance, int powerIterations);
+
+bool compareDebrisDistanceLess(SpaceDebris d1, SpaceDebris d2);
+bool compareDebrisDistanceGreater(SpaceDebris d1, SpaceDebris d2);
+bool compareDebrisIdLess(SpaceDebris d1, SpaceDebris d2);
+bool compareDebrisIdGreater(SpaceDebris d1, SpaceDebris d2);

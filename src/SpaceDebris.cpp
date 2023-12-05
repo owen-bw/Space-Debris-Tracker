@@ -173,3 +173,19 @@ vector<SpaceDebris> find_local_optimum(vector<SpaceDebris>& debris_list, double 
     return result;
 
 }
+
+bool compareDebrisDistanceLess(SpaceDebris d1, SpaceDebris d2) {
+    return (d1.riskDistance < d2.riskDistance);
+}
+
+bool compareDebrisDistanceGreater(SpaceDebris d1, SpaceDebris d2) {
+    return (d1.riskDistance > d2.riskDistance);
+}
+
+bool compareDebrisIdLess(SpaceDebris d1, SpaceDebris d2) {
+    return (d1.id < d2.id);
+}
+
+bool compareDebrisIdGreater(SpaceDebris d1, SpaceDebris d2) {
+    return (d1.id > d2.id);
+}

@@ -854,11 +854,37 @@ void OpenGLEngine::frame(double frameTime)
         }
     }
 
-    ImGui::BeginTable("Risk Assessment", 3, 0);
-    ImGui::TableSetupColumn("Sat ID");
-    ImGui::TableSetupColumn("Nearest Body");
+     static ImGuiTableFlags flags =
+            ImGuiTableFlags_Resizable | ImGuiTableFlags_Reorderable | ImGuiTableFlags_Hideable | ImGuiTableFlags_Sortable | ImGuiTableFlags_SortMulti
+            | ImGuiTableFlags_RowBg | ImGuiTableFlags_BordersOuter | ImGuiTableFlags_BordersV | ImGuiTableFlags_NoBordersInBody
+            | ImGuiTableFlags_ScrollY;
+
+    ImGui::BeginTable("Risk Assessment", 3, ImGuiTableFlags_Sortable);
+    ImGui::TableSetupColumn("Sat ID", ImGuiTableColumnFlags_DefaultSort);
+    ImGui::TableSetupColumn("Nearest Body", ImGuiTableColumnFlags_DefaultSort);
     ImGui::TableSetupColumn("Select");
     ImGui::TableHeadersRow();
+
+    const ImGuiTableSortSpecs* sortSpecs = ImGui::TableGetSortSpecs();
+    if (ImGuiTableSortSpecs* sort_specs = ImGui::TableGetSortSpecs())
+    if (sort_specs->SpecsDirty)
+    {
+        cout << "spec changed" << sort_specs->Specs->SortDirection << endl;
+        if (sort_specs->Specs->ColumnIndex == 1 && sort_specs->Specs->SortDirection == 1) {
+            sort(riskList.begin(), riskList.end(), compareDebrisDistanceLess);
+        }
+        if (sort_specs->Specs->ColumnIndex == 1 && sort_specs->Specs->SortDirection == 2) {
+            sort(riskList.begin(), riskList.end(), compareDebrisDistanceGreater);
+        }
+        if (sort_specs->Specs->ColumnIndex == 0 && sort_specs->Specs->SortDirection == 1) {
+            sort(riskList.begin(), riskList.end(), compareDebrisIdLess);
+        }
+        if (sort_specs->Specs->ColumnIndex == 0 && sort_specs->Specs->SortDirection == 2) {
+            sort(riskList.begin(), riskList.end(), compareDebrisIdGreater);
+        }
+        
+        sort_specs->SpecsDirty = false;
+    }
 
     for (int row = 0; row < riskList.size(); row++)
     {
@@ -869,8 +895,8 @@ void OpenGLEngine::frame(double frameTime)
             if (column == 0) {
                 ImGui::Text("%d", riskList.at(row).id);
             } else if (column == 1) {
-                ImGui::Text("%d", riskList.at(row).riskyOther);
-            } else {
+                ImGui::Text("%f", riskList.at(row).riskDistance);
+            } else if (column == 2) {
                 ImGui::PushID(row);
                 if (ImGui::Button("Select")) {
                     selectedPoint = new GLfloat[3] {(float)riskList.at(row).x, (float)riskList.at(row).y, (float)riskList.at(row).z};
