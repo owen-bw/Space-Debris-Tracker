@@ -1,3 +1,13 @@
+/****************************************************************/
+/*                      SpaceDebris Algorithms                  */
+/*                                                              */
+/*            Blake Owen, Bryant Woolsey, Marco Wehrhahn        */
+/*                                                              */
+/*        This source code contains the two algorithms we       */
+/*        developed for solving the risk assessment for         */
+/*        satellite and debris data read from TLE files.        */
+/****************************************************************/
+
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -12,6 +22,7 @@
 
 using namespace std;
 
+// Octree solution
 Octree::Octree(vector<SpaceDebris>& debris_list, double tolerance) {
     this->debris_list = debris_list;
 
@@ -105,58 +116,7 @@ void Octree::find_risky_debris(vector<SpaceDebris>& riskList) {
   find_risky(root, riskList);
 }
 
-// Greedy Algorithm
-// vector<SpaceDebris> find_local_optimum(const SpaceDebris& start, const vector<SpaceDebris>& debris_list, double tolerance) {
-//     vector<SpaceDebris> result;
-//     unordered_set<int> processed;
-
-//     SpaceDebris current = start;
-
-//     bool found;
-
-//     double dist;
-
-//     do {
-
-//         found = false;
-
-//         double min_distance = numeric_limits<double>::max();
-
-//         int closest_index = -1;
-
-//         for (int i = 0; i < debris_list.size(); ++i) {
-
-//             dist = current.distance(debris_list[i]);
-
-//             if (dist < min_distance && processed.find(debris_list[i].id) == processed.end()) {
-
-//                 min_distance = dist;
-
-//                 closest_index = i;
-
-//                 found = true;
-
-//             }
-
-//         }
-
-//         if (found) {
-//             if (dist <= tolerance) {
-//               result.push_back(debris_list[closest_index]);
-//             }
-            
-//             processed.emplace(debris_list[closest_index].id);
-
-//             current = debris_list[closest_index];
-
-//         }
-
-//     } while (found);
-
-//     return result;
-
-// }
-
+// Iterative solution
 vector<SpaceDebris> find_local_optimum(vector<SpaceDebris>& debris_list, double tolerance, int iterations) {
     vector<SpaceDebris> result;
     for (int p = 1; p <= iterations; p++) {

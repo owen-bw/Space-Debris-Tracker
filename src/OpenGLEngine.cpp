@@ -195,7 +195,7 @@ bool OpenGLEngine::initSharedMem()
     cameraCenter.y = 0.0;
     cameraCenter.z = 0.0;
 
-    drawMode = 0; // 0:fill, 1: wireframe, 2:points
+    drawMode = 0;
 
     vao = 0;
     pointsVao = 0;
@@ -481,17 +481,16 @@ void OpenGLEngine::showFPS()
 
     ++count;
 
-    // update fps every second
     elapsedTime = timer.getElapsedTime();
     if(elapsedTime >= 1.0)
     {
         std::stringstream ss;
         ss << std::fixed << std::setprecision(1);
-        ss << (count / elapsedTime) << " FPS" << std::ends; // update fps string
+        ss << (count / elapsedTime) << " FPS" << std::ends;
         ss << std::resetiosflags(std::ios_base::fixed | std::ios_base::floatfield);
         fps = ss.str();
-        count = 0;                      // reset counter
-        timer.start();                  // restart timer
+        count = 0;
+        timer.start();
     }
 
     // draw FPS at top-right corner
@@ -538,9 +537,9 @@ void OpenGLEngine::toPerspective()
 
     // construct perspective projection matrix
     float aspectRatio = (float)(windowWidth) / windowHeight;
-    float tangent = tanf(FOV_Y / 2.0f);     // tangent of half fovY
-    float h = N * tangent;                  // half height of near plane
-    float w = h * aspectRatio;              // half width of near plane
+    float tangent = tanf(FOV_Y / 2.0f);
+    float h = N * tangent;
+    float w = h * aspectRatio;
     matrixProjection.identity();
     matrixProjection[0]  =  N / w;
     matrixProjection[5]  =  N / h;
@@ -586,7 +585,6 @@ void OpenGLEngine::frame(double frameTime)
     Matrix4 matrixModelViewProjection = matrixProjection * matrixModelView;
     Matrix4 matrixNormal = matrixModelView;
 
-    // float lightDir[] = {*sunAngle, 0.0f, -*sunAngle, 0.0f};
     int lightSector = *sunAngle / 90;
     int lightAmount = static_cast<int>(*sunAngle) % 90;
 
@@ -683,7 +681,6 @@ void OpenGLEngine::frame(double frameTime)
     ossSeconds.str() + " UTC";
 
     ImGui::Begin("Space Debris Tracker");
-    //ImGui::Text("%.2f", epoch + totalTime / (86400.0));
     ImGui::Text(datetime.data());
     ImGui::Text("Input Date (DD/MM/YYYY/HH/MM/SS)");
     ImGui::SetNextItemWidth(25);
@@ -760,7 +757,7 @@ void OpenGLEngine::frame(double frameTime)
     ImGui::Text("Select Risk Detection Algorithm");
     ImGui::RadioButton("Octree", &algorithmSelection, 0); 
     ImGui::SameLine();
-    ImGui::RadioButton("Greedy", &algorithmSelection, 1);
+    ImGui::RadioButton("Iterative", &algorithmSelection, 1);
     ImGui::SameLine();
     ImGui::SetNextItemWidth(100);
     ImGui::InputInt("Iterations", iterations);
@@ -774,7 +771,7 @@ void OpenGLEngine::frame(double frameTime)
         tle.propagate(epoch + totalTime / (86400.0), points, numSats, true, debris);
         
         if (algorithmSelection == 1) {
-            cout << "Running greedy path algorithm..." << endl;
+            cout << "Running iterative algorithm..." << endl;
             cout << "Tolerance: " << *tolerance << endl;
 
             riskList.clear();
@@ -907,32 +904,31 @@ void OpenGLEngine::keyCallback(GLFWwindow* window, int key, int scancode, int ac
 {
     if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     {
-        //std::cout << "Closing program" << std::endl;
         clearSharedMem();
         glfwSetWindowShouldClose(window, GLFW_TRUE);
     }
     else if(key == GLFW_KEY_SPACE && action == GLFW_PRESS)
     {
         earth.reverseNormals();
-        initVBO();  // copy new vertext data to VBOs
+        initVBO();
     }
     else if(key == GLFW_KEY_D && action == GLFW_PRESS)
     {
         ++drawMode;
         drawMode %= 3;
-        if(drawMode == 0)        // fill mode
+        if(drawMode == 0)
         {
             glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
             glEnable(GL_DEPTH_TEST);
             glEnable(GL_CULL_FACE);
         }
-        else if(drawMode == 1)  // wireframe mode
+        else if(drawMode == 1)
         {
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
             glDisable(GL_DEPTH_TEST);
             glDisable(GL_CULL_FACE);
         }
-        else                    // point mode
+        else
         {
             glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
             glDisable(GL_DEPTH_TEST);

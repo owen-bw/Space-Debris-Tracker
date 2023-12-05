@@ -19,6 +19,7 @@ extern "C"
 {
 #endif
 
+// https://www.space-track.org/documentation#sgp4
 #include "tle/DllMainDll_Service.h" 
 #include "tle/TimeFuncDll_Service.h"
 #include "tle/DllMainDll.h"
@@ -52,7 +53,7 @@ class TLEReader {
     double 
     pos[3],           //Position (km)
     vel[3],           //Velocity (km/s)
-    llh[3],           // Latitude(deg), Longitude(deg), Height above Geoid (km)
+    llh[3],           //Latitude(deg), Longitude(deg), Height above Geoid (km)
     meanKep[6],       //Mean Keplerian elements
     oscKep[6],        //Osculating Keplerian elements
     nodalApPer[3],    //Nodal period, apogee, perigee
