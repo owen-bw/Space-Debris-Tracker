@@ -34,11 +34,13 @@ GLfloat* TLEReader::ReadFiles(int& numSats, double& epoch, vector<SpaceDebris>& 
 
     // Load Sgp4Prop dll and assign function pointers
     LoadSgp4PropDll();
-    
-    Sgp4LoadFileAll("2023_332.txt");
-    Sgp4LoadFileAll("2023_337.txt");
-    Sgp4LoadFileAll("2023_338.txt");
 
+    vector<const char*> files = {"2023_332.txt", "2023_337.txt", "2023_338.txt"};
+    
+    for (const char* file : files) {
+        Sgp4LoadFileAll((char*)file);
+    }
+    
     numSats = TleGetCount();
 
     std::cout << numSats << std::endl;

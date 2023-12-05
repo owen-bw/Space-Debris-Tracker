@@ -7,6 +7,10 @@
 /*                                                              */
 /****************************************************************/
 
+#ifdef __APPLE__
+    #define GL_SILENCE_DEPRECATION
+#endif
+
 // https://github.com/ocornut/imgui
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -196,6 +200,8 @@ bool OpenGLEngine::initSharedMem()
     cameraCenter.z = 0.0;
 
     drawMode = 0;
+
+    algorithmSelection = 0;
 
     vao = 0;
     pointsVao = 0;
@@ -681,7 +687,7 @@ void OpenGLEngine::frame(double frameTime)
     ossSeconds.str() + " UTC";
 
     ImGui::Begin("Space Debris Tracker");
-    ImGui::Text(datetime.data());
+    ImGui::Text("%s", datetime.c_str());
     ImGui::Text("Input Date (DD/MM/YYYY/HH/MM/SS)");
     ImGui::SetNextItemWidth(25);
     ImGui::InputText("Day", day, 3);

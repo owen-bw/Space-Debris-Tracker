@@ -1,6 +1,6 @@
 #include "OpenGLEngine.h"
 
-int main(void)
+int main()
 {
     OpenGLEngine engine;
 
@@ -10,5 +10,5 @@ int main(void)
 
     engine.shutdown();
 
-    exit(EXIT_SUCCESS);
+    return 0;
 }
