@@ -119,7 +119,6 @@ class OpenGLEngine {
     GLint uniformMatrixModelView;
     GLint uniformMatrixModelViewProjection;
     GLint uniformMatrixNormal;
-    // GLint uniformLightPosition;
     GLint uniformLightDirection;
     GLint uniformLightAmbient;
     GLint uniformLightDiffuse;
