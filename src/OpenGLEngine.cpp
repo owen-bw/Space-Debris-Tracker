@@ -126,7 +126,7 @@ void OpenGLEngine::init() {
 
 
     // Load Earth texture
-    texId = loadTexture("earth10k.bmp", true);
+    texId = loadTexture("earth2048.bmp", true);
 
     // Calculate perspective matrix projection
     toPerspective();
