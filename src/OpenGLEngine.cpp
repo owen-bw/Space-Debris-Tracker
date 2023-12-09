@@ -46,6 +46,8 @@
 #include <fstream>
 #include <string>
 #include <iomanip>
+#include <unordered_map>
+#include <algorithm>
 
 #include "OpenGLEngine.h"
 #include "TLEReader.h"
@@ -191,6 +193,9 @@ bool OpenGLEngine::initSharedMem()
     simSpeed = 0;
     isPaused = true;
     isValid = true;
+
+    riskyPoints = nullptr;
+    selectedPoint = nullptr;
 
     mouseLeftDown = mouseRightDown = mouseMiddleDown = false;
     mouseX = mouseY = 0;
