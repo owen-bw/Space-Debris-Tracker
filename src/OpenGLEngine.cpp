@@ -22,7 +22,6 @@
 #include "Sphere.h"
 #include "Bmp.h"
 #include "BitmapFontData.h"
-#include "fontCourier20.h"
 #include "Matrices.h"
 #include "Timer.h"
 #include "Vectors.h"
@@ -116,7 +115,7 @@ void OpenGLEngine::init() {
     initVBO();
 
     // Load font
-    bmFont.loadFont(fontCourier20, bitmapCourier20);
+    // bmFont.loadFont(fontCourier20, bitmapCourier20);
 
     // init GLFW callbacks
     glfwSetFramebufferSizeCallback(window, framebufferSizeCallbackWrapper);
