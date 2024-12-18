@@ -1,5 +1,6 @@
 # Space-Debris-Tracker
-OpenGL Cross-Platform Space-Debris Visualization
+OpenGL Cross-Platform Space-Debris Visualization.
+Proximity measurement algorithms implemented to predict possible collisions.
 
 ![Start of Program](https://i.gyazo.com/f6cd6d54f1bb94c2cc49c136a6397d3d.jpg)
 
